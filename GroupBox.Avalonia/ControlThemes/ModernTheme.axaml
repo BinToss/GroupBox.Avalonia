@@ -1,0 +1,25 @@
+<Styles x:Class="GroupBox.Avalonia.ControlThemes.ModernTheme"
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:gb="using:GroupBox.Avalonia.Controls">
+	<Style Selector="gb|GroupBox">
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border>
+					<StackPanel>
+						<ContentPresenter
+							FontWeight="Bold"
+							Content="{TemplateBinding Header}" />
+						<!-- DynamicResource ThemeBorderThickness; TemplateBinding CornerRadius -->
+						<Border
+							BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+							BorderThickness="2"
+							CornerRadius="5">
+							<ContentPresenter Content="{TemplateBinding Content}" />
+						</Border>
+					</StackPanel>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+</Styles>

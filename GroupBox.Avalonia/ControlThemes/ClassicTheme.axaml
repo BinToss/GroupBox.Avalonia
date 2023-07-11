@@ -1,0 +1,63 @@
+<Styles x:Class="GroupBox.Avalonia.ControlThemes.ClassicTheme"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:conv="clr-namespace:GroupBox.Avalonia.Converters;assembly=GroupBox.Avalonia"
+    xmlns:gb="using:GroupBox.Avalonia.Controls">
+
+    <Style Selector="gb|GroupBox">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid Name="GBGrid">
+
+                    <Grid.Resources>
+                        <conv:RectGeometryConverter x:Key="rectConv" />
+                        <Thickness x:Key="BorderMargin">0,10,0,0</Thickness>
+                        <Thickness x:Key="BorderPadding">5,10,5,5</Thickness>
+                    </Grid.Resources>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Name="GBHeaderText"
+                        Margin="5,0,0,0"
+                        Padding="5,0,5,0"
+                        TextBlock.FontWeight="Bold" Text="{TemplateBinding Header}">
+                    </TextBlock>
+
+                    <!-- DynamicResource ThemeBorderThickness; TemplateBinding CornerRadius -->
+                    <Border Name="GBBorder"
+                        Grid.RowSpan="2" Grid.ColumnSpan="2"
+                        Margin="{DynamicResource BorderMargin}"
+                        Padding="{DynamicResource BorderPadding}"
+                        BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+                        BorderThickness="1">
+                        <Rectangle
+                            Height="{Binding #GBContent.Height}"
+                            Width="{Binding #GBContent.Width}" />
+                        <Border.Clip>
+                            <CombinedGeometry
+                                GeometryCombineMode="Exclude"
+                                Geometry1="{Binding #GBGrid.Bounds, Mode=OneWay, Converter={StaticResource rectConv}}"
+                                Geometry2="{Binding #GBHeaderText.Bounds, Mode=OneWay, Converter={StaticResource rectConv}}" />
+                        </Border.Clip>
+                    </Border>
+
+                    <Border Name="GBContent"
+                        Grid.RowSpan="2" Grid.ColumnSpan="2"
+                        Margin="{DynamicResource BorderMargin}"
+                        Padding="{DynamicResource BorderPadding}"
+                        BorderThickness="0">
+
+                        <ContentPresenter Content="{TemplateBinding Content}" />
+                    </Border>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
