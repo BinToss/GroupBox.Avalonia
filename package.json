@@ -1,0 +1,19 @@
+{
+  "name": "groupbox.avalonia-dev",
+  "//": "The following version should match the C# library's version",
+  "version": "0.0.1",
+  "description": "dev-environment utilities",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@halospv3/hce.shared": "HaloSPV3/HCE.Shared#dc8b68af"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
