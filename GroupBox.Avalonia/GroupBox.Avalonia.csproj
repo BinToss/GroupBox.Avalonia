@@ -1,12 +1,32 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>net6.0</TargetFramework> 
     <Nullable>enable</Nullable>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>BinToss.GroupBox.Avalonia</PackageId>
+    <!-- <Title>PackageId</Title> --><!-- use PackageId -->
+    <!-- <Version>1.0.0</Version> --><!-- assigned by GitVersion, semantic-release -->
+    <Authors>BinToss</Authors>
+    <!-- <Company>MyCompany Inc</Company> -->
+    <Product>GroupBox control for AvaloniaUI</Product>
+    <Description>Another attempt to recreate the GroupBox control for AvaloniaUI.</Description>
+    <Copyright>© 2023 Noah Sherwin</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!-- <PackageIconUrl>http://Your.Icon.Url</PackageIconUrl> -->
+    <PackageTags>Avalonia AvaloniaUI GroupBox</PackageTags>
+    <!-- <PackageReleaseNotes>http://Your.ReleaseNotes.Url</PackageReleaseNotes> -->
+    <!-- <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance> -->
+    <RepositoryUrl>https://github.com/BinToss/GroupBox.Avalonia</RepositoryUrl>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSource>true</IncludeSource><!-- ...in snupkg -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSymbols>true</IncludeSymbols><!-- ...in snupkg -->
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
