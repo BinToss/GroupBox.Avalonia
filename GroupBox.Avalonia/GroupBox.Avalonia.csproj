@@ -22,7 +22,7 @@
     <!-- <PackageReleaseNotes>http://Your.ReleaseNotes.Url</PackageReleaseNotes> -->
     <!-- <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance> -->
     <RepositoryUrl>https://github.com/BinToss/GroupBox.Avalonia</RepositoryUrl>
-    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <PackageProjectUrl>$(RepositoryUrl)#groupboxavalonia</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <IncludeSource>true</IncludeSource><!-- ...in snupkg -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
