@@ -9,11 +9,37 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@halospv3/hce.shared": "HaloSPV3/HCE.Shared#dc8b68af"
+    "@halospv3/hce.shared": "HaloSPV3/HCE.Shared"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "//": "We'll use Angular instead of ConventionalCommits",
+    "branches": [
+      "main",
+      {
+        "name": "develop",
+        "channel": "alpha",
+        "prerelease": true
+      }
+    ],
+    "//": "@semantic-release/github is configured in GitHub Workflow via either a semantic-release Action or @semantic-release/exec",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "/GroupBox.Avalonia/bin/Release/net6.0/publish/"
+            }
+          ]
+        }
+      ]
     ]
   }
 }
