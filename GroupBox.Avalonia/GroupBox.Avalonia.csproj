@@ -18,6 +18,7 @@
     <Copyright>© 2023 Noah Sherwin</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <!-- <PackageIconUrl>http://Your.Icon.Url</PackageIconUrl> -->
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Avalonia AvaloniaUI GroupBox</PackageTags>
     <!-- <PackageReleaseNotes>http://Your.ReleaseNotes.Url</PackageReleaseNotes> -->
     <!-- <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance> -->
@@ -31,6 +32,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/">
     <_compile Include="**/*.cs" Exclude="obj/**/*.cs" />
     <None Include="@(_compile)" /> <!-- Because ms-dotnettools.csdevkit refuses to show them in Solution Explorer -->
     <_pages Include="@(_compile -> '%(RecursiveDir)%(Filename)')" />
