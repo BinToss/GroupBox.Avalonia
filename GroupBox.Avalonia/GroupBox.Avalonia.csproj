@@ -32,11 +32,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../README.md" Pack="true" PackagePath="/">
-    <_compile Include="**/*.cs" Exclude="obj/**/*.cs" />
-    <None Include="@(_compile)" /> <!-- Because ms-dotnettools.csdevkit refuses to show them in Solution Explorer -->
-    <_pages Include="@(_compile -> '%(RecursiveDir)%(Filename)')" />
-    <Page Include="@(_pages -&gt; Exists())" />
+    <None Include="../README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 
   <ItemGroup>
