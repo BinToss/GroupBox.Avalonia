@@ -1,0 +1,17 @@
+# based on .NET starter workflow: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+name: Build
+
+on: 
+  push:   
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+    - name: Build Solution
+      run: dotnet build
