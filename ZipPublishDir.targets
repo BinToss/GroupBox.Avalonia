@@ -9,6 +9,6 @@
 
     <ZipDirectory
       SourceDirectory="$(PublishDir)"
-      DestinationFile="./publish/$(AssemblyName).$(Version)_$(TargetFramework)$(PART_RuntimeIdentifier)" />
+      DestinationFile="./publish/$(AssemblyName).$(Version)_$(PART_RuntimeIdentifier)" />
   </Target>
 </Project>
