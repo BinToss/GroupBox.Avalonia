@@ -1,14 +1,14 @@
 <Project>
- <!-- https://learn.microsoft.com/en-us/visualstudio/msbuild/zipdirectory-task?view=vs-2022 -->
+  <!-- https://learn.microsoft.com/en-us/visualstudio/msbuild/zipdirectory-task?view=vs-2022 -->
   <Target Name="ZipPublishDir" AfterTargets="Publish">
     <PropertyGroup>
-      <PART_RuntimeIdentifier Condition="'$(RuntimeIdentifier)' != '' ">-$(RuntimeIdentifier)$(InformationalVersion)</PART_RuntimeIdentifier>
+      <PART_RuntimeIdentifier Condition="'$(RuntimeIdentifier)' != '' ">-$(RuntimeIdentifier)</PART_RuntimeIdentifier>
     </PropertyGroup>
-    
-<!-- https://www.nuget.org/packages/GitInfo -->
 
-    <ZipDirectory 
-      SourceDirectory="$(PublishDir)" 
+    <!-- https://www.nuget.org/packages/GitInfo -->
+
+    <ZipDirectory
+      SourceDirectory="$(PublishDir)"
       DestinationFile="./publish/$(AssemblyName).$(Version)_$(TargetFramework)$(PART_RuntimeIdentifier)" />
   </Target>
 </Project>
