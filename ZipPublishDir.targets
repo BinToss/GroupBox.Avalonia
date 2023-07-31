@@ -2,13 +2,15 @@
   <!-- https://learn.microsoft.com/en-us/visualstudio/msbuild/zipdirectory-task?view=vs-2022 -->
   <Target Name="ZipPublishDir" AfterTargets="Publish">
     <PropertyGroup>
-      <PART_RuntimeIdentifier Condition="'$(RuntimeIdentifier)' != '' ">-$(RuntimeIdentifier)</PART_RuntimeIdentifier>
+      <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildProjectDirectory)'))))</RepoRoot>
+      <Destination>$(RepoRoot)/publish/$(AssemblyName).$(Version)$(PART_RuntimeIdentifier)</Destination>
+      <Destination Condition="'$(RuntimeIdentifier)' != '' ">$(Destination).$(RuntimeIdentifier)</Destination>
     </PropertyGroup>
 
     <!-- https://www.nuget.org/packages/GitInfo -->
 
     <ZipDirectory
       SourceDirectory="$(PublishDir)"
-      DestinationFile="./publish/$(AssemblyName).$(Version)_$(PART_RuntimeIdentifier)" />
+      DestinationFile="$(Destination).zip" />
   </Target>
 </Project>
