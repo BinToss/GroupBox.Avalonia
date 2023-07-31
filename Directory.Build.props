@@ -1,0 +1,5 @@
+<Project>
+   <PropertyGroup>
+      <GitThisAssemblyMetadata>true</GitThisAssemblyMetadata>
+   </PropertyGroup>
+</Project>
