@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "description": "dev-environment utilities",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "author": "",
   "license": "ISC",
