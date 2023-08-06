@@ -11,6 +11,7 @@
 
     <ZipDirectory
       SourceDirectory="$(PublishDir)"
-      DestinationFile="$(Destination).zip" />
+      DestinationFile="$(Destination).zip"
+      Overwrite="true" />
   </Target>
 </Project>
