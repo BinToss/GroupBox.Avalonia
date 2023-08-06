@@ -1,7 +1,7 @@
 {
   "name": "groupbox.avalonia-dev",
   "//": "The following version should match the C# library's version",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "dev-environment utilities",
   "scripts": {
     "prepare": "husky install"
