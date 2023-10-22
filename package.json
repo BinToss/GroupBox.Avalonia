@@ -16,5 +16,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "private": true
 }
