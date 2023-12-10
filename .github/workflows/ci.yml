@@ -1,0 +1,30 @@
+# Inspired by https://github.com/GitTools/GitVersion/blob/main/.github/workflows/ci.yml
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+env:
+  DOTNET_ROLL_FORWARD: "Major"
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_NOLOGO: 1
+  _releaseBranches:
+    main
+    develop
+
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/_build.yml
+  unit_test:
+    name: Unit Test
+    uses: ./.github/workflows/_unit_test.yml
+  release:
+    name: Release
+    if: contains(github.env._releaseBranches, github.event_name)
+    needs: ['build', 'unit_test']
+    uses: ./.github/workflows/release.yml
+  
