@@ -24,7 +24,7 @@ jobs:
     uses: ./.github/workflows/_unit_test.yml
   release:
     name: Release
-    if: contains(github.env._releaseBranches, github.event_name)
+    if: contains(github.env._releaseBranches, github.event_name) && !github.event.pull_request
     needs: ['build', 'unit_test']
     uses: ./.github/workflows/release.yml
   
