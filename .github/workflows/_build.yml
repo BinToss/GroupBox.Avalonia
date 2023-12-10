@@ -1,5 +1,3 @@
-name: Build
-
 on:
   workflow_call:
 
@@ -13,8 +11,9 @@ jobs:
     
     runs-on: ${{matrix.os}}
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    - name: Pack Solution
-      run: dotnet pack
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: npm ci
+      - name: Pack Solution
+        run: dotnet pack
