@@ -1,4 +1,4 @@
 {
     "dotnet.defaultSolution": "GroupBox.Avalonia.sln",
-    "cmake.configureOnOpen": false
+    "xml.codeLens.enabled": true
 }
