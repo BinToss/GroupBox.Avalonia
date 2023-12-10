@@ -17,4 +17,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: npm ci
-      - run: dotnet test --target=${{ matrix.targetFramework }} 
+      - run: dotnet test --framework=${{ matrix.targetFramework }} 
