@@ -9,8 +9,12 @@ on:
   workflow_call:
 
 jobs:
+  ci:
+    name: CI
+    uses: ./.github/workflows/ci.yml
   # based on https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/ci-configurations/github-actions.md
   release:
+    needs: [ci]
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
