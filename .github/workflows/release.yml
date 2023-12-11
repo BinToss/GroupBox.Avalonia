@@ -26,6 +26,9 @@ jobs:
     - uses: actions/checkout@v4
       with: 
         fetch-depth: 0 # necessary for semantic release
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.x'
 
     - name: NPM - Clean Install, Audit and Verify Packages
       run: |

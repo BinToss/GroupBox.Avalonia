@@ -15,5 +15,10 @@ jobs:
         with:
           fetch-depth: 0
       - run: npm ci
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
       - name: Pack Solution
         run: dotnet pack
