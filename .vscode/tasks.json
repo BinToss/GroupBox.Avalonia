@@ -9,7 +9,7 @@
                 "build",
                 "${workspaceFolder}/GroupBox.Avalonia.sln",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -21,7 +21,7 @@
                 "publish",
                 "${workspaceFolder}/GroupBox.Avalonia.sln",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -33,7 +33,8 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/GroupBox.Avalonia.sln"
+                "${workspaceFolder}/GroupBox.Avalonia.sln",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
             "problemMatcher": "$msCompile"
         }
