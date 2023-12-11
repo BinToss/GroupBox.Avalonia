@@ -1,6 +1,8 @@
 # inspired by https://github.com/GitTools/GitVersion/blob/main/.github/workflows/_unit_tests.yml
 on:
   workflow_call:
+env:
+  DOTNET_ROLL_FORWARD: "Major"
 
 jobs:
   unit_test:

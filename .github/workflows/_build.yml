@@ -1,6 +1,9 @@
 on:
   workflow_call:
 
+env:
+  DOTNET_ROLL_FORWARD: "Major"
+
 jobs:
   build:
     name: ${{matrix.os}}
