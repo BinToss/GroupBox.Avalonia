@@ -10,7 +10,6 @@ on:
   pull_request:
   workflow_call:
 
-
 env:
   DOTNET_ROLL_FORWARD: "Major"
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
