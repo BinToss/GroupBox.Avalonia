@@ -63,7 +63,4 @@ jobs:
     # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
     # https://github.com/actions/setup-dotnet/tree/v3/#setting-up-authentication-for-nuget-feeds
     - name: .NET - Push NuPkg
-      run: |
-        dotnet nuget push ./publish/*.nupkg
-        --source https://api.nuget.org/v3/index.json
-        --api-key ${{ secrets.NUGET_TOKEN }};
+      run: dotnet nuget push ./publish/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
