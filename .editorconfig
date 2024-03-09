@@ -1,0 +1,9 @@
+[*.{axaml,xaml}]
+indent_style = space
+indent_size = 2
+
+xml_wrap_tags_and_pi = true
+xml_space_after_last_pi_attribute = true
+xml_space_before_self_closing = true
+xml_attribute_style = first_attribute_on_single_line
+xml_attribute_indent = align_by_first_attribute
