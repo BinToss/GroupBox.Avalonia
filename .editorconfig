@@ -1,3 +1,5 @@
+charset="utf-8-bom"
+
 [*.{axaml,xaml}]
 indent_style = space
 indent_size = 2
