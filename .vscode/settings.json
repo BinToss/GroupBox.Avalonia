@@ -1,4 +1,14 @@
 {
     "dotnet.defaultSolution": "GroupBox.Avalonia.sln",
-    "xml.codeLens.enabled": true
+    "xml.codeLens.enabled": true,
+    "filewatcher.commands": [
+        {
+            "vscodeTask": [
+                "workbench.action.tasks.runTask",
+                "npm: xstyler"
+            ],
+            "event": "onFileChange",
+            "match": ".*/.axaml"
+        }
+    ]
 }

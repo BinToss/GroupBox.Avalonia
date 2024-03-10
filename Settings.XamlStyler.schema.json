@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/Xavalon/XamlStyler/main/Settings.XamlStyler.schema.json",
+  "type": "object",
+  "properties": {
+    "IndentSize": {
+      "description": "XAML Styler (plugin only) detects and uses Visual Studio indent options by default. However, since xstyler.exe runs independently of Visual Studio, we are unable to detect those options. If you want to override the default behavior for either the plugin or xstyler.exe, you can set an extra property \"IndentSize\" in an external configuration.",
+      "type": "integer",
+      "default": 4
+    },
+    "IndentWithTabs": {
+      "description": "XAML Styler (plugin only) detects and uses Visual Studio insertTabs setting by default. However, since xstyler.exe runs independently of Visual Studio, we are unable to detect those options. If you want to override the default behavior for either the plugin or xstyler.exe, you can set an extra property \"IndentWithTabs\" in an external configuration.",
+      "type": "boolean",
+      "default": false
+    },
+    "AttributesTolerance": {
+      "type": "integer",
+      "default": 2
+    },
+    "KeepFirstAttributeOnSameLine": {
+      "type": "boolean",
+      "default": false
+    },
+    "MaxAttributeCharactersPerLine": {
+      "type": "integer",
+      "default": 0
+    },
+    "MaxAttributesPerLine": {
+      "type": "integer",
+      "default": 1
+    },
+    "NewlineExemptionElements": {
+      "type": "string",
+      "default": "RadialGradientBrush, GradientStop, LinearGradientBrush, ScaleTransform, SkewTransform, RotateTransform, TranslateTransform, Trigger, Condition, Setter"
+    },
+    "SeparateByGroups": {
+      "type": "boolean",
+      "default": false
+    },
+    "AttributeIndentation": {
+      "type": "integer",
+      "description": "Defines the number of spaces that attributes are indented on elements with more than one line of attributes. A value of 0 will align indentation with the first attribute.\nSee https://github.com/Xavalon/XamlStyler/wiki/Attribute-Formatting#attribute-indentation",
+      "default": 0
+    },
+    "AttributeIndentationStyle": {
+      "type": "integer",
+      "enum": [
+        {
+          "code": 0,
+          "description": "Mixed"
+        },
+        {
+          "code": 1,
+          "description": "Spaces"
+        }
+      ],
+      "default": 1
+    },
+    "RemoveDesignTimeReferences": {
+      "type": "boolean",
+      "default": false
+    },
+    "IgnoreDesignTimeReferencePrefix": {
+      "type": "boolean",
+      "default": false
+    },
+    "EnableAttributeReordering": {
+      "type": "boolean",
+      "default": true
+    },
+    "AttributeOrderingRuleGroups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "x:Class",
+        "xmlns, xmlns:x",
+        "xmlns:*",
+        "x:Key, Key, x:Name, Name, x:Uid, Uid, Title",
+        "Grid.Row, Grid.RowSpan, Grid.Column, Grid.ColumnSpan, Canvas.Left, Canvas.Top, Canvas.Right, Canvas.Bottom",
+        "Width, Height, MinWidth, MinHeight, MaxWidth, MaxHeight",
+        "Margin, Padding, HorizontalAlignment, VerticalAlignment, HorizontalContentAlignment, VerticalContentAlignment, Panel.ZIndex",
+        "*:*, *",
+        "PageSource, PageIndex, Offset, Color, TargetName, Property, Value, StartPoint, EndPoint",
+        "mc:Ignorable, d:IsDataSource, d:LayoutOverrides, d:IsStaticText",
+        "Storyboard.*, From, To, Duration"
+      ]
+    },
+    "FirstLineAttributes": {
+      "type": "string",
+      "default": ""
+    },
+    "OrderAttributesByName": {
+      "type": "boolean",
+      "default": true
+    },
+    "PutEndingBracketOnNewLine": {
+      "type": "boolean",
+      "default": false
+    },
+    "RemoveEndingTagOfEmptyElement": {
+      "type": "boolean",
+      "default": true
+    },
+    "SpaceBeforeClosingSlash": {
+      "type": "boolean",
+      "default": true
+    },
+    "RootElementLineBreakRule": {
+      "type": "integer",
+      "enum": [
+        {
+          "code": 0,
+          "description": "Default"
+        },
+        {
+          "code": 1,
+          "description": "Always"
+        },
+        {
+          "code": 2,
+          "description": "Never"
+        }
+      ],
+      "default": 0
+    },
+    "ReorderVSM": {
+      "type": "integer",
+      "enum": [
+        {
+          "code": 0,
+          "description": "None"
+        },
+        {
+          "code": 1,
+          "description": "First"
+        },
+        {
+          "code": 2,
+          "description": "Last"
+        }
+      ],
+      "default": 2
+    },
+    "ReorderGridChildren": {
+      "type": "boolean",
+      "default": false
+    },
+    "ReorderCanvasChildren": {
+      "type": "boolean",
+      "default": false
+    },
+    "ReorderSetters": {
+      "type": "integer",
+      "enum": [
+        {
+          "code": 0,
+          "description": "None"
+        },
+        {
+          "code": 1,
+          "description": "Property"
+        },
+        {
+          "code": 2,
+          "description": "TargetName"
+        },
+        {
+          "code": 3,
+          "description": "TargetNameThenProperty"
+        }
+      ],
+      "default": 0
+    },
+    "FormatMarkupExtension": {
+      "type": "boolean",
+      "default": true
+    },
+    "NoNewLineMarkupExtensions": {
+      "type": "string",
+      "default": "x:Bind, Binding"
+    },
+    "ThicknessSeparator": {
+      "type": "integer",
+      "enum": [
+        {
+          "code": 0,
+          "description": "None"
+        },
+        {
+          "code": 1,
+          "description": "Space"
+        },
+        {
+          "code": 2,
+          "description": "Comma"
+        }
+      ],
+      "default": 2
+    },
+    "ThicknessAttributes": {
+      "type": "string",
+      "default": "Margin, Padding, BorderThickness, ThumbnailClipMargin"
+    },
+    "FormatOnSave": {
+      "type": "boolean",
+      "default": true
+    },
+    "CommentPadding": {
+      "type": "integer",
+      "default": 2
+    }
+  }
+}

@@ -1,9 +1,11 @@
 {
   "description": "dev-environment utilities",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky install && dotnet tool restore",
+    "format": "dotnet format && npm run xstyler",
     "release": "npx semantic-release",
-    "semantic-release": "npx semantic-release"
+    "semantic-release": "npx semantic-release",
+    "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
     "@halospv3/hce.shared-config": "^1.2.0",

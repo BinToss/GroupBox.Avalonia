@@ -1,0 +1,22 @@
+{
+    "$schema": "./Settings.XamlStyler.schema.json",
+    "IndentSize": 2,
+    "KeepFirstAttributeOnSameLine": true,
+    "AttributesTolerance": 2,
+    "MaxAttributesPerLine": 2,
+    "SeparateByGroups": true,
+    "AttributeOrderingRuleGroups": [
+        "x:Class",
+        "xmlns",
+        "xmlns:x",
+        "xmlns:*",
+        "x:Key, Key, x:Name, Name, x:Uid, Uid, Title, Header",
+        "Grid.Row, Grid.RowSpan, Grid.Column, Grid.ColumnSpan, Canvas.Left, Canvas.Top, Canvas.Right, Canvas.Bottom",
+        "Width, Height, MinWidth, MinHeight, MaxWidth, MaxHeight",
+        "Margin, Padding, HorizontalAlignment, VerticalAlignment, HorizontalContentAlignment, VerticalContentAlignment, Panel.ZIndex",
+        "mc:Ignorable, d:DesignWidth, d:DesignHeight, d:IsDataSource, d:LayoutOverrides, d:IsStaticText",
+        "*:*, *",
+        "PageSource, PageIndex, Offset, Color, TargetName, Property, Value, StartPoint, EndPoint",
+        "Storyboard.*, From, To, Duration"
+    ]
+}
