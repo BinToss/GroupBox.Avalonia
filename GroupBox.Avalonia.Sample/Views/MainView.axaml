@@ -4,6 +4,7 @@
              xmlns:ctrl="using:GroupBox.Avalonia.Controls"
              xmlns:gbact="using:GroupBox.Avalonia.ControlThemes">
 
+  <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
       <Grid Margin="4"
             ColumnDefinitions="auto *" RowDefinitions="auto *">
 
@@ -43,4 +44,5 @@
             <TextBox>Sample Text</TextBox>
         </ctrl:GroupBox>
     </Grid>
+  </ScrollViewer>
 </UserControl>
