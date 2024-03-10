@@ -21,11 +21,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           cache: npm
-      - run: npm ci
-
+      - run: |
+          npm ci
+          npm audit signatures
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
+          dotnet-version: "8.x"
 
       - name: Pack Solution
         run: dotnet pack
