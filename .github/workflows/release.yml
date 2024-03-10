@@ -49,15 +49,20 @@ jobs:
         $pattern = "(?<=\[!\[avalonia]\(https:\/\/img\.shields\.io\/badge\/avalonia-v)\d+\.\d+\.\d+";
         (Get-Content -Path README.md -Raw) -creplace $pattern, $AV | Set-Content -NoNewLine -Path README.md
 
-    # [release steps](https://github.com/semantic-release/semantic-release#release-steps)
-    # Plugins add sub-steps e.g. for Prepare, @semantic-release/git will "Create a release commit, including configurable file assets."
+    # [release#
+    # steps](https://github.com/semantic-release/semantic-release#release-steps)
+    # Plugins add sub-steps e.g. @semantic-release/git's Prepare will create a
+    # release commit, including configurable file assets." 
+    # After the new version Git tagged, @semantic-release/exec runs
+    # `dotnet publish`. @semantic-release/github adds the artifacts to the
+    # GitHub Release.
     - name: Semantic Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       run: npx semantic-release
 
-    - name: .NET - Pack NuPkg
+    - name: .NET - Pack NuPkg with new version
       run: dotnet pack ./GroupBox.Avalonia/GroupBox.Avalonia.csproj -o ./publish/
 
     # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
