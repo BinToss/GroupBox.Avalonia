@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
+    <Watch Include="**/*.axaml;../GroupBox.Avalonia/**/*.axaml" />
 
     <ProjectReference Include="../GroupBox.Avalonia/GroupBox.Avalonia.csproj" />
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
