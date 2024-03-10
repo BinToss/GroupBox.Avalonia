@@ -5,44 +5,44 @@
              xmlns:gbact="using:GroupBox.Avalonia.ControlThemes">
 
   <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-      <Grid Margin="4"
-            ColumnDefinitions="auto *" RowDefinitions="auto *">
+    <Grid Margin="4"
+          ColumnDefinitions="auto *" RowDefinitions="auto *">
 
-        <ctrl:GroupBox Header="Simple Classic"
-                       Grid.Column="0" Grid.Row="0">
-            <ctrl:GroupBox.Styles>
-                <SimpleTheme />
-                <gbact:ClassicTheme />
-            </ctrl:GroupBox.Styles>
-            <TextBox>Sample Text</TextBox>
-          </ctrl:GroupBox>
-
-        <ctrl:GroupBox Header="Fluent Classic"
-                       Grid.Column="0" Grid.Row="1">
-            <ctrl:GroupBox.Styles>
-                <FluentTheme />
-                <gbact:ClassicTheme />
-            </ctrl:GroupBox.Styles>
-            <TextBox>Sample Text</TextBox>
+      <ctrl:GroupBox Header="Simple Classic"
+                     Grid.Column="0" Grid.Row="0">
+          <ctrl:GroupBox.Styles>
+              <SimpleTheme />
+              <gbact:ClassicTheme />
+          </ctrl:GroupBox.Styles>
+          <TextBox>Sample Text</TextBox>
         </ctrl:GroupBox>
 
-        <ctrl:GroupBox Header="Simple Modern"
-                       Grid.Column="1" Grid.Row="0">
-            <ctrl:GroupBox.Styles>
-                <SimpleTheme />
-                <gbact:ModernTheme />
-            </ctrl:GroupBox.Styles>
-            <TextBox>Sample Text</TextBox>
-        </ctrl:GroupBox>
+      <ctrl:GroupBox Header="Fluent Classic"
+                     Grid.Column="0" Grid.Row="1">
+          <ctrl:GroupBox.Styles>
+              <FluentTheme />
+              <gbact:ClassicTheme />
+          </ctrl:GroupBox.Styles>
+          <TextBox>Sample Text</TextBox>
+      </ctrl:GroupBox>
 
-        <ctrl:GroupBox Header="Fluent Modern"
-                       Grid.Column="1" Grid.Row="1">
-            <ctrl:GroupBox.Styles>
-                <FluentTheme />
-                <gbact:ModernTheme />
-            </ctrl:GroupBox.Styles>
-            <TextBox>Sample Text</TextBox>
-        </ctrl:GroupBox>
+      <ctrl:GroupBox Header="Simple Modern"
+                     Grid.Column="1" Grid.Row="0">
+          <ctrl:GroupBox.Styles>
+              <SimpleTheme />
+              <gbact:ModernTheme />
+          </ctrl:GroupBox.Styles>
+          <TextBox>Sample Text</TextBox>
+      </ctrl:GroupBox>
+
+      <ctrl:GroupBox Header="Fluent Modern"
+                     Grid.Column="1" Grid.Row="1">
+          <ctrl:GroupBox.Styles>
+              <FluentTheme />
+              <gbact:ModernTheme />
+          </ctrl:GroupBox.Styles>
+          <TextBox>Sample Text</TextBox>
+      </ctrl:GroupBox>
     </Grid>
   </ScrollViewer>
 </UserControl>
