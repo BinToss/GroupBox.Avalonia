@@ -1,4 +1,4 @@
-<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
+﻿<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:ctrl="using:GroupBox.Avalonia.Controls"
