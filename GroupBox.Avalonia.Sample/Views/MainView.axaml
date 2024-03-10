@@ -14,7 +14,10 @@
               <SimpleTheme />
               <gbact:ClassicTheme />
           </ctrl:GroupBox.Styles>
-          <TextBox>Sample Text</TextBox>
+        <StackPanel>
+          <CheckBox>CheckBox0</CheckBox>
+          <CheckBox>CheckBox1</CheckBox>
+        </StackPanel>
         </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Fluent Classic"
@@ -23,7 +26,10 @@
               <FluentTheme />
               <gbact:ClassicTheme />
           </ctrl:GroupBox.Styles>
-          <TextBox>Sample Text</TextBox>
+        <StackPanel>
+          <CheckBox>CheckBox0</CheckBox>
+          <CheckBox>CheckBox1</CheckBox>
+        </StackPanel>
       </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Simple Modern"
@@ -32,7 +38,10 @@
               <SimpleTheme />
               <gbact:ModernTheme />
           </ctrl:GroupBox.Styles>
-          <TextBox>Sample Text</TextBox>
+        <StackPanel>
+          <CheckBox>CheckBox0</CheckBox>
+          <CheckBox>CheckBox1</CheckBox>
+        </StackPanel>
       </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Fluent Modern"
@@ -41,7 +50,10 @@
               <FluentTheme />
               <gbact:ModernTheme />
           </ctrl:GroupBox.Styles>
-          <TextBox>Sample Text</TextBox>
+        <StackPanel>
+          <CheckBox>CheckBox0</CheckBox>
+          <CheckBox>CheckBox1</CheckBox>
+        </StackPanel>
       </ctrl:GroupBox>
     </Grid>
   </ScrollViewer>
