@@ -10,22 +10,22 @@
 
       <ctrl:GroupBox Header="Simple Classic"
                      Grid.Column="0" Grid.Row="0">
-          <ctrl:GroupBox.Styles>
-              <SimpleTheme />
-              <gbact:ClassicTheme />
-          </ctrl:GroupBox.Styles>
+        <ctrl:GroupBox.Styles>
+            <SimpleTheme />
+            <gbact:ClassicTheme />
+        </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
           <CheckBox>CheckBox1</CheckBox>
         </StackPanel>
-        </ctrl:GroupBox>
+      </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Fluent Classic"
                      Grid.Column="0" Grid.Row="1">
-          <ctrl:GroupBox.Styles>
-              <FluentTheme />
-              <gbact:ClassicTheme />
-          </ctrl:GroupBox.Styles>
+        <ctrl:GroupBox.Styles>
+            <FluentTheme />
+            <gbact:ClassicTheme />
+        </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
           <CheckBox>CheckBox1</CheckBox>
@@ -34,10 +34,10 @@
 
       <ctrl:GroupBox Header="Simple Modern"
                      Grid.Column="1" Grid.Row="0">
-          <ctrl:GroupBox.Styles>
-              <SimpleTheme />
-              <gbact:ModernTheme />
-          </ctrl:GroupBox.Styles>
+        <ctrl:GroupBox.Styles>
+            <SimpleTheme />
+            <gbact:ModernTheme />
+        </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
           <CheckBox>CheckBox1</CheckBox>
@@ -46,10 +46,10 @@
 
       <ctrl:GroupBox Header="Fluent Modern"
                      Grid.Column="1" Grid.Row="1">
-          <ctrl:GroupBox.Styles>
-              <FluentTheme />
-              <gbact:ModernTheme />
-          </ctrl:GroupBox.Styles>
+        <ctrl:GroupBox.Styles>
+            <FluentTheme />
+            <gbact:ModernTheme />
+        </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
           <CheckBox>CheckBox1</CheckBox>
