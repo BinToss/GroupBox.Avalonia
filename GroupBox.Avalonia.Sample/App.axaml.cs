@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using GroupBox.Avalonia.Sample.Views;
 using HotAvalonia;
 
 namespace GroupBox.Avalonia.Sample;

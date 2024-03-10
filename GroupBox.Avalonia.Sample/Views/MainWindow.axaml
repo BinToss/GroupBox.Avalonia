@@ -1,0 +1,10 @@
+﻿<Window x:Class="GroupBox.Avalonia.Sample.Views.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="using:GroupBox.Avalonia.Sample.Views"
+        Title="Avalonian GroupBox Sample"
+        Background="Transparent" Icon="/Assets/avalonia-logo.ico"
+        SizeToContent="WidthAndHeight" TransparencyLevelHint="AcrylicBlur">
+
+  <view:MainView />
+</Window>

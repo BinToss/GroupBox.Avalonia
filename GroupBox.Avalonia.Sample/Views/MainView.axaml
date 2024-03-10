@@ -1,16 +1,10 @@
-<Window xmlns="https://github.com/avaloniaui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-    xmlns:gbac="using:GroupBox.Avalonia.Controls"
-    xmlns:gbact="using:GroupBox.Avalonia.ControlThemes"
-    x:Class="GroupBox.Avalonia.Sample.MainWindow"
-    Title="GroupBox.Avalonia.Sample"
-    TransparencyLevelHint="AcrylicBlur"
-    Background="Transparent"
-    SizeToContent="WidthAndHeight">
-    <Grid>
+﻿<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:gbac="using:GroupBox.Avalonia.Controls"
+             xmlns:gbact="using:GroupBox.Avalonia.ControlThemes">
+
+      <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
@@ -60,4 +54,4 @@
             </gbac:GroupBox>
         </Panel>
     </Grid>
-</Window>
+</UserControl>
