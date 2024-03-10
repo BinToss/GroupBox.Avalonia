@@ -7,6 +7,11 @@
   <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
     <Grid Margin="4"
           ColumnDefinitions="auto *" RowDefinitions="auto *">
+      <Grid.Styles>
+        <Style Selector="Grid &gt; :is(Layoutable)">
+          <Setter Property="Margin" Value="4" />
+        </Style>
+      </Grid.Styles>
 
       <ctrl:GroupBox Header="Simple Classic"
                      Grid.Column="0" Grid.Row="0">
