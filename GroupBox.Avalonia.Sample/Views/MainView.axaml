@@ -1,50 +1,50 @@
 <UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:gbac="using:GroupBox.Avalonia.Controls"
+             xmlns:ctrl="using:GroupBox.Avalonia.Controls"
              xmlns:gbact="using:GroupBox.Avalonia.ControlThemes">
 
       <Grid Margin="4"
             ColumnDefinitions="auto *" RowDefinitions="auto *">
 
         <Panel Grid.Column="0" Grid.Row="0">
-            <gbac:GroupBox Header="Simple Classic">
-                <gbac:GroupBox.Styles>
+            <ctrl:GroupBox Header="Simple Classic">
+                <ctrl:GroupBox.Styles>
                     <SimpleTheme />
                     <gbact:ClassicTheme />
-                </gbac:GroupBox.Styles>
+                </ctrl:GroupBox.Styles>
                 <TextBox>Sample Text</TextBox>
-            </gbac:GroupBox>
+            </ctrl:GroupBox>
         </Panel>
 
         <Panel Grid.Column="0" Grid.Row="1">
-            <gbac:GroupBox Header="Fluent Classic">
-                <gbac:GroupBox.Styles>
+            <ctrl:GroupBox Header="Fluent Classic">
+                <ctrl:GroupBox.Styles>
                     <FluentTheme />
                     <gbact:ClassicTheme />
-                </gbac:GroupBox.Styles>
+                </ctrl:GroupBox.Styles>
                 <TextBox>Sample Text</TextBox>
-            </gbac:GroupBox>
+            </ctrl:GroupBox>
         </Panel>
 
         <Panel Grid.Column="1" Grid.Row="0">
-            <gbac:GroupBox Header="Simple Modern">
-                <gbac:GroupBox.Styles>
+            <ctrl:GroupBox Header="Simple Modern">
+                <ctrl:GroupBox.Styles>
                     <SimpleTheme />
                     <gbact:ModernTheme />
-                </gbac:GroupBox.Styles>
+                </ctrl:GroupBox.Styles>
                 <TextBox>Sample Text</TextBox>
-            </gbac:GroupBox>
+            </ctrl:GroupBox>
         </Panel>
 
         <Panel Grid.Column="1" Grid.Row="1">
-            <gbac:GroupBox Header="Fluent Modern">
-                <gbac:GroupBox.Styles>
+            <ctrl:GroupBox Header="Fluent Modern">
+                <ctrl:GroupBox.Styles>
                     <FluentTheme />
                     <gbact:ModernTheme />
-                </gbac:GroupBox.Styles>
+                </ctrl:GroupBox.Styles>
                 <TextBox>Sample Text</TextBox>
-            </gbac:GroupBox>
+            </ctrl:GroupBox>
         </Panel>
     </Grid>
 </UserControl>
