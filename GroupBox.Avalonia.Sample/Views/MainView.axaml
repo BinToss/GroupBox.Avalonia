@@ -7,44 +7,40 @@
       <Grid Margin="4"
             ColumnDefinitions="auto *" RowDefinitions="auto *">
 
-        <Panel Grid.Column="0" Grid.Row="0">
-            <ctrl:GroupBox Header="Simple Classic">
-                <ctrl:GroupBox.Styles>
-                    <SimpleTheme />
-                    <gbact:ClassicTheme />
-                </ctrl:GroupBox.Styles>
-                <TextBox>Sample Text</TextBox>
-            </ctrl:GroupBox>
-        </Panel>
+        <ctrl:GroupBox Header="Simple Classic"
+                       Grid.Column="0" Grid.Row="0">
+            <ctrl:GroupBox.Styles>
+                <SimpleTheme />
+                <gbact:ClassicTheme />
+            </ctrl:GroupBox.Styles>
+            <TextBox>Sample Text</TextBox>
+          </ctrl:GroupBox>
 
-        <Panel Grid.Column="0" Grid.Row="1">
-            <ctrl:GroupBox Header="Fluent Classic">
-                <ctrl:GroupBox.Styles>
-                    <FluentTheme />
-                    <gbact:ClassicTheme />
-                </ctrl:GroupBox.Styles>
-                <TextBox>Sample Text</TextBox>
-            </ctrl:GroupBox>
-        </Panel>
+        <ctrl:GroupBox Header="Fluent Classic"
+                       Grid.Column="0" Grid.Row="1">
+            <ctrl:GroupBox.Styles>
+                <FluentTheme />
+                <gbact:ClassicTheme />
+            </ctrl:GroupBox.Styles>
+            <TextBox>Sample Text</TextBox>
+        </ctrl:GroupBox>
 
-        <Panel Grid.Column="1" Grid.Row="0">
-            <ctrl:GroupBox Header="Simple Modern">
-                <ctrl:GroupBox.Styles>
-                    <SimpleTheme />
-                    <gbact:ModernTheme />
-                </ctrl:GroupBox.Styles>
-                <TextBox>Sample Text</TextBox>
-            </ctrl:GroupBox>
-        </Panel>
+        <ctrl:GroupBox Header="Simple Modern"
+                       Grid.Column="1" Grid.Row="0">
+            <ctrl:GroupBox.Styles>
+                <SimpleTheme />
+                <gbact:ModernTheme />
+            </ctrl:GroupBox.Styles>
+            <TextBox>Sample Text</TextBox>
+        </ctrl:GroupBox>
 
-        <Panel Grid.Column="1" Grid.Row="1">
-            <ctrl:GroupBox Header="Fluent Modern">
-                <ctrl:GroupBox.Styles>
-                    <FluentTheme />
-                    <gbact:ModernTheme />
-                </ctrl:GroupBox.Styles>
-                <TextBox>Sample Text</TextBox>
-            </ctrl:GroupBox>
-        </Panel>
+        <ctrl:GroupBox Header="Fluent Modern"
+                       Grid.Column="1" Grid.Row="1">
+            <ctrl:GroupBox.Styles>
+                <FluentTheme />
+                <gbact:ModernTheme />
+            </ctrl:GroupBox.Styles>
+            <TextBox>Sample Text</TextBox>
+        </ctrl:GroupBox>
     </Grid>
 </UserControl>
