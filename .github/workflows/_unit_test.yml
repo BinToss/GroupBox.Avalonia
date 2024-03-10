@@ -6,12 +6,11 @@ env:
 
 jobs:
   unit_test:
-    name: ${{ matrix.os }} - ${{ matrix.targetFramework }}
+    name: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest]
-        targetFramework: [ 'net8.0', 'net7.0', 'net6.0' ]
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -26,6 +25,6 @@ jobs:
 
       - uses: actions/setup-dotnet@v4.0.0
         with:
-          dotnet-version: '8.x'
+          dotnet-version: "8.x"
 
-      - run: dotnet test --framework=${{ matrix.targetFramework }} 
+      - run: dotnet test
