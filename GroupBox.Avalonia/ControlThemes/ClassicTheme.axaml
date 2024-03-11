@@ -8,21 +8,12 @@
   <Style Selector="ctrl|GroupBox">
     <Setter Property="Template">
       <ControlTemplate>
-        <Grid Name="GBGrid">
-
+        <Grid Name="GBGrid"
+              ColumnDefinitions="Auto *" RowDefinitions="Auto *">
           <Grid.Resources>
             <sys:Double x:Key="GBBorderPadding">3</sys:Double>
             <sys:Double x:Key="GBBorderMargin">0</sys:Double>
           </Grid.Resources>
-
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-          </Grid.RowDefinitions>
-          <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-          </Grid.ColumnDefinitions>
 
           <TextBlock Name="GBHeaderText"
                      Margin="5,1"
