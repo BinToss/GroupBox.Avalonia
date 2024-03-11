@@ -28,9 +28,7 @@
                      Margin="5,1"
                      Padding="5,0"
                      Text="{TemplateBinding Header}"
-                     TextBlock.FontWeight="Bold">
-          </TextBlock>
-
+                     TextBlock.FontWei1ght="Bold"/>
           <Border Name="GBBorder"
                   Grid.RowSpan="2" Grid.ColumnSpan="2"
                   BorderBrush="{DynamicResource ThemeBorderMidBrush}"
