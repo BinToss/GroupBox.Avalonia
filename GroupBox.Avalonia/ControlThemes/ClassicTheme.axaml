@@ -31,11 +31,11 @@
                      TextBlock.FontWeight="Bold">
           </TextBlock>
 
-          <!-- DynamicResource ThemeBorderThickness; TemplateBinding CornerRadius -->
           <Border Name="GBBorder"
                   Grid.RowSpan="2" Grid.ColumnSpan="2"
                   BorderBrush="{DynamicResource ThemeBorderMidBrush}"
-                  BorderThickness="1">
+                  BorderThickness="1" CornerRadius="3"
+                  RenderOptions.EdgeMode="Aliased">
             <Border.Clip>
               <MultiBinding Converter="{x:Static conv:StaticConverters.ConvertBoundsToOuterBorder}">
                 <!--  Parent  -->
@@ -62,7 +62,9 @@
                 <Binding Source="{StaticResource GBBorderMargin}" />
               </MultiBinding>
             </Border.Margin>
-            <ContentPresenter Content="{TemplateBinding Content}" />
+            <ContentPresenter Name="PART_ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              RenderOptions.EdgeMode="Antialias" />
           </Border>
         </Grid>
       </ControlTemplate>
