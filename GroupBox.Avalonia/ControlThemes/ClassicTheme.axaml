@@ -2,7 +2,8 @@
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:conv="using:GroupBox.Avalonia.Converters"
-        xmlns:gb="using:GroupBox.Avalonia.Controls">
+        xmlns:gb="using:GroupBox.Avalonia.Controls"
+        xmlns:sys="using:System">
 
   <Style Selector="gb|GroupBox">
     <Setter Property="Template">
@@ -10,8 +11,8 @@
         <Grid Name="GBGrid">
 
           <Grid.Resources>
-            <Thickness x:Key="BorderMargin">0,10,0,0</Thickness>
-            <Thickness x:Key="BorderPadding">5,10,5,5</Thickness>
+            <sys:Double x:Key="GBBorderPadding">3</sys:Double>
+            <sys:Double x:Key="GBBorderMargin">0</sys:Double>
           </Grid.Resources>
 
           <Grid.RowDefinitions>
@@ -32,8 +33,6 @@
           <!-- DynamicResource ThemeBorderThickness; TemplateBinding CornerRadius -->
           <Border Name="GBBorder"
                   Grid.RowSpan="2" Grid.ColumnSpan="2"
-                  Margin="{DynamicResource BorderMargin}"
-                  Padding="{DynamicResource BorderPadding}"
                   BorderBrush="{DynamicResource ThemeBorderMidBrush}"
                   BorderThickness="1">
             <Border.Clip>
@@ -46,6 +45,22 @@
                 <Binding Converter="{x:Static conv:StaticConverters.ThicknessRectConverter}" Path="#GBBorder.Margin" />
               </MultiBinding>
             </Border.Clip>
+            <Border.Padding>
+              <MultiBinding Converter="{x:Static conv:StaticConverters.ConvertDoublesToThickness}">
+                <Binding Source="{StaticResource GBBorderPadding}" />
+                <Binding Converter="{x:Static conv:StaticConverters.BoundsToHeaderHeightDividedByTwo}" Path="#GBHeaderText.Bounds" />
+                <Binding Source="{StaticResource GBBorderPadding}" />
+                <Binding Source="{StaticResource GBBorderPadding}" />
+              </MultiBinding>
+            </Border.Padding>
+            <Border.Margin>
+              <MultiBinding Converter="{x:Static conv:StaticConverters.ConvertDoublesToThickness}">
+                <Binding Source="{StaticResource GBBorderMargin}" />
+                <Binding Converter="{x:Static conv:StaticConverters.BoundsToHeaderHeightDividedByTwo}" Path="#GBHeaderText.Bounds" />
+                <Binding Source="{StaticResource GBBorderMargin}" />
+                <Binding Source="{StaticResource GBBorderMargin}" />
+              </MultiBinding>
+            </Border.Margin>
             <ContentPresenter Content="{TemplateBinding Content}" />
           </Border>
         </Grid>
