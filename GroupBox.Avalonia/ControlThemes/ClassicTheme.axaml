@@ -25,9 +25,10 @@
           </Grid.ColumnDefinitions>
 
           <TextBlock Name="GBHeaderText"
-                     Margin="5,0,0,0"
-                     Padding="5,0,5,0"
-                     TextBlock.FontWeight="Bold" Text="{TemplateBinding Header}">
+                     Margin="5,1"
+                     Padding="5,0"
+                     Text="{TemplateBinding Header}"
+                     TextBlock.FontWeight="Bold">
           </TextBlock>
 
           <!-- DynamicResource ThemeBorderThickness; TemplateBinding CornerRadius -->
