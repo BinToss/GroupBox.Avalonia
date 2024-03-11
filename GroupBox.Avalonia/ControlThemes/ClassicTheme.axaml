@@ -2,10 +2,10 @@
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:conv="using:GroupBox.Avalonia.Converters"
-        xmlns:gb="using:GroupBox.Avalonia.Controls"
+        xmlns:ctrl="using:GroupBox.Avalonia.Controls"
         xmlns:sys="using:System">
 
-  <Style Selector="gb|GroupBox">
+  <Style Selector="ctrl|GroupBox">
     <Setter Property="Template">
       <ControlTemplate>
         <Grid Name="GBGrid">
