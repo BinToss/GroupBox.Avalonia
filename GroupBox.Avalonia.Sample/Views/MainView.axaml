@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
+<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:ctrl="using:GroupBox.Avalonia.Controls"
@@ -14,7 +14,7 @@
       </Grid.Styles>
 
       <ctrl:GroupBox Header="Simple Classic"
-                     Grid.Column="0" Grid.Row="0">
+                     Grid.Row="0" Grid.Column="0">
         <ctrl:GroupBox.Styles>
             <SimpleTheme />
             <gbact:ClassicTheme />
@@ -26,7 +26,7 @@
       </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Fluent Classic"
-                     Grid.Column="0" Grid.Row="1">
+                     Grid.Row="1" Grid.Column="0">
         <ctrl:GroupBox.Styles>
             <FluentTheme />
             <gbact:ClassicTheme />
@@ -38,7 +38,7 @@
       </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Simple Modern"
-                     Grid.Column="1" Grid.Row="0">
+                     Grid.Row="0" Grid.Column="1">
         <ctrl:GroupBox.Styles>
             <SimpleTheme />
             <gbact:ModernTheme />
@@ -50,7 +50,7 @@
       </ctrl:GroupBox>
 
       <ctrl:GroupBox Header="Fluent Modern"
-                     Grid.Column="1" Grid.Row="1">
+                     Grid.Row="1" Grid.Column="1">
         <ctrl:GroupBox.Styles>
             <FluentTheme />
             <gbact:ModernTheme />
