@@ -1,8 +1,8 @@
-<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
+﻿<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:ctrl="using:GroupBox.Avalonia.Controls"
-             xmlns:gbact="using:GroupBox.Avalonia.ControlThemes">
+             xmlns:themes="using:GroupBox.Avalonia.Themes">
 
   <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
     <Grid Margin="4"
@@ -16,8 +16,8 @@
       <ctrl:GroupBox Header="Simple Classic"
                      Grid.Row="0" Grid.Column="0">
         <ctrl:GroupBox.Styles>
-            <SimpleTheme />
-            <gbact:ClassicTheme />
+          <SimpleTheme />
+          <themes:ClassicTheme />
         </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
@@ -28,8 +28,8 @@
       <ctrl:GroupBox Header="Fluent Classic"
                      Grid.Row="1" Grid.Column="0">
         <ctrl:GroupBox.Styles>
-            <FluentTheme />
-            <gbact:ClassicTheme />
+          <FluentTheme />
+          <themes:ClassicTheme />
         </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
@@ -40,8 +40,8 @@
       <ctrl:GroupBox Header="Simple Modern"
                      Grid.Row="0" Grid.Column="1">
         <ctrl:GroupBox.Styles>
-            <SimpleTheme />
-            <gbact:ModernTheme />
+          <SimpleTheme />
+          <themes:ModernTheme />
         </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
@@ -52,8 +52,8 @@
       <ctrl:GroupBox Header="Fluent Modern"
                      Grid.Row="1" Grid.Column="1">
         <ctrl:GroupBox.Styles>
-            <FluentTheme />
-            <gbact:ModernTheme />
+          <FluentTheme />
+          <themes:ModernTheme />
         </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>

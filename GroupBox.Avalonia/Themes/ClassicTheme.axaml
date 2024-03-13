@@ -1,4 +1,4 @@
-<Styles x:Class="GroupBox.Avalonia.ControlThemes.ClassicTheme"
+﻿<Styles x:Class="GroupBox.Avalonia.Themes.ClassicTheme"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:conv="using:GroupBox.Avalonia.Converters"
@@ -16,10 +16,9 @@
           </Grid.Resources>
 
           <TextBlock Name="GBHeaderText"
-                     Margin="5,1"
-                     Padding="5,0"
+                     Margin="5,1" Padding="5,0"
                      Text="{TemplateBinding Header}"
-                     TextBlock.FontWei1ght="Bold"/>
+                     TextBlock.FontWeight="Bold" />
           <Border Name="GBBorder"
                   Grid.RowSpan="2" Grid.ColumnSpan="2"
                   BorderBrush="{DynamicResource ThemeBorderMidBrush}"

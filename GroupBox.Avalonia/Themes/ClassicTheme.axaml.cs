@@ -1,8 +1,7 @@
-using System;
 using Avalonia.Markup.Xaml;
 using Avalonia.Styling;
 
-namespace GroupBox.Avalonia.ControlThemes;
+namespace GroupBox.Avalonia.Themes;
 
 public partial class ClassicTheme : Styles
 {
