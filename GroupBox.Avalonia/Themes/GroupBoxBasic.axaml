@@ -1,7 +1,6 @@
-﻿<Styles x:Class="GroupBox.Avalonia.Themes.ModernTheme"
-        xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:ctrl="using:GroupBox.Avalonia.Controls">
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="using:GroupBox.Avalonia.Controls">
 
   <!--
     BasedOn="{StaticResource {x:Type HeaderedContentControl}}" doesn't work.
@@ -9,14 +8,14 @@
     src/Avalonia.Themes.SimpleTheme/Controls/HeaderedContentControl.xaml, but is
     not included with releases 11.0.9, 11.0.10.
   -->
-  <Style Selector="ctrl|GroupBox">
+  <ControlTheme x:Key="{x:Type ctrl:GroupBox}" TargetType="ctrl:GroupBox">
     <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
     <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
     <Setter Property="CornerRadius" Value="3"/>
     <Setter Property="Padding" Value="8"/>
     <Setter Property="Template">
       <ControlTemplate>
-        <Grid RowDefinitions="Auto *">
+        <Grid RowDefinitions="auto *">
           <ContentPresenter Name="PART_HeaderPresenter"
                             HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -38,10 +37,10 @@
                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                               Content="{TemplateBinding Content}"
                               ContentTemplate="{TemplateBinding ContentTemplate}"
-                              RecognizesAccessKey="True"/>
+                              RecognizesAccessKey="True" />
           </Border>
         </Grid>
       </ControlTemplate>
     </Setter>
-  </Style>
-</Styles>
+  </ControlTheme>
+</ResourceDictionary>

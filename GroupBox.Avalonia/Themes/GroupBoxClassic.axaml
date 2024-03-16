@@ -1,13 +1,15 @@
-﻿<Styles x:Class="GroupBox.Avalonia.Themes.ClassicTheme"
-        xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:conv="using:GroupBox.Avalonia.Converters"
-        xmlns:ctrl="using:GroupBox.Avalonia.Controls"
-        xmlns:sys="using:System">
+﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:conv="using:GroupBox.Avalonia.Converters"
+                    xmlns:ctrl="using:GroupBox.Avalonia.Controls"
+                    xmlns:sys="using:System">
 
-  <Style Selector="ctrl|GroupBox">
-    <!-- Copied from SimpleTheme's .../Accents/Base.xaml. These are not defined in FluentTheme. -->
-    <Style.Resources>
+
+  <ControlTheme x:Key="GroupBoxClassic"
+                BasedOn="{StaticResource {x:Type ctrl:GroupBox}}"
+                TargetType="ctrl:GroupBox">
+  <!-- Copied from SimpleTheme's .../Accents/Base.xaml. These are not defined in FluentTheme. -->
+    <ControlTheme.Resources>
       <ResourceDictionary>
         <ResourceDictionary.ThemeDictionaries>
           <ResourceDictionary x:Key="Light">
@@ -20,7 +22,7 @@
           </ResourceDictionary>
         </ResourceDictionary.ThemeDictionaries>
       </ResourceDictionary>
-    </Style.Resources>
+    </ControlTheme.Resources>
 
     <Setter Property="Template">
       <ControlTemplate>
@@ -74,5 +76,5 @@
         </Grid>
       </ControlTemplate>
     </Setter>
-  </Style>
-</Styles>
+  </ControlTheme>
+</ResourceDictionary>

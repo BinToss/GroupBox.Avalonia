@@ -14,21 +14,16 @@
       </Grid.Styles>
 
       <ctrl:GroupBox Header="Classic"
+                     Theme="{StaticResource GroupBoxClassic}"
                      Grid.Row="0" Grid.Column="0">
-        <ctrl:GroupBox.Styles>
-          <themes:ClassicTheme />
-        </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
           <CheckBox>CheckBox1</CheckBox>
         </StackPanel>
       </ctrl:GroupBox>
 
-      <ctrl:GroupBox Header="Modern"
+      <ctrl:GroupBox Header="Basic (default)"
                      Grid.Row="0" Grid.Column="1">
-        <ctrl:GroupBox.Styles>
-          <themes:ModernTheme />
-        </ctrl:GroupBox.Styles>
         <StackPanel>
           <CheckBox>CheckBox0</CheckBox>
           <CheckBox>CheckBox1</CheckBox>
