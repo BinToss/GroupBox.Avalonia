@@ -38,10 +38,10 @@ jobs:
         with:
           dotnet-version: "8.x"
 
-      - name: NPM - Clean Install, Audit and Verify Packages
-        run: |
-          npm ci
-          npm audit signatures
+      - name: NPM - Clean Install
+        run: npm ci
+      - name: NPM - Audit Signatures
+        run: npm audit signatures
 
       - name: Update version in README's Avalonia badge
         shell: pwsh

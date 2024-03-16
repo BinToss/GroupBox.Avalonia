@@ -6,7 +6,7 @@ env:
 
 jobs:
   build:
-    name: ${{matrix.os}}
+    name: Build (${{matrix.os}})
     strategy:
       fail-fast: false
       matrix:
@@ -22,12 +22,15 @@ jobs:
         with:
           node-version: "lts/*"
           cache: npm
-      - run: |
-          npm ci
-          npm audit signatures
+
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.x"
+
+      - name: NPM - Clean Install
+        run: npm ci
+      - name: NPM - Audit Signatures
+        run: npm audit signatures
 
       - name: Pack Solution
         run: dotnet pack

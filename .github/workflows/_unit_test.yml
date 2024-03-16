@@ -6,7 +6,7 @@ env:
 
 jobs:
   unit_test:
-    name: ${{ matrix.os }}
+    name: Unit Tests (${{ matrix.os }})
     strategy:
       fail-fast: false
       matrix:
