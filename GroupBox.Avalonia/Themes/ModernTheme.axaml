@@ -11,8 +11,9 @@
   -->
   <Style Selector="ctrl|GroupBox">
     <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
-    <Setter Property="BorderThickness" Value="2"/>
-    <Setter Property="CornerRadius" Value="5"/>
+    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
+    <Setter Property="CornerRadius" Value="3"/>
+    <Setter Property="Padding" Value="8"/>
     <Setter Property="Template">
       <ControlTemplate>
         <Grid RowDefinitions="Auto *">
