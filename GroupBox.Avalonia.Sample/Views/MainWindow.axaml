@@ -1,10 +1,27 @@
-﻿<Window x:Class="GroupBox.Avalonia.Sample.Views.MainWindow"
+<Window x:Class="GroupBox.Avalonia.Sample.Views.MainWindow"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:view="using:GroupBox.Avalonia.Sample.Views"
         Title="Avalonian GroupBox Sample"
-        Background="Transparent" Icon="/Assets/avalonia-logo.ico"
-        SizeToContent="WidthAndHeight" TransparencyLevelHint="AcrylicBlur">
+        Background="{DynamicResource TranslucentBackground}" Icon="/Assets/avalonia-logo.ico"
+        SizeToContent="WidthAndHeight" TransparencyLevelHint="AcrylicBlur"
+        x:DataType="view:MainWindow">
+  <Window.Resources>
+    <ResourceDictionary>
+    <ResourceDictionary.ThemeDictionaries>
+      <ResourceDictionary x:Key="Light">
+        <SolidColorBrush x:Key="TranslucentBackground"
+                         Color="#ffffff"
+                         Opacity="0.5"/>
+      </ResourceDictionary>
+      <ResourceDictionary x:Key="Dark">
+        <SolidColorBrush x:Key="TranslucentBackground"
+                         Color="#000000"
+                         Opacity="0.5"/>
+      </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
   <Window.Styles>
     <FluentTheme />
   </Window.Styles>
