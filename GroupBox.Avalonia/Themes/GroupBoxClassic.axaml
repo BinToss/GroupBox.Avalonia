@@ -8,29 +8,30 @@
   <ControlTheme x:Key="GroupBoxClassic"
                 BasedOn="{StaticResource {x:Type ctrl:GroupBox}}"
                 TargetType="ctrl:GroupBox">
-  <!-- Copied from SimpleTheme's .../Accents/Base.xaml. These are not defined in FluentTheme. -->
-    <ControlTheme.Resources>
-      <ResourceDictionary>
-        <ResourceDictionary.ThemeDictionaries>
-          <ResourceDictionary x:Key="Light">
-            <Color x:Key="ThemeBorderMidColor">#FF888888</Color>
-            <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
-          </ResourceDictionary>
-          <ResourceDictionary x:Key="Dark">
-            <Color x:Key="ThemeBorderMidColor">#FF808080</Color>
-            <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
-          </ResourceDictionary>
-        </ResourceDictionary.ThemeDictionaries>
-      </ResourceDictionary>
-    </ControlTheme.Resources>
-
     <Setter Property="Template">
       <ControlTemplate>
         <Grid Name="GBGrid"
               ColumnDefinitions="Auto *" RowDefinitions="Auto *">
           <Grid.Resources>
-            <sys:Double x:Key="GBBorderPadding">3</sys:Double>
-            <sys:Double x:Key="GBBorderMargin">0</sys:Double>
+            <ResourceDictionary>
+              <sys:Double x:Key="GBBorderPadding">3</sys:Double>
+              <sys:Double x:Key="GBBorderMargin">0</sys:Double>
+              <!-- Copied from SimpleTheme's .../Accents/Base.xaml. These are not defined in FluentTheme. -->
+              <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                  <Color x:Key="ThemeBorderMidColor">#FF888888</Color>
+                  <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                  <Color x:Key="ThemeBorderMidColor">#FF888888</Color>
+                  <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Dark">
+                  <Color x:Key="ThemeBorderMidColor">#FF808080</Color>
+                  <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
+                </ResourceDictionary>
+              </ResourceDictionary.ThemeDictionaries>
+            </ResourceDictionary>
           </Grid.Resources>
 
           <TextBlock Name="GBHeaderText"
