@@ -5,6 +5,17 @@
         Title="Avalonian GroupBox Sample"
         Background="Transparent" Icon="/Assets/avalonia-logo.ico"
         SizeToContent="WidthAndHeight" TransparencyLevelHint="AcrylicBlur">
+  <Window.Styles>
+    <FluentTheme />
+  </Window.Styles>
 
-  <view:MainView />
+  <StackPanel Margin="10">
+    <CheckBox Name="FluentWindowButton" Checked="FluentWindowButton_OnChecked" Unchecked="FluentWindowButton_OnUnchecked">
+      Show FluentWindow
+    </CheckBox>
+
+    <CheckBox Name="SimpleWindowButton" Checked="SimpleWindowButton_OnChecked" Unchecked="SimpleWindowButton_OnUnchecked">
+      Show SimpleWindow
+    </CheckBox>
+  </StackPanel>
 </Window>

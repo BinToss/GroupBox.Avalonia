@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
+<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:ctrl="using:GroupBox.Avalonia.Controls"
@@ -13,10 +13,9 @@
         </Style>
       </Grid.Styles>
 
-      <ctrl:GroupBox Header="Simple Classic"
+      <ctrl:GroupBox Header="Classic"
                      Grid.Row="0" Grid.Column="0">
         <ctrl:GroupBox.Styles>
-          <SimpleTheme />
           <themes:ClassicTheme />
         </ctrl:GroupBox.Styles>
         <StackPanel>
@@ -25,34 +24,9 @@
         </StackPanel>
       </ctrl:GroupBox>
 
-      <ctrl:GroupBox Header="Fluent Classic"
-                     Grid.Row="1" Grid.Column="0">
-        <ctrl:GroupBox.Styles>
-          <FluentTheme />
-          <themes:ClassicTheme />
-        </ctrl:GroupBox.Styles>
-        <StackPanel>
-          <CheckBox>CheckBox0</CheckBox>
-          <CheckBox>CheckBox1</CheckBox>
-        </StackPanel>
-      </ctrl:GroupBox>
-
-      <ctrl:GroupBox Header="Simple Modern"
+      <ctrl:GroupBox Header="Modern"
                      Grid.Row="0" Grid.Column="1">
         <ctrl:GroupBox.Styles>
-          <SimpleTheme />
-          <themes:ModernTheme />
-        </ctrl:GroupBox.Styles>
-        <StackPanel>
-          <CheckBox>CheckBox0</CheckBox>
-          <CheckBox>CheckBox1</CheckBox>
-        </StackPanel>
-      </ctrl:GroupBox>
-
-      <ctrl:GroupBox Header="Fluent Modern"
-                     Grid.Row="1" Grid.Column="1">
-        <ctrl:GroupBox.Styles>
-          <FluentTheme />
           <themes:ModernTheme />
         </ctrl:GroupBox.Styles>
         <StackPanel>

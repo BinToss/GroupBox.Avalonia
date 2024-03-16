@@ -1,9 +1,8 @@
-﻿<Application x:Class="GroupBox.Avalonia.Sample.App"
+<Application x:Class="GroupBox.Avalonia.Sample.App"
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              RequestedThemeVariant="Default">
 
   <Application.Styles>
-    <SimpleTheme />
   </Application.Styles>
 </Application>

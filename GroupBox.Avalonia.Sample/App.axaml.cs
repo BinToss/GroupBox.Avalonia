@@ -14,11 +14,16 @@ public partial class App : Application
         AvaloniaXamlLoader.Load(this);
     }
 
+    public FluentWindow? FluentWindow { get; private set; }
+    public SimpleWindow? SimpleWindow { get; private set; }
+
     public override void OnFrameworkInitializationCompleted()
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow();
+            FluentWindow = new();
+            SimpleWindow = new();
         }
 
         base.OnFrameworkInitializationCompleted();
