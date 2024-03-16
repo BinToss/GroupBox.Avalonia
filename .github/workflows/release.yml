@@ -3,7 +3,7 @@ name: Release
 
 on:
   push:
-    branches: 
+    branches:
       - main
       - develop
 env:
@@ -27,45 +27,46 @@ jobs:
       id-token: write # to enable use of OIDC for npm provenance
 
     steps:
-    - uses: actions/checkout@v4
-      with: 
-        fetch-depth: 0 # necessary for semantic release
-    - uses: actions/setup-node@v4
-      with:
-        cache: npm
-    - uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.x'
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # necessary for semantic release
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: npm
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.x"
 
-    - name: NPM - Clean Install, Audit and Verify Packages
-      run: |
-        npm ci
-        npm audit signatures
+      - name: NPM - Clean Install, Audit and Verify Packages
+        run: |
+          npm ci
+          npm audit signatures
 
-    - name: Update version in README's Avalonia badge
-      shell: pwsh
-      run: |
-        $AV = [version]::new((Select-Xml -XPath "//AvaloniaVersion"  -Path "Directory.Build.props" ).Node.InnerText ).ToString();
-        $pattern = "(?<=\[!\[avalonia]\(https:\/\/img\.shields\.io\/badge\/avalonia-v)\d+\.\d+\.\d+";
-        (Get-Content -Path README.md -Raw) -creplace $pattern, $AV | Set-Content -NoNewLine -Path README.md
+      - name: Update version in README's Avalonia badge
+        shell: pwsh
+        run: |
+          $AV = [version]::new((Select-Xml -XPath "//AvaloniaVersion"  -Path "Directory.Build.props" ).Node.InnerText ).ToString();
+          $pattern = "(?<=\[!\[avalonia]\(https:\/\/img\.shields\.io\/badge\/avalonia-v)\d+\.\d+\.\d+";
+          (Get-Content -Path README.md -Raw) -creplace $pattern, $AV | Set-Content -NoNewLine -Path README.md
 
-    # [release#
-    # steps](https://github.com/semantic-release/semantic-release#release-steps)
-    # Plugins add sub-steps e.g. @semantic-release/git's Prepare will create a
-    # release commit, including configurable file assets." 
-    # After the new version Git tagged, @semantic-release/exec runs
-    # `dotnet publish`. @semantic-release/github adds the artifacts to the
-    # GitHub Release.
-    - name: Semantic Release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
-      run: npx semantic-release
+      # [release#
+      # steps](https://github.com/semantic-release/semantic-release#release-steps)
+      # Plugins add sub-steps e.g. @semantic-release/git's Prepare will create a
+      # release commit, including configurable file assets."
+      # After the new version Git tagged, @semantic-release/exec runs
+      # `dotnet publish`. @semantic-release/github adds the artifacts to the
+      # GitHub Release.
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+        run: npx semantic-release
 
-    - name: .NET - Pack NuPkg with new version
-      run: dotnet pack ./GroupBox.Avalonia/GroupBox.Avalonia.csproj -o ./publish/
+      - name: .NET - Pack NuPkg with new version
+        run: dotnet pack ./GroupBox.Avalonia/GroupBox.Avalonia.csproj -o ./publish/
 
-    # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
-    # https://github.com/actions/setup-dotnet/tree/v3/#setting-up-authentication-for-nuget-feeds
-    - name: .NET - Push NuPkg
-      run: dotnet nuget push ./publish/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
+      # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
+      # https://github.com/actions/setup-dotnet/tree/v3/#setting-up-authentication-for-nuget-feeds
+      - name: .NET - Push NuPkg
+        run: dotnet nuget push ./publish/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
