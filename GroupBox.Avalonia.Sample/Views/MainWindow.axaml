@@ -1,4 +1,4 @@
-<Window x:Class="GroupBox.Avalonia.Sample.Views.MainWindow"
+﻿<Window x:Class="GroupBox.Avalonia.Sample.Views.MainWindow"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:view="using:GroupBox.Avalonia.Sample.Views"
@@ -26,13 +26,22 @@
     <FluentTheme />
   </Window.Styles>
 
-  <StackPanel Margin="10">
-    <CheckBox Name="FluentWindowButton" Checked="FluentWindowButton_OnChecked" Unchecked="FluentWindowButton_OnUnchecked">
-      Show FluentWindow
-    </CheckBox>
+  <Grid RowDefinitions="*" ColumnDefinitions="* *" Margin="10">
+    <ComboBox Name="ThemeVariantComboBox"
+              SelectedIndex="0"
+              SelectionChanged="ThemeVariantComboBox_OnSelectionChanged"
+              Width="100"
+              Grid.RowSpan="2"
+              Grid.Column="0"/>
+    
+    <StackPanel Margin="10" Grid.Column="1">
+      <CheckBox Name="FluentWindowButton" Checked="FluentWindowButton_OnChecked" Unchecked="FluentWindowButton_OnUnchecked">
+        Show FluentWindow
+      </CheckBox>
 
-    <CheckBox Name="SimpleWindowButton" Checked="SimpleWindowButton_OnChecked" Unchecked="SimpleWindowButton_OnUnchecked">
-      Show SimpleWindow
-    </CheckBox>
-  </StackPanel>
+      <CheckBox Name="SimpleWindowButton" Checked="SimpleWindowButton_OnChecked" Unchecked="SimpleWindowButton_OnUnchecked">
+        Show SimpleWindow
+      </CheckBox>
+    </StackPanel>
+  </Grid>
 </Window>
