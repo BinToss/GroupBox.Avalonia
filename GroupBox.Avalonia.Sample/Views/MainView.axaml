@@ -8,7 +8,7 @@
     <Grid Margin="4"
           ColumnDefinitions="auto *" RowDefinitions="auto *">
       <Grid.Styles>
-        <Style Selector="Grid &gt; :is(Layoutable)">
+        <Style Selector="Grid &gt; ctrl|GroupBox">
           <Setter Property="Margin" Value="4" />
         </Style>
       </Grid.Styles>
