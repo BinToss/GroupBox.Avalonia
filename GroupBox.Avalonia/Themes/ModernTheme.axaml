@@ -2,20 +2,44 @@
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ctrl="using:GroupBox.Avalonia.Controls">
+
+  <!--
+    BasedOn="{StaticResource {x:Type HeaderedContentControl}}" doesn't work.
+    That ControlTheme is in AvaloniaUI/Avalonia@master at
+    src/Avalonia.Themes.SimpleTheme/Controls/HeaderedContentControl.xaml, but is
+    not included with releases 11.0.9, 11.0.10.
+  -->
   <Style Selector="ctrl|GroupBox">
+    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
+    <Setter Property="BorderThickness" Value="2"/>
+    <Setter Property="CornerRadius" Value="5"/>
     <Setter Property="Template">
       <ControlTemplate>
-        <Border Name="GBBorder"
-                BorderBrush="{DynamicResource ThemeBorderMidBrush}"
-                BorderThickness="2" CornerRadius="5">
-          <Grid RowDefinitions="auto *">
-            <ContentPresenter Name="PART_HeaderPresenter"
-                              Content="{TemplateBinding Header}" FontWeight="Bold" 
-                              Grid.Row="0"/>
+        <Grid RowDefinitions="Auto *">
+          <ContentPresenter Name="PART_HeaderPresenter"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Header}"
+                            ContentTemplate="{TemplateBinding HeaderTemplate}"
+                            FontFamily="{TemplateBinding FontFamily}"
+                            FontStyle="{TemplateBinding FontStyle}"
+                            FontWeight="Bold" 
+                            Grid.Row="0"/>
+          <Border Name="GBBorder"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}"
+                  CornerRadius="{TemplateBinding CornerRadius}"
+                  Background="{TemplateBinding Background}"
+                  Padding="{TemplateBinding Padding}"
+                  Grid.Row="1">
             <ContentPresenter Name="PART_ContentPresenter"
-                              Content="{TemplateBinding Content}" Grid.Row="1"/>
-          </Grid>
-        </Border>
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              RecognizesAccessKey="True"/>
+          </Border>
+        </Grid>
       </ControlTemplate>
     </Setter>
   </Style>
