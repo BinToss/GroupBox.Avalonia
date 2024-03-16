@@ -6,6 +6,22 @@
         xmlns:sys="using:System">
 
   <Style Selector="ctrl|GroupBox">
+    <!-- Copied from SimpleTheme's .../Accents/Base.xaml. These are not defined in FluentTheme. -->
+    <Style.Resources>
+      <ResourceDictionary>
+        <ResourceDictionary.ThemeDictionaries>
+          <ResourceDictionary x:Key="Light">
+            <Color x:Key="ThemeBorderMidColor">#FF888888</Color>
+            <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
+          </ResourceDictionary>
+          <ResourceDictionary x:Key="Dark">
+            <Color x:Key="ThemeBorderMidColor">#FF808080</Color>
+            <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
+          </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+      </ResourceDictionary>
+    </Style.Resources>
+
     <Setter Property="Template">
       <ControlTemplate>
         <Grid Name="GBGrid"
@@ -50,6 +66,7 @@
                 <Binding Source="{StaticResource GBBorderMargin}" />
               </MultiBinding>
             </Border.Margin>
+
             <ContentPresenter Name="PART_ContentPresenter"
                               Content="{TemplateBinding Content}"
                               RenderOptions.EdgeMode="Antialias" />
