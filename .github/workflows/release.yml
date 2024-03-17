@@ -30,16 +30,21 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # necessary for semantic release
+
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
-          cache: npm
+          cache: "npm"
+          check-latest: true
+          node-version-file: package.json
+      - run: npm i -g npm@latest
+
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.x"
 
       - name: NPM - Clean Install
         run: npm ci
+
       - name: NPM - Audit Signatures
         run: npm audit signatures
 

@@ -20,8 +20,10 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
-          cache: npm
+          cache: "npm"
+          check-latest: true
+          node-version-file: package.json
+      - run: npm i -g npm@latest
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -29,6 +31,7 @@ jobs:
 
       - name: NPM - Clean Install
         run: npm ci
+
       - name: NPM - Audit Signatures
         run: npm audit signatures
 

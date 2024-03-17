@@ -20,8 +20,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
-          cache: npm
+          cache: "npm"
+          check-latest: true
+          node-version-file: package.json
+      - run: npm i -g npm@latest
+
       - run: npm ci
 
       - uses: actions/setup-dotnet@v4.0.0
