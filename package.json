@@ -8,7 +8,7 @@
     "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
-    "@halospv3/hce.shared-config": "^1.2.7",
+    "@halospv3/hce.shared-config": "^2.0.0",
     "@semantic-release/exec": "^6.0.3"
   },
   "commitlint": {
