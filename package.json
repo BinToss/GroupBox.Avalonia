@@ -6,7 +6,7 @@
     "semantic-release": "npx semantic-release"
   },
   "devDependencies": {
-    "@halospv3/hce.shared-config": "^1.2.0",
+    "@halospv3/hce.shared-config": "^2.0.0",
     "@semantic-release/exec": "^6.0.3"
   },
   "commitlint": {
