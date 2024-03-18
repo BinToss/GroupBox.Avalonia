@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -25,12 +26,19 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols><!-- ...in snupkg -->
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 
- <!-- Package refs moved to Directory.Build.Props -->
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="GitVersion.MsBuild" Version="6.0.0-beta.7" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
 
 </Project>

@@ -1,18 +1,32 @@
 {
   "description": "dev-environment utilities",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky install && dotnet tool restore",
+    "format": "dotnet format && npm run xstyler",
     "release": "npx semantic-release",
-    "semantic-release": "npx semantic-release"
+    "semantic-release": "npx semantic-release",
+    "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
-    "@halospv3/hce.shared-config": "^1.2.0",
+    "@halospv3/hce.shared-config": "^2.1.0",
     "@semantic-release/exec": "^6.0.3"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "body-max-line-length": [
+        1,
+        "always",
+        100
+      ]
+    }
   },
+  "engines": {
+    "node": ">=20.8.1",
+    "npm": ">=10.5.0"
+  },
+  "engineStrict": true,
   "private": true
 }

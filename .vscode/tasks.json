@@ -33,10 +33,23 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/GroupBox.Avalonia.sln",
+                "${workspaceFolder}/GroupBox.Avalonia.Sample",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "npm",
+            "script": "xstyler",
+            "problemMatcher": [],
+            "label": "npm: xstyler",
+            "detail": "node ./tools/formatXamlFiles.mjs",
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated",
+                "showReuseMessage": false,
+                "focus": false
+            }
         }
     ]
 }

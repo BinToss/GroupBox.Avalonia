@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="GroupBox.Avalonia.Sample.Views.MainView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ctrl="using:GroupBox.Avalonia.Controls"
+             xmlns:themes="using:GroupBox.Avalonia.Themes">
+
+  <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+    <Grid Margin="4"
+          ColumnDefinitions="* *" RowDefinitions="* *">
+      <Grid.Styles>
+        <Style Selector="Grid &gt; ctrl|GroupBox">
+          <Setter Property="Margin" Value="4" />
+        </Style>
+      </Grid.Styles>
+
+      <ctrl:GroupBox Header="Classic"
+                     Theme="{StaticResource GroupBoxClassic}"
+                     Grid.Row="0" Grid.Column="0">
+        <StackPanel>
+          <CheckBox>CheckBox0</CheckBox>
+          <CheckBox>CheckBox1</CheckBox>
+        </StackPanel>
+      </ctrl:GroupBox>
+
+      <ctrl:GroupBox Header="Basic (default)"
+                     Grid.Row="0" Grid.Column="1">
+        <StackPanel>
+          <CheckBox>CheckBox0</CheckBox>
+          <CheckBox>CheckBox1</CheckBox>
+        </StackPanel>
+      </ctrl:GroupBox>
+    </Grid>
+  </ScrollViewer>
+</UserControl>

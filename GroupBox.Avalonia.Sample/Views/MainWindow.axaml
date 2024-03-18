@@ -1,0 +1,47 @@
+﻿<Window x:Class="GroupBox.Avalonia.Sample.Views.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="using:GroupBox.Avalonia.Sample.Views"
+        Title="Avalonian GroupBox Sample"
+        Background="{DynamicResource TranslucentBackground}" Icon="/Assets/avalonia-logo.ico"
+        SizeToContent="WidthAndHeight" TransparencyLevelHint="AcrylicBlur"
+        x:DataType="view:MainWindow">
+  <Window.Resources>
+    <ResourceDictionary>
+    <ResourceDictionary.ThemeDictionaries>
+      <ResourceDictionary x:Key="Light">
+        <SolidColorBrush x:Key="TranslucentBackground"
+                         Color="#ffffff"
+                         Opacity="0.5"/>
+      </ResourceDictionary>
+      <ResourceDictionary x:Key="Dark">
+        <SolidColorBrush x:Key="TranslucentBackground"
+                         Color="#000000"
+                         Opacity="0.5"/>
+      </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.Styles>
+    <FluentTheme />
+  </Window.Styles>
+
+  <Grid RowDefinitions="*" ColumnDefinitions="* *" Margin="10">
+    <ComboBox Name="ThemeVariantComboBox"
+              SelectedIndex="0"
+              SelectionChanged="ThemeVariantComboBox_OnSelectionChanged"
+              Width="100"
+              Grid.RowSpan="2"
+              Grid.Column="0"/>
+    
+    <StackPanel Margin="10" Grid.Column="1">
+      <CheckBox Name="FluentWindowButton" Checked="FluentWindowButton_OnChecked" Unchecked="FluentWindowButton_OnUnchecked">
+        Show FluentWindow
+      </CheckBox>
+
+      <CheckBox Name="SimpleWindowButton" Checked="SimpleWindowButton_OnChecked" Unchecked="SimpleWindowButton_OnUnchecked">
+        Show SimpleWindow
+      </CheckBox>
+    </StackPanel>
+  </Grid>
+</Window>

@@ -1,5 +1,9 @@
 /** Semantic-Release configuration for GroupBox.Avalonia
  * @extends { hceSharedConfig }
+ * 
+ * <-- TABLE OF CONTENTS -->
+ * - Insert-Edit Plugins
+ * - Append Plugins
  */
 
 /**
@@ -19,8 +23,14 @@ if (process.argv.includes("--debug") || process.argv.includes("--verbose")) {
  * @type { typeof hceSharedConfig.plugins }
  */
 const newPlugins = hceSharedConfig.plugins;
+const projs = [
+  './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
+  './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj'];
+const dotnetPublish = projs.map(v => "dotnet publish " + v).join(" && ");
 
-// insert and/or configure plugins
+//#region Insert-Edit Plugins
+/* Insert and/or configure plugins. Can be used to load plugin A before plugin B
+or edit a plugin's existing configuration */
 for (var i = 0; i < newPlugins.length; i++) {
   /** e.g.
   //#region Git Options | https://github.com/semantic-release/git#options
@@ -42,17 +52,21 @@ for (var i = 0; i < newPlugins.length; i++) {
       plugins[i][1].assets.push("CHANGELOG.md");
     }
   }
-  //#endregion
+  //#endregion Git Options
   */
 }
+//#endregion Insert-Edit Plugins
 
+//#region Append Plugins
 newPlugins.push(
-  // append this tuple-like array of [pluginName, pluginConfig] to plugins
-  ["@semantic-release/exec", {// https://github.com/semantic-release/exec#usage
-    // 'AfterPublish' target zips the publish folder(s) to ./publish/*.zip
-    prepareCmd: "dotnet publish ./GroupBox.Avalonia/GroupBox.Avalonia.csproj && dotnet publish ./GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj"
+  // APPEND this array of [pluginName, pluginConfig] to plugins
+  // https://github.com/semantic-release/exec#usage
+  ["@semantic-release/exec", {
+    // 'ZipPublishDir' zips each publish folder to ./publish/*.zip
+    prepareCmd: dotnetPublish
   }]
 )
+//#endregion Append Plugins
 
 if (process.argv.includes("--debug") || process.argv.includes("--verbose")) {
   console.info("modified plugins array:\n" + JSON.stringify(newPlugins, null, 2))
