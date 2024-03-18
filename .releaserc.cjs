@@ -23,6 +23,10 @@ if (process.argv.includes("--debug") || process.argv.includes("--verbose")) {
  * @type { typeof hceSharedConfig.plugins }
  */
 const newPlugins = hceSharedConfig.plugins;
+const projs = [
+  './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
+  './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj'];
+const dotnetPublish = projs.map(v => "dotnet publish " + v).join(" && ");
 
 //#region Insert-Edit Plugins
 /* Insert and/or configure plugins. Can be used to load plugin A before plugin B
@@ -59,7 +63,7 @@ newPlugins.push(
   // https://github.com/semantic-release/exec#usage
   ["@semantic-release/exec", {
     // 'ZipPublishDir' zips each publish folder to ./publish/*.zip
-    prepareCmd: "dotnet publish ./GroupBox.Avalonia/GroupBox.Avalonia.csproj && dotnet publish ./GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj"
+    prepareCmd: dotnetPublish
   }]
 )
 //#endregion Append Plugins
