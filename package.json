@@ -11,18 +11,6 @@
     "@halospv3/hce.shared-config": "^2.1.0",
     "@semantic-release/exec": "^6.0.3"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "body-max-line-length": [
-        1,
-        "always",
-        100
-      ]
-    }
-  },
   "engines": {
     "node": ">=20.8.1",
     "npm": ">=10.5.0"
