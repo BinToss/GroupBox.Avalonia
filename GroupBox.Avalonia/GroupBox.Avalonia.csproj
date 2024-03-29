@@ -31,10 +31,12 @@
     <IncludeSymbols>true</IncludeSymbols><!-- ...in snupkg -->
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <PackageIcon>GroupBox.Avalonia.256.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
+    <None Include="../GroupBox.Avalonia.256.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>
