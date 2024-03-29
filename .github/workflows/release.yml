@@ -25,6 +25,7 @@ jobs:
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
+      packages: write # for pushing GitHub Nuget packages
 
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +52,7 @@ jobs:
       - name: Update version in README's Avalonia badge
         shell: pwsh
         run: |
-          $AV = [version]::new((Select-Xml -XPath "//AvaloniaVersion"  -Path "Directory.Build.props" ).Node.InnerText ).ToString();
+          $AV = [version]::new(((dotnet msbuild .\GroupBox.Avalonia\GroupBox.Avalonia.csproj  -getItem:PackageReference | ConvertFrom-Json).Items.PackageReference | Where-Object {$_.Identity -eq 'Avalonia'}).Version).ToString();
           $pattern = "(?<=\[!\[avalonia]\(https:\/\/img\.shields\.io\/badge\/avalonia-v)\d+\.\d+\.\d+";
           (Get-Content -Path README.md -Raw) -creplace $pattern, $AV | Set-Content -NoNewLine -Path README.md
 
@@ -63,15 +64,22 @@ jobs:
       # `dotnet publish`. @semantic-release/github adds the artifacts to the
       # GitHub Release.
       - name: Semantic Release
+        id: semantic_release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
-        run: npx semantic-release
-
-      - name: .NET - Pack NuPkg with new version
-        run: dotnet pack ./GroupBox.Avalonia/GroupBox.Avalonia.csproj -o ./publish/
+        shell: pwsh
+        run: |
+          $output=npx semantic-release
+          if ($output.EndsWith('There are no relevant changes, so no new version is released.')) {
+            echo "NoNewVersion=true" >> "$env:GITHUB_OUTPUT"
+          }
 
       # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
       # https://github.com/actions/setup-dotnet/tree/v3/#setting-up-authentication-for-nuget-feeds
-      - name: .NET - Push NuPkg
-        run: dotnet nuget push ./publish/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
+      - name: .NET - Pack n' Push NuPkg
+        if: ${{!steps.semantic_release.outputs.NO_NEW_VERSION}}
+        run: |
+          dotnet pack ./GroupBox.Avalonia/GroupBox.Avalonia.csproj -o ./publish/ 
+          && dotnet nuget push ./publish/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
+          && dotnet nuget push ./publish/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ secrets.GITHUB_TOKEN }}

@@ -8,6 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DefineConstants>$(DefineConstants);ENABLE_XAML_HOT_RELOAD</DefineConstants>
+  </PropertyGroup>
+
   <PropertyGroup>
     <PackageId>BinToss.GroupBox.Avalonia</PackageId>
     <!-- <Title>PackageId</Title> --><!-- use PackageId -->
@@ -27,10 +31,12 @@
     <IncludeSymbols>true</IncludeSymbols><!-- ...in snupkg -->
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <PackageIcon>GroupBox.Avalonia.256.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
+    <None Include="../GroupBox.Avalonia.256.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +45,9 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="GitVersion.MsBuild" Version="6.0.0-beta.7" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="Avalonia.Markup.Xaml.Loader" Version="$(AvaloniaVersion)" />
+    <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia" Version="$(HotAvaloniaVersion)" />
+    <PackageReference Include="HotAvalonia.Extensions" Version="$(HotAvaloniaVersion)" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

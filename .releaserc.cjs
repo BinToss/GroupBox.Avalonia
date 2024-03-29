@@ -26,7 +26,7 @@ const newPlugins = hceSharedConfig.plugins;
 const projs = [
   './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
   './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj'];
-const dotnetPublish = projs.map(v => "dotnet publish " + v).join(" && ");
+const dotnetPublish = projs.map(v => `dotnet publish ${v}`).join(" && ");
 
 //#region Insert-Edit Plugins
 /* Insert and/or configure plugins. Can be used to load plugin A before plugin B
