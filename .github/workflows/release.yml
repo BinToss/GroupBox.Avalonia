@@ -37,7 +37,7 @@ jobs:
           cache: "npm"
           check-latest: true
           node-version-file: package.json
-      - run: npm i -g npm@latest
+          node-version: lts/*
 
       - uses: actions/setup-dotnet@v4
         with:
