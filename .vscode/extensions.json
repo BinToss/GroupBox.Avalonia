@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "appulate.filewatcher"
+        "appulate.filewatcher",
+        "actionforge.actionforge",
+        "avaloniateam.vscode-avalonia"
     ]
 }
