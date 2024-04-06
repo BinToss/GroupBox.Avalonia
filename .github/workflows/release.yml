@@ -51,11 +51,7 @@ jobs:
         run: npm audit signatures
 
       - name: Update version in README's Avalonia badge
-        shell: pwsh
-        run: |
-          $AV = [version]::new(((dotnet msbuild .\GroupBox.Avalonia\GroupBox.Avalonia.csproj  -getItem:PackageReference | ConvertFrom-Json).Items.PackageReference | Where-Object {$_.Identity -eq 'Avalonia'}).Version).ToString();
-          $pattern = "(?<=\[!\[avalonia]\(https:\/\/img\.shields\.io\/badge\/avalonia-v)\d+\.\d+\.\d+";
-          (Get-Content -Path README.md -Raw) -creplace $pattern, $AV | Set-Content -NoNewLine -Path README.md
+        run: npm run update-readme
 
       # [release#
       # steps](https://github.com/semantic-release/semantic-release#release-steps)
