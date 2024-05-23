@@ -4,7 +4,7 @@
       <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config/</HCESharedDir>
       <GitVersion_Path>$(HCESharedDir)GitVersion.yml</GitVersion_Path>
       <AvaloniaVersion>11.0.10</AvaloniaVersion>
-      <HotAvaloniaVersion>1.0.1</HotAvaloniaVersion>
+      <HotAvaloniaVersion>1.1.1</HotAvaloniaVersion>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == 'true'">
