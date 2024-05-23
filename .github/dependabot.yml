@@ -11,21 +11,37 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "develop"
+    groups:
+      "Git SubModules":
+        patterns:
+          - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
     target-branch: "develop"
+    groups:
+      "GitHub Actions Dependencies":
+        patterns:
+          - "*"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
     target-branch: "develop"
+    groups:
+      "NPM Dependencies":
+        patterns:
+          - "*"
 
   - package-ecosystem: "nuget"
     directory: "/"
     schedule:
       interval: "daily"
     target-branch: "develop"
+    groups:
+      "NuGet Dependencies":
+        patterns:
+          - "*"
