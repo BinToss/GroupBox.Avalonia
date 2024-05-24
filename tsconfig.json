@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext"
+    },
+    "exclude": [
+        "node_modules",
+        "GroupBox.Avalonia",
+        "GroupBox.Avalonia.Sample",
+        "publish"
+    ]
+}
