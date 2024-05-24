@@ -1,7 +1,7 @@
 {
   "description": "dev-environment utilities",
   "scripts": {
-    "prepare": "husky install && dotnet tool restore",
+    "prepare": "husky && dotnet tool restore",
     "format": "dotnet format && npm run xstyler",
     "release": "npx semantic-release",
     "semantic-release": "npx semantic-release",
