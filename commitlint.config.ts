@@ -1,2 +1,2 @@
-import hceShared from "./node_modules/@halospv3/hce.shared-config/commitlint.config"
+import hceShared from "@halospv3/hce.shared-config/commitlintConfig"
 export default hceShared;
