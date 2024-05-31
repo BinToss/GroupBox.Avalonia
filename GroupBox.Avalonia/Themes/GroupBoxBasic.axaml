@@ -12,6 +12,7 @@
     <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
     <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
     <Setter Property="CornerRadius" Value="3"/>
+    <Setter Property="FontWeight" Value="Bold"/>
     <Setter Property="Padding" Value="8"/>
     <Setter Property="Template">
       <ControlTemplate>
@@ -23,7 +24,7 @@
                             ContentTemplate="{TemplateBinding HeaderTemplate}"
                             FontFamily="{TemplateBinding FontFamily}"
                             FontStyle="{TemplateBinding FontStyle}"
-                            FontWeight="Bold" 
+                            FontWeight="{TemplateBinding FontWeight}" 
                             Grid.Row="0"/>
           <Border Name="GBBorder"
                   BorderBrush="{TemplateBinding BorderBrush}"
