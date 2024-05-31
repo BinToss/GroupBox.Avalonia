@@ -1,4 +1,4 @@
-﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:conv="using:GroupBox.Avalonia.Converters"
                     xmlns:ctrl="using:GroupBox.Avalonia.Controls"
@@ -34,10 +34,10 @@
             </ResourceDictionary>
           </Grid.Resources>
 
-          <TextBlock Name="GBHeaderText"
-                     Margin="5,1" Padding="5,0"
-                     Text="{TemplateBinding Header}"
-                     TextBlock.FontWeight="Bold" />
+          <Label Name="GBHeaderText"
+                 Margin="5,1" Padding="5,0"
+                 Content="{TemplateBinding Header}"
+                 FontWeight="Bold" />
           <Border Name="GBBorder"
                   Grid.RowSpan="2" Grid.ColumnSpan="2"
                   BorderBrush="{DynamicResource ThemeBorderMidBrush}"
