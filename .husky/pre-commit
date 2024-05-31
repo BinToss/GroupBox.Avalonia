@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+isModifiedBefore=false;
+
+if git status README.md | grep -q 'modified:   README.md'
+then
+    isModifiedBefore=true
+fi
+
+npm run update-readme
+
+if $isModifiedBefore
+then
+echo "README.md has unstaged changes. Stash them and try again." >&2
+exit -1
+else
+git add "README.md"
+fi
