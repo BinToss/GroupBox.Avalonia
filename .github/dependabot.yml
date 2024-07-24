@@ -4,7 +4,6 @@
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
 
 version: 2
-enable-beta-ecosystems: true
 updates:
   - package-ecosystem: "gitsubmodule"
     directory: "/"
