@@ -20,6 +20,8 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "develop"
+    commit-message:
+      prefix: "ci(deps-dev)"
     groups:
       "GitHub Actions":
         patterns:
@@ -30,17 +32,34 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "develop"
+    commit-message:
+      prefix: chore(deps-dev)
     groups:
       "NPM":
         patterns:
           - "*"
 
   - package-ecosystem: "nuget"
-    directory: "/"
+    directory: "/GroupBox.Avalonia.Sample/"
     schedule:
       interval: "daily"
     target-branch: "develop"
+    commit-message:
+      prefix: build(sample)
     groups:
-      "NuGet":
+      "GroupBox.Avalonia.Sample":
+        patterns:
+          - "*"
+
+  - package-ecosystem: "nuget"
+    directory: "/GroupBox.Avalonia/"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+    commit-message:
+      prefix: fix(deps)
+      prefix-development: build(deps-dev)
+    groups:
+      "GroupBox.Avalonia":
         patterns:
           - "*"
