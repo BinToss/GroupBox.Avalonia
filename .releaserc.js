@@ -6,6 +6,6 @@ const projectsToPublish = [
 const projectsToPackAndPush = [
   './GroupBox.Avalonia/GroupBox.Avalonia.csproj'
 ];
-const config = getConfig(projectsToPublish, projectsToPackAndPush);
+const config = await getConfig(projectsToPublish, projectsToPackAndPush);
 
 export default config;
