@@ -1,4 +1,4 @@
-import { getConfig } from '@halospv3/hce.shared-config/semanticReleaseConfigDotnet'
+import { getConfig } from '@halospv3/hce.shared-config/semanticReleaseConfigDotnet';
 
 const projectsToPublish = [
   './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
