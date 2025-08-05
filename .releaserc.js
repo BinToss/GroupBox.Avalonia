@@ -7,25 +7,34 @@ import {
 import { getConfig } from '@halospv3/hce.shared-config/semanticReleaseConfigDotnet';
 import { inspect } from 'node:util';
 
-/** @type {MSBuildProject[]} */
-const projectsToPublish = await MSBuildProject.PackableProjectsToMSBuildProjects([
-  './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
-  './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj'
-]).then(promises => Promise.all(promises));
+/** @type {import('semantic-release').Options} */
+let config = {};
 
-const mainProject = projectsToPublish[0];
-if (!mainProject)
-  throw new Error('GroupBox.Avalonia.csproj was not in the evaluated projects array!');
+try {
+  /** @type {MSBuildProject[]} */
+  const projectsToPublish = await MSBuildProject.PackableProjectsToMSBuildProjects([
+    './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
+    './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj'
+  ]).then(promises => Promise.all(promises));
 
-const opts = { project: mainProject };
+  const mainProject = projectsToPublish[0];
+  if (!mainProject)
+    throw new Error('GroupBox.Avalonia.csproj was not in the evaluated projects array!');
 
-const config = await getConfig(
-  projectsToPublish,
-  [
-    new GithubNugetRegistryInfo(opts),
-    new NugetRegistryInfo(opts),
-  ]
-);
+  const opts = { project: mainProject };
+
+  config = await getConfig(
+    projectsToPublish,
+    [
+      new GithubNugetRegistryInfo(opts),
+      new NugetRegistryInfo(opts),
+    ]
+  );
+}
+catch (error) {
+  console.error(inspect(error, { depth: Infinity }));
+  throw error;
+}
 
 console.log(inspect(config, { depth: Infinity }));
 
