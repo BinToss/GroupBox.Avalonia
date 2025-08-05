@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net6.0": {
+      "Avalonia": {
+        "type": "Direct",
+        "requested": "[11.*, )",
+        "resolved": "11.3.3",
+        "contentHash": "JEYVWn6wMtgfcF4EdwlENvmp9V2axpR3uJ/t4c9h4Xz0M/hvLQx5djp36peq8IA2LICjHrP7QMtVozmlC0aDWg==",
+        "dependencies": {
+          "Avalonia.BuildServices": "0.0.31",
+          "Avalonia.Remote.Protocol": "11.3.3",
+          "MicroCom.Runtime": "0.11.0",
+          "System.Diagnostics.DiagnosticSource": "8.0.1"
+        }
+      },
+      "Avalonia.Diagnostics": {
+        "type": "Direct",
+        "requested": "[11.*, )",
+        "resolved": "11.3.3",
+        "contentHash": "rE0xTWE1hOh6Ek6NQSFmGGD6Dcr/VgLkZIERtbdEjkaRq6iG2gIzM9Dz80BTfT2XckcJ+ZOreXzBzXI/0eCodw==",
+        "dependencies": {
+          "Avalonia": "11.3.3",
+          "Avalonia.Controls.ColorPicker": "11.3.3",
+          "Avalonia.Themes.Simple": "11.3.3"
+        }
+      },
+      "Avalonia.Markup.Xaml.Loader": {
+        "type": "Direct",
+        "requested": "[11.*, )",
+        "resolved": "11.3.3",
+        "contentHash": "EQM7IKOSlGkiJd4sIMsU/MdHI9pe3E1QvHL7kWy5+qvnUpdyMgol28fYHj6G7/9xLQqdVAk9XkjcRjzeKcpfFg==",
+        "dependencies": {
+          "Avalonia": "11.3.3"
+        }
+      },
+      "GitVersion.MsBuild": {
+        "type": "Direct",
+        "requested": "[6.0.3, )",
+        "resolved": "6.0.3",
+        "contentHash": "U9lnHqzhDFAOyninVjyN/inUrNpPoYXb/CZwxf51JOgOV8hpWf4YV2GmdJyOjdCKm1S3REeS2U1xt0eS8XVoVg=="
+      },
+      "HotAvalonia": {
+        "type": "Direct",
+        "requested": "[1.1.1, )",
+        "resolved": "1.1.1",
+        "contentHash": "w76G7DbIMixwgvCVf/AQSRY3ryhpJV9BudNZyOyTZKiJCB83HsLLHXvh2rpKDPoQqSqbsVjw9a1+j1sY84rwSA=="
+      },
+      "HotAvalonia.Extensions": {
+        "type": "Direct",
+        "requested": "[1.1.1, )",
+        "resolved": "1.1.1",
+        "contentHash": "igciE4VgPLLgTNT3QoCR+pwObCp9IWFkubqcE1X1LvQX8vnvq8yN8ibZocN/E5/4CR0ZQrfN4k/NrKOXjOt6Aw=="
+      },
+      "Microsoft.SourceLink.GitHub": {
+        "type": "Direct",
+        "requested": "[8.0.0, )",
+        "resolved": "8.0.0",
+        "contentHash": "G5q7OqtwIyGTkeIOAc3u2ZuV/kicQaec5EaRnc0pIeSnh9LUjj+PYQrJYBURvDt7twGl2PKA7nSN0kz1Zw5bnQ==",
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "8.0.0",
+          "Microsoft.SourceLink.Common": "8.0.0"
+        }
+      },
+      "Avalonia.BuildServices": {
+        "type": "Transitive",
+        "resolved": "0.0.31",
+        "contentHash": "KmCN6Hc+45q4OnF10ge450yVUvWuxU6bdQiyKqiSvrHKpahNrEdk0kG6Ip6GHk2SKOCttGQuA206JVdkldEENg=="
+      },
+      "Avalonia.Controls.ColorPicker": {
+        "type": "Transitive",
+        "resolved": "11.3.3",
+        "contentHash": "Pp7llcn2y/a0TLAk/Csni4atV6+GP9gf9KFwsEBk6zpAlW4GWHd61I2tXJNlQ1nPBZ1btX6KB7gx2Xf/Cjt/Yw==",
+        "dependencies": {
+          "Avalonia": "11.3.3",
+          "Avalonia.Remote.Protocol": "11.3.3"
+        }
+      },
+      "Avalonia.Remote.Protocol": {
+        "type": "Transitive",
+        "resolved": "11.3.3",
+        "contentHash": "ehPZeXSI/07n9o+j+7+Pj9TK3EOoMGmB671jo+6H+a4gko8/IMhlzwo+wCMmAeZyiq+Qmpq2PagT9c2hZbwnDA=="
+      },
+      "Avalonia.Themes.Simple": {
+        "type": "Transitive",
+        "resolved": "11.3.3",
+        "contentHash": "3wisBvQnFZOe/qZurGylly1phP3Lk5GcxiknhU0wfaRCWPLo65iuV6+hSJ0fpCN9bDAn2a5qrc3a/2Qh6sp6ZA==",
+        "dependencies": {
+          "Avalonia": "11.3.3"
+        }
+      },
+      "MicroCom.Runtime": {
+        "type": "Transitive",
+        "resolved": "0.11.0",
+        "contentHash": "MEnrZ3UIiH40hjzMDsxrTyi8dtqB5ziv3iBeeU4bXsL/7NLSal9F1lZKpK+tfBRnUoDSdtcW3KufE4yhATOMCA=="
+      },
+      "Microsoft.Build.Tasks.Git": {
+        "type": "Transitive",
+        "resolved": "8.0.0",
+        "contentHash": "bZKfSIKJRXLTuSzLudMFte/8CempWjVamNUR5eHJizsy+iuOuO/k2gnh7W0dHJmYY0tBf+gUErfluCv5mySAOQ=="
+      },
+      "Microsoft.SourceLink.Common": {
+        "type": "Transitive",
+        "resolved": "8.0.0",
+        "contentHash": "dk9JPxTCIevS75HyEQ0E4OVAFhB2N+V9ShCXf8Q6FkUQZDkgLI12y679Nym1YqsiSysuQskT7Z+6nUf3yab6Vw=="
+      },
+      "System.Diagnostics.DiagnosticSource": {
+        "type": "Transitive",
+        "resolved": "8.0.1",
+        "contentHash": "vaoWjvkG1aenR2XdjaVivlCV9fADfgyhW5bZtXT23qaEea0lWiUljdQuze4E31vKM7ZWJaSUsbYIKE3rnzfZUg==",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe": {
+        "type": "Transitive",
+        "resolved": "6.0.0",
+        "contentHash": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg=="
+      }
+    }
+  }
+}
