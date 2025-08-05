@@ -18,5 +18,6 @@
         }
     ],
     "csharp.debug.symbolOptions.searchMicrosoftSymbolServer": true,
-    "csharp.debug.symbolOptions.searchNuGetOrgSymbolServer": true
+    "csharp.debug.symbolOptions.searchNuGetOrgSymbolServer": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }
