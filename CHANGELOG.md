@@ -1,3 +1,17 @@
+## [1.1.0-develop.1](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.0.0...v1.1.0-develop.1) (2025-08-05)
+
+### Features
+
+* allow changing Header FontWeight ([180299b](https://github.com/BinToss/GroupBox.Avalonia/commit/180299bb1e696325ea773e58f84e9137e6780ab8)), closes [#49](https://github.com/BinToss/GroupBox.Avalonia/issues/49)
+* allow dependents to use any Avalonia release in the 11.x range; add dep lock file ([934a78b](https://github.com/BinToss/GroupBox.Avalonia/commit/934a78b143c2a7d450ab794dac9f00691dbfeab3))
+* allow non-text controls in GroupBoxClassic Header ([60ed3ad](https://github.com/BinToss/GroupBox.Avalonia/commit/60ed3ad45c3e5c360c0dbd71270df2200d564d8b)), closes [#42](https://github.com/BinToss/GroupBox.Avalonia/issues/42)
+
+### Bug Fixes
+
+* **deps:** bump Avalonia dependencies to 11.1.1 ([0315b18](https://github.com/BinToss/GroupBox.Avalonia/commit/0315b18c87bbcf553af02dcb7d3373be3523ae90))
+* **deps:** bump the nuget group across 1 directory with 10 updates ([408d0dc](https://github.com/BinToss/GroupBox.Avalonia/commit/408d0dcf8825c43211aae8d925213172d42836fc))
+* **deps:** bump the nuget-dependencies group across 1 directory with 8 updates ([05447d1](https://github.com/BinToss/GroupBox.Avalonia/commit/05447d1e80877f67f0793758a3e1eb8964b82eaa))
+
 ## [1.0.0](https://github.com/BinToss/GroupBox.Avalonia/compare/v0.1.0...v1.0.0) (2024-03-18)
 
 
