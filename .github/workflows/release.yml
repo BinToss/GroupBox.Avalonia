@@ -71,16 +71,3 @@ jobs:
           if ($output.EndsWith('There are no relevant changes, so no new version is released.')) {
             echo "NoNewVersion=true" >> "$env:GITHUB_OUTPUT"
           }
-
-      # https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry
-      # https://github.com/actions/setup-dotnet/tree/v3/#setting-up-authentication-for-nuget-feeds
-      - name: .NET - Pack n' Push NuPkg
-        if: ${{!steps.semantic_release.outputs.NO_NEW_VERSION}}
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          NUGET_TOKEN: ${{secrets.NUGET_TOKEN}}
-        shell: pwsh
-        run: |
-          dotnet pack ./GroupBox.Avalonia/GroupBox.Avalonia.csproj -o ./publish/
-          dotnet nuget push ./publish/*.nupkg --source https://api.nuget.org/v3/index.json --api-key $env:NUGET_TOKEN
-          dotnet nuget push ./publish/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key $env:GITHUB_TOKEN
