@@ -2,7 +2,7 @@
    <PropertyGroup>
       <RepoRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), '.git/index'))</RepoRoot>
       <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config/</HCESharedDir>
-      <GitVersion_Path>$(HCESharedDir)GitVersion.yml</GitVersion_Path>
+      <GitVersion_Path>$(HCESharedDir)dotnet/GitVersion6.0.yml</GitVersion_Path>
       <AvaloniaVersion>11.1.4</AvaloniaVersion>
       <HotAvaloniaVersion>1.1.1</HotAvaloniaVersion>
    </PropertyGroup>
