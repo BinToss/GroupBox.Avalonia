@@ -2,12 +2,27 @@
     "compilerOptions": {
         "module": "NodeNext",
         "allowJs": true,
-        "noEmit": true
+        "noEmit": true,
+        "strict": true,
+        "erasableSyntaxOnly": true,
+        "exactOptionalPropertyTypes": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "verbatimModuleSyntax": true
+
     },
     "exclude": [
         "node_modules",
         "GroupBox.Avalonia",
         "GroupBox.Avalonia.Sample",
         "publish"
+    ],
+    "files": [
+        "./commitlint.config.ts",
+        "./.releaserc.js",
+        "./tools/formatXamlFiles.mjs",
+        "./tools/updateReadMe.mjs"
     ]
 }
