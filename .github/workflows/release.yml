@@ -66,8 +66,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
         shell: pwsh
-        run: |
-          $output=npx semantic-release
-          if ($output.EndsWith('There are no relevant changes, so no new version is released.')) {
-            echo "NoNewVersion=true" >> "$env:GITHUB_OUTPUT"
-          }
+        run: npx semantic-release -- --debug=*
