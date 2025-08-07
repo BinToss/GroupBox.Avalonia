@@ -479,3 +479,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,dotnetcore,csharp
 
 .env
+GroupBox.Avalonia.Sample/TargetFrameworkSwitcher.targets
