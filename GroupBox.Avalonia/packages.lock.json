@@ -25,6 +25,12 @@
           "Avalonia.Themes.Simple": "11.3.3"
         }
       },
+      "DotNet.ReproducibleBuilds": {
+        "type": "Direct",
+        "requested": "[1.*, )",
+        "resolved": "1.2.25",
+        "contentHash": "xCXiw7BCxHJ8pF6wPepRUddlh2dlQlbr81gXA72hdk4FLHkKXas7EH/n+fk5UCA/YfMqG1Z6XaPiUjDbUNBUzg=="
+      },
       "GitVersion.MsBuild": {
         "type": "Direct",
         "requested": "[6.0.3, )",
