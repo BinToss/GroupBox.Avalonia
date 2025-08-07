@@ -12,6 +12,7 @@
 
    <PropertyGroup Condition="'$(CI)' == 'true'">
       <Configuration>Release</Configuration>
+      <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
    </PropertyGroup>
 
    <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" />
