@@ -6,6 +6,8 @@
       <AvaloniaVersion>11.*</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
       <Deterministic>true</Deterministic>
+      <LangVersion>Latest</LangVersion>
+      <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == 'true'">
@@ -24,5 +26,10 @@
                         Version="3.*"
                         PrivateAssets="All"
                         Publish="true" />
+      <PackageReference Include="Meziantou.Polyfill"
+                        Version="1.*"
+                        PrivateAssets="All">
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
    </ItemGroup>
 </Project>
