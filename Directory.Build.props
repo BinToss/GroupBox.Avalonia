@@ -10,12 +10,16 @@
 
    <PropertyGroup Condition="'$(CI)' == 'true'">
       <Configuration>Release</Configuration>
-      <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
    </PropertyGroup>
 
    <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" />
    <Import Project="$(HCESharedDir)/dotnet/ZipPublishDir.targets" />
    <ItemGroup>
+      <!-- See https://github.com/dotnet/reproducible-builds#dotnetreproduciblebuilds -->
+      <PackageReference Condition="'$(IsPackable)' == 'true'"
+                        Include="DotNet.ReproducibleBuilds"
+                        Version="1.*"
+                        PrivateAssets="All" />
       <PackageReference Include="HotAvalonia"
                         Version="3.*"
                         PrivateAssets="All"
