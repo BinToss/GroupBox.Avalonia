@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Files/">
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj" />
+  <Project Path="GroupBox.Avalonia/GroupBox.Avalonia.csproj" />
+</Solution>
