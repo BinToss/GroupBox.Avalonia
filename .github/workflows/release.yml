@@ -12,6 +12,7 @@ env:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
   DOTNET_NOLOGO: 1
+  NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
 jobs:
   ci:
@@ -43,6 +44,8 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.x"
+          cache: true
+          cache-dependency-path: './GroupBox.Avalonia*/packages.lock.json'
 
       - name: NPM - Clean Install
         run: npm ci

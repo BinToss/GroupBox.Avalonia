@@ -3,6 +3,10 @@ on:
   workflow_call:
 env:
   DOTNET_ROLL_FORWARD: "Major"
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_NOLOGO: 1
+  NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
 
 jobs:
   unit_test:
@@ -30,5 +34,7 @@ jobs:
       - uses: actions/setup-dotnet@v4.3.1
         with:
           dotnet-version: "8.x"
+          cache: true
+          cache-dependency-path: './GroupBox.Avalonia*/packages.lock.json'
 
       - run: dotnet test
