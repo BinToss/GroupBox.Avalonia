@@ -4,7 +4,7 @@
       <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config/</HCESharedDir>
       <GitVersion_Path>$(HCESharedDir)dotnet/GitVersion6.0.yml</GitVersion_Path>
       <AvaloniaVersion>11.*</AvaloniaVersion>
-      <HotAvaloniaVersion>1.1.1</HotAvaloniaVersion>
+      <HotAvaloniaVersion>3.*</HotAvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
    </PropertyGroup>
 
