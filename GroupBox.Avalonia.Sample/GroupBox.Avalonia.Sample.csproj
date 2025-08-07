@@ -9,7 +9,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
   </PropertyGroup>
-  
+
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <PublishTrimmed>true</PublishTrimmed>
     <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
@@ -21,9 +21,13 @@
     <Watch Include="**/*.axaml;../GroupBox.Avalonia/**/*.axaml" />
 
     <ProjectReference Include="../GroupBox.Avalonia/GroupBox.Avalonia.csproj" />
-    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.Themes.Simple" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Desktop"
+                      Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Fonts.Inter"
+                      Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Fluent"
+                      Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Simple"
+                      Version="$(AvaloniaVersion)" />
   </ItemGroup>
 </Project>
