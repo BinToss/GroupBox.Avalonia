@@ -15,7 +15,7 @@
     <Authors>BinToss</Authors>
     <Product>GroupBox control for AvaloniaUI</Product>
     <Description>Another attempt to recreate the GroupBox control for AvaloniaUI.</Description>
-    <Copyright>© 2023 Noah Sherwin</Copyright>
+    <Copyright>© 2025 Noah Sherwin</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Avalonia AvaloniaUI GroupBox</PackageTags>
