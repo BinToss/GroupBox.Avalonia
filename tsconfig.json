@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "module": "NodeNext",
+        "target": "es2024",
         "allowJs": true,
         "noEmit": true,
         "strict": true,
@@ -11,7 +12,6 @@
         "noPropertyAccessFromIndexSignature": true,
         "noUncheckedIndexedAccess": true,
         "verbatimModuleSyntax": true
-
     },
     "exclude": [
         "node_modules",
