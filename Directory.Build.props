@@ -1,8 +1,8 @@
 <Project>
    <PropertyGroup>
       <RepoRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), '.git/index'))</RepoRoot>
-      <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config/</HCESharedDir>
-      <GitVersion_Path>$(HCESharedDir)dotnet/GitVersion6.0.yml</GitVersion_Path>
+      <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config</HCESharedDir>
+      <GitVersion_Path>$(HCESharedDir)/dotnet/GitVersion6.0.yml</GitVersion_Path>
       <AvaloniaVersion>11.*</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
    </PropertyGroup>
