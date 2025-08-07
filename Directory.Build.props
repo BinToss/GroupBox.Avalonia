@@ -5,12 +5,12 @@
       <GitVersion_Path>$(HCESharedDir)/dotnet/GitVersion6.0.yml</GitVersion_Path>
       <AvaloniaVersion>11.*</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+      <Deterministic>true</Deterministic>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == 'true'">
       <Configuration>Release</Configuration>
       <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-      <Deterministic>true</Deterministic>
    </PropertyGroup>
 
    <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" />
