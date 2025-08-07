@@ -4,7 +4,6 @@
       <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config/</HCESharedDir>
       <GitVersion_Path>$(HCESharedDir)dotnet/GitVersion6.0.yml</GitVersion_Path>
       <AvaloniaVersion>11.*</AvaloniaVersion>
-      <HotAvaloniaVersion>3.*</HotAvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
    </PropertyGroup>
 
@@ -15,4 +14,10 @@
    </PropertyGroup>
 
    <Import Project="$(HCESharedDir)/dotnet/ZipPublishDir.targets" />
+   <ItemGroup>
+      <PackageReference Include="HotAvalonia"
+                        Version="3.*"
+                        PrivateAssets="All"
+                        Publish="true" />
+   </ItemGroup>
 </Project>

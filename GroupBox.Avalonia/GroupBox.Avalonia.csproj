@@ -41,7 +41,6 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="GitVersion.MsBuild" Version="6.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-    <PackageReference Include="HotAvalonia" Version="$(HotAvaloniaVersion)" PrivateAssets="All" Publish="true" />
   </ItemGroup>
 
 </Project>
