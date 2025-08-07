@@ -13,6 +13,7 @@
       <Deterministic>true</Deterministic>
    </PropertyGroup>
 
+   <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" />
    <Import Project="$(HCESharedDir)/dotnet/ZipPublishDir.targets" />
    <ItemGroup>
       <PackageReference Include="HotAvalonia"
