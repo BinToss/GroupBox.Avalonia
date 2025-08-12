@@ -13,9 +13,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
-    <PublishTrimmed>true</PublishTrimmed>
     <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
+    <PublishTrimmed>$(SelfContained)</PublishTrimmed>
+    <EnableCompressionInSingleFile>$(SelfContained)</EnableCompressionInSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
