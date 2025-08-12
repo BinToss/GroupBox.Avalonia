@@ -2,23 +2,110 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFrameworks>net481;net8.0</TargetFrameworks>
+    <RuntimeIdentifiers>linux-arm64;linux-x64;win-arm64;win-x86;win-x64</RuntimeIdentifiers>
     <Nullable>enable</Nullable>
-    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+
+    <ApplicationIcon>Assets/avalonia-logo.ico</ApplicationIcon>
+
+    <!-- Recommended Avalonia trimming settings for Native AOT -->
+    <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+    <TrimMode>link</TrimMode>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ImplicitUsings>enable</ImplicitUsings>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishLzmaCompressed>true</PublishLzmaCompressed>
+    <UseSystemResourceKeys>true</UseSystemResourceKeys>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <StripSymbols>true</StripSymbols>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+  <!-- file://./../node_modules/@halospv3/hce.shared-config/dotnet/PublishAll.targets
+  PublishProfileName(s) and related PropertyGroups are inspired by .pubxml PublishProfiles.
+  See https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish
+  TODO: semantic-release multi-platform native builds
+    - semantic-release dry-run w/ semantic-release-export-data plugin to get
+      nextVersion from GITHUB_OUTPUT
+    - invoke "setup-publish-assets" workflow w/ nextVersion
+      - use matrix-strategy for target OSs e.g. `windows-latest` for `win-`;
+        `ubuntu-latest` for `linux-*`
+      - filter $(PublishProfileNames) for only those supported by the workflow
+        runner OS
+      - upload ./publish directory as artifact
+    - download all ./publish artifacts for the current commit
+    - run semantic-release
+      - IMPORTANT!: change prepareCmd to account for `dotnet publish` running outside of
+        semantic-release. Currently, HCE.Shared's requires at least one entry in
+        `projectsToPublish` which is now undesired.
+
+  -->
+  <PropertyGroup Label="PublishAll.props">
+    <!-- PublishProfileName should be any of the semicolon-separated values in PublishProfileNames -->
+    <!-- <PublishProfileName
+    Condition="'$(PublishProfileName)'==''">net481</PublishProfileName> -->
+    <!-- TODO: implement per-PublishProfileNames ops in PublishAll.targets
+    file://./../node_modules/@halospv3/hce.shared-config/dotnet/PublishAll.targets -->
+    <PublishProfileNames>net481;net8.0-linux-arm64;net8.0-linux-x64;net8.0-win-x86;net8.0-win-x64</PublishProfileNames>
+  </PropertyGroup>
+
+  <!-- file://./../node_modules/@halospv3/hce.shared-config/dotnet/ZipPublishDir.targets -->
+  <PropertyGroup Label="ZipPublishDir.props">
+    <VariantArgs Condition="'$(Configuration)' != 'Release'">$(Configuration)</VariantArgs>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(PublishProfileName)' == 'net481'">
+    <TargetFramework>net481</TargetFramework>
+    <RuntimeIdentifier></RuntimeIdentifier>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(PublishProfileName.StartsWith('net8.0-'))">
+    <TargetFramework>net8.0</TargetFramework>
     <PublishTrimmed>true</PublishTrimmed>
-    <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
-    <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RuntimeIdentifier Condition="'$(PublishProfileName)' == 'net8.0-linux-arm64'">
+      linux-arm64
+    </RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(PublishProfileName)' == 'net8.0-linux-x64'">
+      linux-x64
+    </RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(PublishProfileName)' == 'net8.0-win-x86'">
+      win-x86
+    </RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(PublishProfileName)' == 'net8.0-win-arm64'">
+      win-arm64
+    </RuntimeIdentifier>
+    <RuntimeIdentifier Condition="'$(PublishProfileName)' == 'net8.0-win-x64'">
+      win-x64
+    </RuntimeIdentifier>
+
+    <VariantArgs Condition="'$(PublishAot)' == 'true'">$(VariantArgs);native</VariantArgs>
+    <VariantArgs>$(VariantArgs);$(TargetFramework);$(RuntimeIdentifier)</VariantArgs>
+
+    <_NativeLibExt>.a</_NativeLibExt>
+    <_NativeLibExt Condition="$(RuntimeIdentifier.StartsWith('win-'))">.lib</_NativeLibExt>
   </PropertyGroup>
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
     <Watch Include="**/*.axaml;../GroupBox.Avalonia/**/*.axaml" />
+
+    <!-- Preserve Avalonia types for reflection -->
+    <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
+    <TrimmerRootAssembly Include="Avalonia.Themes.Simple" />
+
+    <!-- TODO: setup native lib acquisition
+     When set up, external, dynamically-linked native dependencies will be
+     statically linked for truly single-file binaries! -->
+    <!-- <NativeLibrary
+    Include="av_libglesv2$(_NativeLibExt);libHarfBuzzSharp$(_NativeLibExt);libSkiaSharp$(_NativeLibExt)"
+    /> -->
 
     <ProjectReference Include="../GroupBox.Avalonia/GroupBox.Avalonia.csproj" />
     <PackageReference Include="Avalonia.Desktop"
@@ -29,5 +116,8 @@
                       Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Themes.Simple"
                       Version="$(AvaloniaVersion)" />
+    <PackageReference Condition="$([MSBuild]::IsTargetFrameworkCompatible('net5.0', '$(TargetFramework)'))"
+                      Include="PublishAotCompressed"
+                      Version="1.*" />
   </ItemGroup>
 </Project>
