@@ -4,7 +4,7 @@
         xmlns:conv="using:GroupBox.Avalonia.Converters"
         xmlns:ctrl="using:GroupBox.Avalonia.Controls"
         xmlns:view="using:GroupBox.Avalonia.Sample.Views"
-        Title="SimpleTheme" Icon="/Assets/avalonia-logo.ico"
+        Title="SimpleTheme"
         SizeToContent="WidthAndHeight">
   <Window.Styles>
     <SimpleTheme/>
