@@ -12,14 +12,22 @@
     <ApplicationIcon>../GroupBox.Avalonia.ico</ApplicationIcon>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
-    <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
-    <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
-
-    <SelfContained>false</SelfContained>
-    <PublishTrimmed>$(SelfContained)</PublishTrimmed>
-    <EnableCompressionInSingleFile>$(SelfContained)</EnableCompressionInSingleFile>
-  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net481'">
+      <PropertyGroup>
+        <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net8.0'">
+      <PropertyGroup>
+        <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
+        <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
+        <SelfContained>false</SelfContained>
+        <PublishTrimmed>$(SelfContained)</PublishTrimmed>
+        <EnableCompressionInSingleFile>$(SelfContained)</EnableCompressionInSingleFile>
+      </PropertyGroup>
+    </When>
+  </Choose>
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
