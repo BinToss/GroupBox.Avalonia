@@ -32,6 +32,8 @@
         <SelfContained>false</SelfContained>
         <PublishTrimmed>$(SelfContained)</PublishTrimmed>
         <EnableCompressionInSingleFile>$(SelfContained)</EnableCompressionInSingleFile>
+        <!-- https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview?tabs=cli#native-libraries -->
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
       </PropertyGroup>
     </When>
   </Choose>
