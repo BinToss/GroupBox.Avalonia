@@ -13,6 +13,12 @@
     <ApplicationIcon>../GroupBox.Avalonia.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <StripSymbols>true</StripSymbols>
+  </PropertyGroup>
+
   <Choose>
     <When Condition="'$(TargetFramework)' == 'net481'">
       <PropertyGroup>
