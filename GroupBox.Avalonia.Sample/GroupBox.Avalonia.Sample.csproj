@@ -8,6 +8,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ImplicitUsings>enable</ImplicitUsings>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <PublishRelease>true</PublishRelease>
 
     <ApplicationIcon>../GroupBox.Avalonia.ico</ApplicationIcon>
   </PropertyGroup>
