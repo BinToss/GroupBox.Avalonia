@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
 isModifiedBefore=false;
 
 if git status README.md | grep -q 'modified:   README.md'
