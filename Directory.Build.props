@@ -8,6 +8,7 @@
       <Deterministic>true</Deterministic>
       <LangVersion>Latest</LangVersion>
       <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>
+      <PublishRelease>true</PublishRelease>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == 'true'">
