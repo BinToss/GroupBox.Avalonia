@@ -22,9 +22,9 @@
 
    [![CI](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml)
    [![Release](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml)
-   
-   [![latest](https://buildstats.info/nuget/BinToss.GroupBox.Avalonia)](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/)
-   <!-- [![prerelease](https://buildstats.info/nuget/BinToss.GroupBox.Avalonia?includePreReleases=true)](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/1.0.0-CI00021) -->
+
+   [![latest](https://img.shields.io/nuget/v/BinToss.GroupBox.Avalonia)](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/)
+   [![prerelease](https://img.shields.io/nuget/vpre/BinToss.GroupBox.Avalonia?label=nuget%20(prerelease))](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/#versions-body-tab)
 </div>
 </div>
 </div>
