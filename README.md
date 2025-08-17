@@ -1,4 +1,4 @@
-<!-- Unfortunately, the AvaloniaUI badge is updated via the Release workflow instead of via Shields.io and NuGet's API. Also, simpleicons.org does not have Avalonia's icon right now. -->
+<!-- Unfortunately, the AvaloniaUI badge is updated via the Release workflow instead of via Shields.io and NuGet's API. -->
 
 <!-- The SVG should be exported to an "optimized" SVG and the contents should be copied here. Take care so you don't delete the styles! -->
 
