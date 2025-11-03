@@ -1,3 +1,4 @@
+//@ts-check
 import { execFileSync } from "child_process";
 import { readFileSync, writeFileSync } from 'fs'
 import { dirname, join } from 'path';

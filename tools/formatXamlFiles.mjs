@@ -1,3 +1,4 @@
+//@ts-check
 import { exec } from "node:child_process";
 import * as fs from "node:fs/promises"
 import path, { dirname } from "node:path";
