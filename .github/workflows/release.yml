@@ -36,7 +36,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          cache: "npm"
+          cache: "yarn"
           check-latest: true
           node-version-file: package.json
           node-version: lts/*
@@ -47,14 +47,15 @@ jobs:
           cache: true
           cache-dependency-path: './GroupBox.Avalonia*/packages.lock.json'
 
-      - name: NPM - Clean Install
-        run: npm ci
+      - name: Yarn - Immutable Install
+        run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: NPM - Audit Signatures
-        run: npm audit signatures
+      - name: Yarn - Audit Signatures
+        # run: yarn npm audit signatures
+        run: echo "::warning ::yarn npm audit signatures is unavailable. See https://github.com/yarnpkg/berry/issues/6487"
 
       - name: Update version in README's Avalonia badge
-        run: npm run update-readme
+        run: yarn update-readme
 
       # [release#
       # steps](https://github.com/semantic-release/semantic-release#release-steps)
@@ -69,4 +70,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
         shell: pwsh
-        run: npx semantic-release -- --debug=*
+        run: yarn exec semantic-release -- --debug=*

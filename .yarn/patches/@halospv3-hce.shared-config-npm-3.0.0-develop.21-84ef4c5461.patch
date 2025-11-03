@@ -1,0 +1,197 @@
+diff --git a/package.json b/package.json
+index f14b39271734e420b1d1d07d2b6856eefc9bfa10..ef5caa58db38f746c5946d971c69e52fa83ecfc4 100644
+--- a/package.json
++++ b/package.json
+@@ -123,7 +123,192 @@
+     "./*": {
+       "types": "./mjs/*.d.ts",
+       "import": "./mjs/*.mjs"
++    },
++    "./CaseInsensitiveMap": {
++      "types": "./mjs/CaseInsensitiveMap.d.ts",
++      "import": "./mjs/CaseInsensitiveMap.mjs"
++    },
++    "./commitlintConfig": {
++      "types": "./mjs/commitlintConfig.d.ts",
++      "import": "./mjs/commitlintConfig.mjs"
++    },
++    "./debug": {
++      "types": "./mjs/debug.d.ts",
++      "import": "./mjs/debug.mjs"
++    },
++    "./dotnet": {
++      "types": "./mjs/dotnet.d.ts",
++      "import": "./mjs/dotnet.mjs"
++    },
++    "./utils/env": {
++      "types": "./mjs/utils/env.d.ts",
++      "import": "./mjs/utils/env.mjs"
++    },
++    "./eslintConfig": {
++      "types": "./mjs/eslintConfig.d.ts",
++      "import": "./mjs/eslintConfig.mjs"
++    },
++    "./utils/Exact": {
++      "types": "./mjs/utils/Exact.d.ts",
++      "import": "./mjs/utils/Exact.mjs"
++    },
++    "./utils/execAsync": {
++      "types": "./mjs/utils/execAsync.d.ts",
++      "import": "./mjs/utils/execAsync.mjs"
++    },
++    "./utils/reflection/filterForGetters": {
++      "types": "./mjs/utils/reflection/filterForGetters.d.ts",
++      "import": "./mjs/utils/reflection/filterForGetters.mjs"
++    },
++    "./utils/reflection/FunctionLike": {
++      "types": "./src/utils/reflection/FunctionLike.d.ts",
++      "import": "./mjs/utils/reflection/FunctionLike.d.mjs"
++    },
++    "./utils/reflection/getOwnPropertyDescriptors": {
++      "types": "./mjs/utils/reflection/getOwnPropertyDescriptors.d.ts",
++      "import": "./mjs/utils/reflection/getOwnPropertyDescriptors.mjs"
++    },
++    "./utils/reflection/getOwnPropertyDescriptorsRecursively": {
++      "types": "./mjs/utils/reflection/getOwnPropertyDescriptorsRecursively.d.ts",
++      "import": "./mjs/utils/reflection/getOwnPropertyDescriptorsRecursively.mjs"
++    },
++    "./utils/reflection/getPrototypeChainOf": {
++      "types": "./mjs/utils/reflection/getPrototypeChainOf.d.ts",
++      "import": "./mjs/utils/reflection/getPrototypeChainOf.mjs"
++    },
++    "./utils/reflection/getPrototypeOf": {
++      "types": "./mjs/utils/reflection/getPrototypeOf.d.ts",
++      "import": "./mjs/utils/reflection/getPrototypeOf.mjs"
++    },
++    "./utils/reflection/GetterDescriptor": {
++      "types": "./src/utils/reflection/GetterDescriptor.d.ts",
++      "import": "./mjs/utils/reflection/GetterDescriptor.d.mjs"
++    },
++    "./dotnet/GithubNugetRegistryInfo": {
++      "types": "./mjs/dotnet/GithubNugetRegistryInfo.d.ts",
++      "import": "./mjs/dotnet/GithubNugetRegistryInfo.mjs"
++    },
++    "./dotnet/GitlabNugetRegistryInfo": {
++      "types": "./mjs/dotnet/GitlabNugetRegistryInfo.d.ts",
++      "import": "./mjs/dotnet/GitlabNugetRegistryInfo.mjs"
++    },
++    "./utils/GracefulRecursion": {
++      "types": "./src/utils/GracefulRecursion.d.ts",
++      "import": "./mjs/utils/GracefulRecursion.d.mjs"
++    },
++    "./dotnet/helpers": {
++      "types": "./mjs/dotnet/helpers.d.ts",
++      "import": "./mjs/dotnet/helpers.mjs"
++    },
++    "./dotnet/index": {
++      "types": "./mjs/dotnet/index.d.ts",
++      "import": "./mjs/dotnet/index.mjs"
++    },
++    "./index": {
++      "types": "./mjs/index.d.ts",
++      "import": "./mjs/index.mjs"
++    },
++    "./utils/reflection/inheritance": {
++      "types": "./mjs/utils/reflection/inheritance.d.ts",
++      "import": "./mjs/utils/reflection/inheritance.mjs"
++    },
++    "./insertPlugins": {
++      "types": "./mjs/insertPlugins.d.ts",
++      "import": "./mjs/insertPlugins.mjs"
++    },
++    "./utils/reflection/InstancePropertyDescriptorMap": {
++      "types": "./src/utils/reflection/InstancePropertyDescriptorMap.d.ts",
++      "import": "./mjs/utils/reflection/InstancePropertyDescriptorMap.d.mjs"
++    },
++    "./utils/reflection/InstanceTypeOrSelfPropertyDescriptorMap": {
++      "types": "./src/utils/reflection/InstanceTypeOrSelfPropertyDescriptorMap.d.ts",
++      "import": "./mjs/utils/reflection/InstanceTypeOrSelfPropertyDescriptorMap.d.mjs"
++    },
++    "./utils/reflection/isConstructor": {
++      "types": "./mjs/utils/reflection/isConstructor.d.ts",
++      "import": "./mjs/utils/reflection/isConstructor.mjs"
++    },
++    "./utils/reflection/isGetterDescriptor": {
++      "types": "./mjs/utils/reflection/isGetterDescriptor.d.ts",
++      "import": "./mjs/utils/reflection/isGetterDescriptor.mjs"
++    },
++    "./dotnet/IsNextVersionAlreadyPublished.cli": {
++      "types": "./mjs/dotnet/IsNextVersionAlreadyPublished.cli.d.ts",
++      "import": "./mjs/dotnet/IsNextVersionAlreadyPublished.cli.mjs"
++    },
++    "./utils/reflection/listOwnGetters": {
++      "types": "./mjs/utils/reflection/listOwnGetters.d.ts",
++      "import": "./mjs/utils/reflection/listOwnGetters.mjs"
++    },
++    "./utils/miscTypes": {
++      "types": "./mjs/utils/miscTypes.d.ts",
++      "import": "./mjs/utils/miscTypes.mjs"
++    },
++    "./dotnet/MSBuildProject": {
++      "types": "./mjs/dotnet/MSBuildProject.d.ts",
++      "import": "./mjs/dotnet/MSBuildProject.mjs"
++    },
++    "./dotnet/MSBuildProjectProperties": {
++      "types": "./mjs/dotnet/MSBuildProjectProperties.d.ts",
++      "import": "./mjs/dotnet/MSBuildProjectProperties.mjs"
++    },
++    "./dotnet/NugetProjectProperties": {
++      "types": "./mjs/dotnet/NugetProjectProperties.d.ts",
++      "import": "./mjs/dotnet/NugetProjectProperties.mjs"
++    },
++    "./dotnet/NugetRegistryInfo": {
++      "types": "./mjs/dotnet/NugetRegistryInfo.d.ts",
++      "import": "./mjs/dotnet/NugetRegistryInfo.mjs"
++    },
++    "./utils/reflection/OwnGetterDescriptorMap": {
++      "types": "./src/utils/reflection/OwnGetterDescriptorMap.d.ts",
++      "import": "./mjs/utils/reflection/OwnGetterDescriptorMap.d.mjs"
++    },
++    "./utils/reflection/OwnKeyOf": {
++      "types": "./src/utils/reflection/OwnKeyOf.d.ts",
++      "import": "./mjs/utils/reflection/OwnKeyOf.d.mjs"
++    },
++    "./utils/reflection/OwnPropertyDescriptorMap": {
++      "types": "./src/utils/reflection/OwnPropertyDescriptorMap.d.ts",
++      "import": "./mjs/utils/reflection/OwnPropertyDescriptorMap.d.mjs"
++    },
++    "./utils/reflection/PropertyDescriptorMap": {
++      "types": "./src/utils/reflection/PropertyDescriptorMap.d.ts",
++      "import": "./mjs/utils/reflection/PropertyDescriptorMap.d.mjs"
++    },
++    "./utils/reflection": {
++      "types": "./mjs/utils/reflection.d.ts",
++      "import": "./mjs/utils/reflection.mjs"
++    },
++    "./semantic-release__commit-analyzer": {
++      "types": "./src/semantic-release__commit-analyzer.d.ts",
++      "import": "./mjs/semantic-release__commit-analyzer.d.mjs"
++    },
++    "./semantic-release__exec": {
++      "types": "./src/semantic-release__exec.d.ts",
++      "import": "./mjs/semantic-release__exec.d.mjs"
++    },
++    "./semantic-release__git": {
++      "types": "./src/semantic-release__git.d.ts",
++      "import": "./mjs/semantic-release__git.d.mjs"
++    },
++    "./semantic-release__github": {
++      "types": "./src/semantic-release__github.d.ts",
++      "import": "./mjs/semantic-release__github.d.mjs"
++    },
++    "./semanticReleaseConfig": {
++      "types": "./mjs/semanticReleaseConfig.d.ts",
++      "import": "./mjs/semanticReleaseConfig.mjs"
++    },
++    "./semanticReleaseConfigDotnet": {
++      "types": "./mjs/semanticReleaseConfigDotnet.d.ts",
++      "import": "./mjs/semanticReleaseConfigDotnet.mjs"
++    },
++    "./setupGitPluginSpec": {
++      "types": "./mjs/setupGitPluginSpec.d.ts",
++      "import": "./mjs/setupGitPluginSpec.mjs"
+     }
++
+   },
+   "types": "./mjs/index.d.ts",
+   "packemon": {

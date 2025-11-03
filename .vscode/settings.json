@@ -1,23 +1,29 @@
 {
-    "dotnet.defaultSolution": "GroupBox.Avalonia.sln",
-    "xml.codeLens.enabled": true,
-    "xml.format.maxLineWidth": 100,
-    "xml.format.preserveAttributeLineBreaks": false,
-    "xml.format.splitAttributes": "alignWithFirstAttr",
-    "[AXAML]": {
-        "editor.defaultFormatter": "redhat.vscode-xml",
-    },
-    "filewatcher.commands": [
-        {
-            "vscodeTask": [
-                "workbench.action.tasks.runTask",
-                "npm: xstyler"
-            ],
-            "event": "onFileChange",
-            "match": ".*/.axaml"
-        }
-    ],
-    "csharp.debug.symbolOptions.searchMicrosoftSymbolServer": true,
-    "csharp.debug.symbolOptions.searchNuGetOrgSymbolServer": true,
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+  "dotnet.defaultSolution": "GroupBox.Avalonia.sln",
+  "xml.codeLens.enabled": true,
+  "xml.format.maxLineWidth": 100,
+  "xml.format.preserveAttributeLineBreaks": false,
+  "xml.format.splitAttributes": "alignWithFirstAttr",
+  "[AXAML]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "filewatcher.commands": [
+    {
+      "vscodeTask": [
+        "workbench.action.tasks.runTask",
+        "npm: xstyler"
+      ],
+      "event": "onFileChange",
+      "match": ".*/.axaml"
+    }
+  ],
+  "csharp.debug.symbolOptions.searchMicrosoftSymbolServer": true,
+  "csharp.debug.symbolOptions.searchNuGetOrgSymbolServer": true,
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": ".yarn/sdks"
 }

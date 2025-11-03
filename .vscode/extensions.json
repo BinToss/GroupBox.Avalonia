@@ -5,5 +5,8 @@
     "dbaeumer.vscode-eslint",
     "dabbinavo.xamlstyler",
     "lextudio.vscode-axaml"
+    "arcanis.vscode-zipfs",
+    "gamunu.vscode-yarn",
+    "mariusschulz.yarn-lock-syntax",
   ]
 }

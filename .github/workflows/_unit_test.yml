@@ -22,14 +22,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Enable Corepack _before_ you setup Node
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          cache: "npm"
+          cache: "yarn"
           check-latest: true
           node-version-file: package.json
-      - run: npm i -g npm@latest
-
-      - run: npm ci
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: echo "::warning ::yarn npm audit signatures is unavailable. See https://github.com/yarnpkg/berry/issues/6487"
 
       - uses: actions/setup-dotnet@v4.3.1
         with:

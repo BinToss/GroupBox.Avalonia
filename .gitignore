@@ -480,3 +480,12 @@ $RECYCLE.BIN/
 
 .env
 GroupBox.Avalonia.Sample/TargetFrameworkSwitcher.targets
+
+# yarn
+.yarn/*
+.pnp.*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

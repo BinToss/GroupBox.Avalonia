@@ -1,7 +1,22 @@
 <Project>
    <PropertyGroup>
       <RepoRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), '.git/index'))</RepoRoot>
-      <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config</HCESharedDir>
+      <_nm_hceShared>node_modules/@halospv3/hce.shared-config/</_nm_hceShared>
+      <HCESharedDir Condition="'$(HCESharedDir)' == ''">$(RepoRoot)$(_nm_hceShared)</HCESharedDir>
+
+      <!-- Using Yarn? You'll need to `yarn unplug @halospv3/hce.shared-config` -->
+      <_yarnLock>$([System.IO.Path]::Join(`$(RepoRoot)`, `yarn.lock`))</_yarnLock>
+      <_yarnUsingYarn>$([System.IO.Path]::Exists("$(_yarnLock)"))</_yarnUsingYarn>
+      <_yarnUnplugged>$([System.IO.Path]::Join("$(RepoRoot)", ".yarn/unplugged"))</_yarnUnplugged>
+      <_yarnUnplugged Condition="!Exists($(_yarnUnplugged))"></_yarnUnplugged>
+
+      <_yarnUnpluggedPackages Condition="Exists($(_yarnUnplugged))">$([System.IO.Directory]::GetDirectories(`$(_yarnUnplugged)`, '@halospv3-hce.shared-config*'))</_yarnUnpluggedPackages>
+      <_yarnUnpluggedPackagesLast>$([MSBuild]::Subtract($(_yarnUnpluggedPackages.Split(';').Length), 1))</_yarnUnpluggedPackagesLast>
+      <!-- For simplicity's sake, take the last result ("" if none). This may be a -patch instead of -npm. -->
+      <_yarnUnpluggedHceShared Condition="'$(_yarnUnpluggedPackages)' != ''">
+         $(_yarnUnpluggedPackages.Split(';')[`$(_yarnUnpluggedPackagesLast)`])</_yarnUnpluggedHceShared>
+      <HCESharedDir Condition="'$(_yarnUnpluggedHceShared)' != ''">$(_yarnUnpluggedHceShared)/$(_nm_hceShared)</HCESharedDir>
+
       <GitVersion_Path>$(HCESharedDir)/dotnet/GitVersion6.0.yml</GitVersion_Path>
       <AvaloniaVersion>11.*</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>

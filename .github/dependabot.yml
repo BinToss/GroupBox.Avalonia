@@ -35,7 +35,7 @@ updates:
     commit-message:
       prefix: chore(deps-dev)
     groups:
-      "NPM":
+      "Yarn":
         patterns:
           - "*"
 

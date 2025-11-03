@@ -21,13 +21,13 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
+      # Enable Corepack _before_ you setup Node
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          cache: "npm"
+          cache: "yarn"
           check-latest: true
           node-version-file: package.json
-      - run: npm i -g npm@latest
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -35,11 +35,11 @@ jobs:
           cache: true
           cache-dependency-path: './GroupBox.Avalonia*/packages.lock.json'
 
-      - name: NPM - Clean Install
-        run: npm ci
+      - name: Yarn - Install
+        run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: NPM - Audit Signatures
-        run: npm audit signatures
+      - name: Yarn - Audit Signatures
+        run: echo "::warning ::yarn npm audit signatures is unavailable. See https://github.com/yarnpkg/berry/issues/6487"
 
       - name: Pack Solution
         run: dotnet pack

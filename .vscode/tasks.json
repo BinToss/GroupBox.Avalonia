@@ -43,7 +43,7 @@
             "script": "xstyler",
             "problemMatcher": [],
             "label": "npm: xstyler",
-            "detail": "node ./tools/formatXamlFiles.mjs",
+            "detail": "yarn node ./tools/formatXamlFiles.mjs",
             "presentation": {
                 "reveal": "never",
                 "panel": "dedicated",
