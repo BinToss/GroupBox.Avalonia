@@ -6,7 +6,8 @@ const scopes = {
   'deps-dev': 'Affects dependencies not included at runtime.',
   README: 'Affects "./README.md".',
   release: 'Only for commits made by @semantic-release/git.',
-  sample: 'Affects "./src/GroupBox.Avalonia.Sample/**/*".'
+  sample: 'Affects "./src/GroupBox.Avalonia.Sample/**/*".',
+  vscode: 'Affects "./vscode/**/*".'
 };
 
 hceShared.rules["scope-enum"] = [
