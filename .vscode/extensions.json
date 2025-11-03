@@ -1,7 +1,9 @@
 {
-    "recommendations": [
-        "appulate.filewatcher",
-        "actionforge.actionforge",
-        "avaloniateam.vscode-avalonia"
-    ]
+  "recommendations": [
+    "appulate.filewatcher",
+    "actionforge.actionforge",
+    "dbaeumer.vscode-eslint",
+    "dabbinavo.xamlstyler",
+    "lextudio.vscode-axaml"
+  ]
 }
