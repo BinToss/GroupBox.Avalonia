@@ -19,5 +19,6 @@
   ],
   "csharp.debug.symbolOptions.searchMicrosoftSymbolServer": true,
   "csharp.debug.symbolOptions.searchNuGetOrgSymbolServer": true,
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "axaml.selectedSolution": "./GroupBox.Avalonia.slnx"
 }
