@@ -4,7 +4,7 @@
     ".NETStandard,Version=v2.0": {
       "Avalonia": {
         "type": "Direct",
-        "requested": "[11.*, )",
+        "requested": "[11.3.4, )",
         "resolved": "11.3.4",
         "contentHash": "gWy26+7xDbGOURVUjion2lzqXEMo2+YOjVMhYn7ZGQNAAEjogK5EpVn6KNzeBcLUK+TNulkoZY7tjlHPSY2oFw==",
         "dependencies": {
@@ -19,7 +19,7 @@
       },
       "Avalonia.Diagnostics": {
         "type": "Direct",
-        "requested": "[11.*, )",
+        "requested": "[11.3.4, )",
         "resolved": "11.3.4",
         "contentHash": "7agu3YsJ3VjSKlGehh3CBMHm6wkMTMmXj4rqYt0Lc08ZVaziurezP8R2Hudsn0I9jS28X3WvpNBFuny7KCCWPw==",
         "dependencies": {
