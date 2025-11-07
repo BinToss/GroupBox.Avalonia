@@ -12,6 +12,9 @@
     <ControlFlowGuard Condition="'$(RuntimeIdentifier)' != '' AND $(RuntimeIdentifier.StartsWith(`win`))">Guard</ControlFlowGuard>
 
     <ApplicationIcon>../GroupBox.Avalonia.ico</ApplicationIcon>
+
+    <WeaverConfiguration>$(WeaverConfiguration)</WeaverConfiguration>
+    <!-- <TargetFramework>net481</TargetFramework> -->
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
@@ -22,7 +25,33 @@
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net481'">
     <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <WeaverConfiguration>
+      $(WeaverConfiguration)
+      <Weavers>
+        @(WeaverConfiguration.Weavers)
+        <Costura
+          UnmanagedWinX86Assemblies="libSkiaSharp|libHarfBuzzSharp"
+          UnmanagedWinX64Assemblies="libSkiaSharp|libHarfBuzzSharp"
+          UnmanagedWinArm64Assemblies="libSkiaSharp|libHarfBuzzSharp"
+          >
+          <IncludeAssemblies>
+          av_libglesv2
+          Avalonia*
+          GroupBox.Avalonia
+          HarfBuzzSharp
+          MicroCom.Runtime
+          SkiaSharp
+          System.*
+          Tmds.DBus.Protocol
+          </IncludeAssemblies>
+        </Costura>
+      </Weavers>
+    </WeaverConfiguration>
   </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net481' ">
+    <Content Remove="arm/*;arm64/*;loongarch64/*;musl-arm/*;musl-arm64/*;musl-loongarch64/*;musl-riscv64/*;musl-x64/*;riscv64/*;x64/*.so;x86/*.so"  />
+  </ItemGroup>
   
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
@@ -33,6 +62,9 @@
     <!-- https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview?tabs=cli#native-libraries -->
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <Content Remove="arm64/*.dll;loongarch64/*;musl-arm/*;musl-arm64/*;musl-loongarch64/*;musl-riscv64/*;musl-x64/*;riscv64/*;x86/*.so" />
+  </ItemGroup>
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
@@ -47,5 +79,16 @@
                       Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Themes.Simple"
                       Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net481' ">
+    <PackageReference Condition=" '$(TargetFramework)' == 'net481' "
+                      Include="Costura.Fody"
+                      Version="6.0.0"
+                      PrivateAssets="All" />
+    <PackageReference Condition=" '$(TargetFramework)' == 'net481' "
+                      Include="Fody"
+                      Version="6.9.3"
+                      PrivateAssets="All" />
   </ItemGroup>
 </Project>

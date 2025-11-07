@@ -3,7 +3,7 @@
       <RepoRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), '.git/index'))</RepoRoot>
       <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config</HCESharedDir>
       <GitVersion_Path>$(HCESharedDir)/dotnet/GitVersion6.0.yml</GitVersion_Path>
-      <AvaloniaVersion>11.*</AvaloniaVersion>
+      <AvaloniaVersion>11.3.4</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
       <Deterministic>true</Deterministic>
       <LangVersion>Latest</LangVersion>
@@ -17,7 +17,8 @@
       <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
    </PropertyGroup>
 
-   <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" />
+   <!-- <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" /> -->
+   <Import Project="/home/noah/repos/HaloSPV3/HCE.Shared/dotnet/PublishAll.targets" />
    <Import Project="$(HCESharedDir)/dotnet/ZipPublishDir.targets" />
    <ItemGroup>
       <!-- See https://github.com/dotnet/reproducible-builds#dotnetreproduciblebuilds -->
