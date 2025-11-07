@@ -20,24 +20,19 @@
     <StripSymbols>true</StripSymbols>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'net481'">
-      <PropertyGroup>
-        <RuntimeIdentifier>win-x86</RuntimeIdentifier>
-      </PropertyGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'net8.0'">
-      <PropertyGroup>
-        <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
-        <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
-        <SelfContained>false</SelfContained>
-        <PublishTrimmed>$(SelfContained)</PublishTrimmed>
-        <EnableCompressionInSingleFile>$(SelfContained)</EnableCompressionInSingleFile>
-        <!-- https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview?tabs=cli#native-libraries -->
-        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
-      </PropertyGroup>
-    </When>
-  </Choose>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net481'">
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
+    <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <PublishTrimmed>$(SelfContained)</PublishTrimmed>
+    <EnableCompressionInSingleFile>$(SelfContained)</EnableCompressionInSingleFile>
+    <!-- https://learn.microsoft.com/en-us/dotnet/core/deploying/single-file/overview?tabs=cli#native-libraries -->
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
 
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
