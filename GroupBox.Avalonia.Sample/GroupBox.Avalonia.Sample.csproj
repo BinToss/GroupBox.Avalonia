@@ -8,6 +8,8 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ImplicitUsings>enable</ImplicitUsings>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <!-- Enable control flow guard -->
+    <ControlFlowGuard Condition="'$(RuntimeIdentifier)' != '' AND $(RuntimeIdentifier.StartsWith(`win`))">Guard</ControlFlowGuard>
 
     <ApplicationIcon>../GroupBox.Avalonia.ico</ApplicationIcon>
   </PropertyGroup>
