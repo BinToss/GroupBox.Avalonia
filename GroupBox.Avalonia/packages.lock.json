@@ -55,8 +55,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.49",
-        "contentHash": "LVbNRdqWw8DBx80J/enVLLpTcZMmJZ1qV/nwdDWQJonEKRu9hv+1plL8fYND32bmh+PpBACFfAwy1SZzKqI5lQ=="
+        "resolved": "1.0.62",
+        "contentHash": "HznGcUvW/ZHHYTrBR7txDXxF2QORC+2/6OdsqNOqqVkJs19QTo0Dd9kKxcR+4YPTP2PyrIBJgY0Xh12MathhTw=="
       },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",
