@@ -25,7 +25,8 @@
                         Include="DotNet.ReproducibleBuilds"
                         Version="1.*"
                         PrivateAssets="All" />
-      <PackageReference Include="HotAvalonia"
+      <PackageReference Condition=" '$(Configuration)' != 'Release' "
+                        Include="HotAvalonia"
                         Version="3.*"
                         PrivateAssets="All"
                         Publish="true" />
