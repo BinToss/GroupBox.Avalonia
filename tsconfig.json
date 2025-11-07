@@ -17,7 +17,8 @@
         "node_modules",
         "GroupBox.Avalonia",
         "GroupBox.Avalonia.Sample",
-        "publish"
+        "publish",
+        "artifacts"
     ],
     "files": [
         "./commitlint.config.ts",
