@@ -23,7 +23,7 @@
   <PropertyGroup Condition="'$(TargetFramework)' == 'net481'">
     <RuntimeIdentifier>win-x86</RuntimeIdentifier>
   </PropertyGroup>
-  
+
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
     <PublishSingleFile>true</PublishSingleFile>
