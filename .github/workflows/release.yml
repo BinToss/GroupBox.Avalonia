@@ -69,4 +69,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
         shell: pwsh
-        run: npx semantic-release -- --debug=*
+        run: npx semantic-release --debug
