@@ -1,3 +1,13 @@
+## [1.1.0-develop.2](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.1.0-develop.1...v1.1.0-develop.2) (2025-11-16)
+
+### Features
+
+* **deps:** lower minimum target framework to netstandard2.0; add `Meziantou.Polyfill` to assist ([e9a9d64](https://github.com/BinToss/GroupBox.Avalonia/commit/e9a9d64f1a825073c79f90bed8eaadbbf2e69f57)), closes [#93](https://github.com/BinToss/GroupBox.Avalonia/issues/93)
+
+### Reverts
+
+* lift property groups out of choose-when statement ([2c1d862](https://github.com/BinToss/GroupBox.Avalonia/commit/2c1d8627e913c83792416233210175da3fdcdf8c))
+
 ## [1.1.0-develop.1](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.0.0...v1.1.0-develop.1) (2025-08-05)
 
 ### Features
