@@ -22,6 +22,10 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "axaml.selectedSolution": "./GroupBox.Avalonia.slnx",
   "cSpell.words": [
-    "axaml"
+    "axaml",
+    "conv",
+    "groupboxavalonia",
+    "Headered",
+    "snupkg"
   ]
 }
