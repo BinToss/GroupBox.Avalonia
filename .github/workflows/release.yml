@@ -1,5 +1,5 @@
 # Test changes locally with https://github.com/nektos/act
-# Edit grahically with https://marketplace.visualstudio.com/items?itemName=actionforge.actionforge
+# Edit graphically with https://marketplace.visualstudio.com/items?itemName=actionforge.actionforge
 name: Release
 
 on:
