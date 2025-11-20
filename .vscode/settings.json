@@ -1,5 +1,5 @@
 {
-  "dotnet.defaultSolution": "GroupBox.Avalonia.sln",
+  "dotnet.defaultSolution": "GroupBox.Avalonia.slnx",
   "xml.codeLens.enabled": true,
   "xml.format.maxLineWidth": 100,
   "xml.format.preserveAttributeLineBreaks": false,
