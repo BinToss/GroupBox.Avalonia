@@ -63,8 +63,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.62",
-        "contentHash": "HznGcUvW/ZHHYTrBR7txDXxF2QORC+2/6OdsqNOqqVkJs19QTo0Dd9kKxcR+4YPTP2PyrIBJgY0Xh12MathhTw=="
+        "resolved": "1.0.68",
+        "contentHash": "HapKNYry2VLvgCGik4COUelFRjyX1P3+IlzybmebTK/N4VGwDgUkEO5Mmr+pxn7IzTi3/bLApXdEFd8Dvs4OpA=="
       },
       "Microsoft.NETFramework.ReferenceAssemblies": {
         "type": "Direct",
@@ -657,8 +657,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.62",
-        "contentHash": "HznGcUvW/ZHHYTrBR7txDXxF2QORC+2/6OdsqNOqqVkJs19QTo0Dd9kKxcR+4YPTP2PyrIBJgY0Xh12MathhTw=="
+        "resolved": "1.0.68",
+        "contentHash": "HapKNYry2VLvgCGik4COUelFRjyX1P3+IlzybmebTK/N4VGwDgUkEO5Mmr+pxn7IzTi3/bLApXdEFd8Dvs4OpA=="
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
