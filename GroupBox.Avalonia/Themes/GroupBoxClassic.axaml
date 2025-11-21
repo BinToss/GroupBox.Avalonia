@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:avaMedia="using:Avalonia.Media"
                     xmlns:conv="using:GroupBox.Avalonia.Converters"
                     xmlns:ctrl="using:GroupBox.Avalonia.Controls"
                     xmlns:sys="using:System">
@@ -39,11 +40,20 @@
                  Margin="5,1" Padding="5,0"
                  Content="{TemplateBinding Header}"
                  FontWeight="{TemplateBinding FontWeight}" />
-          <Border Name="GBBorder"
+
+          <!-- GBBorder split to Data and Visual so aliased rendering doesn't override anti-aliased content styles -->
+          <Border Name="GBBorderVisual"
                   Grid.RowSpan="2" Grid.ColumnSpan="2"
                   BorderBrush="{DynamicResource ThemeBorderMidBrush}"
                   BorderThickness="1" CornerRadius="3"
-                  RenderOptions.EdgeMode="Aliased">
+                  Border.Clip="{Binding #GBBorder.Clip}"
+                  Border.Padding="{Binding #GBBorder.Padding}"
+                  Border.Margin="{Binding #GBBorder.Margin}"
+                  RenderOptions.EdgeMode="Aliased" />
+          <Border Name="GBBorder"
+                  Grid.RowSpan="2" Grid.ColumnSpan="2"
+                  BorderBrush="{x:Static avaMedia:Brushes.Transparent}"
+                  BorderThickness="1" CornerRadius="3">
             <Border.Clip>
               <MultiBinding Converter="{x:Static conv:StaticConverters.ConvertBoundsToOuterBorder}">
                 <!--  Parent  -->
