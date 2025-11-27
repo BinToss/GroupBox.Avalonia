@@ -36,9 +36,9 @@
       },
       "GitVersion.MsBuild": {
         "type": "Direct",
-        "requested": "[6.0.3, )",
-        "resolved": "6.0.3",
-        "contentHash": "U9lnHqzhDFAOyninVjyN/inUrNpPoYXb/CZwxf51JOgOV8hpWf4YV2GmdJyOjdCKm1S3REeS2U1xt0eS8XVoVg=="
+        "requested": "[6.5.1, )",
+        "resolved": "6.5.1",
+        "contentHash": "92zAmfGWVtjHM8eR7O+1WWxqP+gulXvVqu3Sb1+KzuImdmxBt/bln/dMRvsIyV69KEiSrtbUoet4HBjG+bOLyw=="
       },
       "HotAvalonia": {
         "type": "Direct",
@@ -55,8 +55,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.62",
-        "contentHash": "HznGcUvW/ZHHYTrBR7txDXxF2QORC+2/6OdsqNOqqVkJs19QTo0Dd9kKxcR+4YPTP2PyrIBJgY0Xh12MathhTw=="
+        "resolved": "1.0.68",
+        "contentHash": "HapKNYry2VLvgCGik4COUelFRjyX1P3+IlzybmebTK/N4VGwDgUkEO5Mmr+pxn7IzTi3/bLApXdEFd8Dvs4OpA=="
       },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",

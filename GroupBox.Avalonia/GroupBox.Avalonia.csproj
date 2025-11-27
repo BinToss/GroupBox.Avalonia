@@ -39,7 +39,7 @@
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
-    <PackageReference Include="GitVersion.MsBuild" Version="6.0.3" PrivateAssets="All" />
+    <PackageReference Include="GitVersion.MsBuild" Version="6.5.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
 
