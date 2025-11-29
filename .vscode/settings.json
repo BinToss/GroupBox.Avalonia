@@ -5,7 +5,7 @@
   "xml.format.preserveAttributeLineBreaks": false,
   "xml.format.splitAttributes": "alignWithFirstAttr",
   "[AXAML]": {
-    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "filewatcher.commands": [
     {
