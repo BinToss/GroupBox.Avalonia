@@ -7,7 +7,6 @@
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
       <Deterministic>true</Deterministic>
       <LangVersion>Latest</LangVersion>
-      <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>
       <PublishRelease>true</PublishRelease>
       <UseArtifactsOutput>true</UseArtifactsOutput>
    </PropertyGroup>
