@@ -36,9 +36,9 @@
       },
       "GitVersion.MsBuild": {
         "type": "Direct",
-        "requested": "[6.0.3, )",
-        "resolved": "6.0.3",
-        "contentHash": "U9lnHqzhDFAOyninVjyN/inUrNpPoYXb/CZwxf51JOgOV8hpWf4YV2GmdJyOjdCKm1S3REeS2U1xt0eS8XVoVg=="
+        "requested": "[6.5.1, )",
+        "resolved": "6.5.1",
+        "contentHash": "92zAmfGWVtjHM8eR7O+1WWxqP+gulXvVqu3Sb1+KzuImdmxBt/bln/dMRvsIyV69KEiSrtbUoet4HBjG+bOLyw=="
       },
       "HotAvalonia": {
         "type": "Direct",
