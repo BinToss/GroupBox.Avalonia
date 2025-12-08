@@ -42,14 +42,14 @@
       },
       "HotAvalonia": {
         "type": "Direct",
-        "requested": "[3.*, )",
-        "resolved": "3.0.0",
-        "contentHash": "p6rp7jpkfbQyCW+I3YAAP/ABmwsw+5yD0GG5BGWZFRFpjy6pBwTRJIfbWLjbUp3sC0BJs2poJMT5aQzTMS79yQ==",
+        "requested": "[3.0.1, )",
+        "resolved": "3.0.1",
+        "contentHash": "J7xFKG9AgKFPFNM7xoCHwXds/sWA/mm3GQfwsrNGiZuPuXwtQOUn0ylK34fhXCI3QSPUpEFEKPxDK+71bH6YMA==",
         "dependencies": {
           "Avalonia.Markup.Xaml.Loader": "11.0.0",
-          "HotAvalonia.Core": "3.0.0",
-          "HotAvalonia.Extensions": "3.0.0",
-          "HotAvalonia.Fody": "3.0.0"
+          "HotAvalonia.Core": "3.0.1",
+          "HotAvalonia.Extensions": "3.0.1",
+          "HotAvalonia.Fody": "3.0.1"
         }
       },
       "Meziantou.Polyfill": {
@@ -120,8 +120,8 @@
       },
       "HotAvalonia.Core": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "6mYHcr79mhOBuKJHOJA+oub8/rNR3TtiTFbVdPadmrKJv3+KZPHuZzFkSDn3KRubB0z3cw/JljKOj08K7LicRQ==",
+        "resolved": "3.0.1",
+        "contentHash": "If+p0bIMTIINKJCBEhxrdXy6Q0X5wu9OI1XdSIBlhRhFsWnOnZj7AyyH8rIRW09JxEJj/63kTdCImeMowZaeWA==",
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0",
           "System.Reflection.Metadata": "9.0.3"
@@ -129,13 +129,13 @@
       },
       "HotAvalonia.Extensions": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "19rlMjkerMeOZwt2EHdWGS+36GlpurLC38c2iP55a9cbZ1NV3OY27V0Tq68ZpqVeFMYTlXFFdu1ydbREPPcqeQ=="
+        "resolved": "3.0.1",
+        "contentHash": "aNJnKhPGuPTH5u6dd+8oVkKUeNnuZ1zKO4yWyFWWwYisQM2TsTNQu6mh3ruekXc3OQXUeI9A0/X5vL9EaH3Rpg=="
       },
       "HotAvalonia.Fody": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "5FGM1na5gEnzUV67MmvTBjZXUjPjavkbncZeyZ/q9GxGjiwvMej0+H5VwIDCcMQWGVucBgHN5u8gz+a0IPQq7Q==",
+        "resolved": "3.0.1",
+        "contentHash": "DdViFKCGTMVJL5142LoiHY88GXQ8HNHmqHQRvuZdujzD03tP1fxVCkT6qp9cv/HnvsIhdIje6SSZ//ee4y5lPw==",
         "dependencies": {
           "Fody": "6.9.2"
         }
@@ -292,14 +292,14 @@
       },
       "HotAvalonia": {
         "type": "Direct",
-        "requested": "[3.0.0, )",
-        "resolved": "3.0.0",
-        "contentHash": "p6rp7jpkfbQyCW+I3YAAP/ABmwsw+5yD0GG5BGWZFRFpjy6pBwTRJIfbWLjbUp3sC0BJs2poJMT5aQzTMS79yQ==",
+        "requested": "[3.0.1, )",
+        "resolved": "3.0.1",
+        "contentHash": "J7xFKG9AgKFPFNM7xoCHwXds/sWA/mm3GQfwsrNGiZuPuXwtQOUn0ylK34fhXCI3QSPUpEFEKPxDK+71bH6YMA==",
         "dependencies": {
           "Avalonia.Markup.Xaml.Loader": "11.0.0",
-          "HotAvalonia.Core": "3.0.0",
-          "HotAvalonia.Extensions": "3.0.0",
-          "HotAvalonia.Fody": "3.0.0"
+          "HotAvalonia.Core": "3.0.1",
+          "HotAvalonia.Extensions": "3.0.1",
+          "HotAvalonia.Fody": "3.0.1"
         }
       },
       "Meziantou.Polyfill": {
@@ -366,18 +366,18 @@
       },
       "HotAvalonia.Core": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "6mYHcr79mhOBuKJHOJA+oub8/rNR3TtiTFbVdPadmrKJv3+KZPHuZzFkSDn3KRubB0z3cw/JljKOj08K7LicRQ=="
+        "resolved": "3.0.1",
+        "contentHash": "If+p0bIMTIINKJCBEhxrdXy6Q0X5wu9OI1XdSIBlhRhFsWnOnZj7AyyH8rIRW09JxEJj/63kTdCImeMowZaeWA=="
       },
       "HotAvalonia.Extensions": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "19rlMjkerMeOZwt2EHdWGS+36GlpurLC38c2iP55a9cbZ1NV3OY27V0Tq68ZpqVeFMYTlXFFdu1ydbREPPcqeQ=="
+        "resolved": "3.0.1",
+        "contentHash": "aNJnKhPGuPTH5u6dd+8oVkKUeNnuZ1zKO4yWyFWWwYisQM2TsTNQu6mh3ruekXc3OQXUeI9A0/X5vL9EaH3Rpg=="
       },
       "HotAvalonia.Fody": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "5FGM1na5gEnzUV67MmvTBjZXUjPjavkbncZeyZ/q9GxGjiwvMej0+H5VwIDCcMQWGVucBgHN5u8gz+a0IPQq7Q==",
+        "resolved": "3.0.1",
+        "contentHash": "DdViFKCGTMVJL5142LoiHY88GXQ8HNHmqHQRvuZdujzD03tP1fxVCkT6qp9cv/HnvsIhdIje6SSZ//ee4y5lPw==",
         "dependencies": {
           "Fody": "6.9.2"
         }
@@ -435,14 +435,14 @@
       },
       "HotAvalonia": {
         "type": "Direct",
-        "requested": "[3.0.0, )",
-        "resolved": "3.0.0",
-        "contentHash": "p6rp7jpkfbQyCW+I3YAAP/ABmwsw+5yD0GG5BGWZFRFpjy6pBwTRJIfbWLjbUp3sC0BJs2poJMT5aQzTMS79yQ==",
+        "requested": "[3.0.1, )",
+        "resolved": "3.0.1",
+        "contentHash": "J7xFKG9AgKFPFNM7xoCHwXds/sWA/mm3GQfwsrNGiZuPuXwtQOUn0ylK34fhXCI3QSPUpEFEKPxDK+71bH6YMA==",
         "dependencies": {
           "Avalonia.Markup.Xaml.Loader": "11.0.0",
-          "HotAvalonia.Core": "3.0.0",
-          "HotAvalonia.Extensions": "3.0.0",
-          "HotAvalonia.Fody": "3.0.0"
+          "HotAvalonia.Core": "3.0.1",
+          "HotAvalonia.Extensions": "3.0.1",
+          "HotAvalonia.Fody": "3.0.1"
         }
       },
       "Meziantou.Polyfill": {
@@ -509,21 +509,21 @@
       },
       "HotAvalonia.Core": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "6mYHcr79mhOBuKJHOJA+oub8/rNR3TtiTFbVdPadmrKJv3+KZPHuZzFkSDn3KRubB0z3cw/JljKOj08K7LicRQ==",
+        "resolved": "3.0.1",
+        "contentHash": "If+p0bIMTIINKJCBEhxrdXy6Q0X5wu9OI1XdSIBlhRhFsWnOnZj7AyyH8rIRW09JxEJj/63kTdCImeMowZaeWA==",
         "dependencies": {
           "System.Reflection.Metadata": "9.0.3"
         }
       },
       "HotAvalonia.Extensions": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "19rlMjkerMeOZwt2EHdWGS+36GlpurLC38c2iP55a9cbZ1NV3OY27V0Tq68ZpqVeFMYTlXFFdu1ydbREPPcqeQ=="
+        "resolved": "3.0.1",
+        "contentHash": "aNJnKhPGuPTH5u6dd+8oVkKUeNnuZ1zKO4yWyFWWwYisQM2TsTNQu6mh3ruekXc3OQXUeI9A0/X5vL9EaH3Rpg=="
       },
       "HotAvalonia.Fody": {
         "type": "Transitive",
-        "resolved": "3.0.0",
-        "contentHash": "5FGM1na5gEnzUV67MmvTBjZXUjPjavkbncZeyZ/q9GxGjiwvMej0+H5VwIDCcMQWGVucBgHN5u8gz+a0IPQq7Q==",
+        "resolved": "3.0.1",
+        "contentHash": "DdViFKCGTMVJL5142LoiHY88GXQ8HNHmqHQRvuZdujzD03tP1fxVCkT6qp9cv/HnvsIhdIje6SSZ//ee4y5lPw==",
         "dependencies": {
           "Fody": "6.9.2"
         }
