@@ -8,9 +8,12 @@
     Avalonia 12 targets net8.0;net10.0; See https://github.com/AvaloniaUI/Avalonia/blob/master/build/TargetFrameworks.props#L3-L13 -->
     <TargetFrameworks>netstandard2.0;net8.0;net10.0</TargetFrameworks>
     <Nullable>enable</Nullable>
-    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <BuiltInComInteropSupport Condition="'$(PublishTrimmed)' != 'true'">true</BuiltInComInteropSupport>
+    <IsTrimmable>true</IsTrimmable>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
   </PropertyGroup>
 
   <PropertyGroup>
