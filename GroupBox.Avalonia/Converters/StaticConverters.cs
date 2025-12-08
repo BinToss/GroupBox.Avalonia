@@ -10,7 +10,7 @@ namespace GroupBox.Avalonia.Converters
         public static FuncMultiValueConverter<Rect?, CombinedGeometry> ConvertBoundsToOuterBorder { get; } =
         new(rects =>
         {
-            List<Rect> arr = rects.Cast<Rect>().ToList() ?? throw new NullReferenceException();
+            List<Rect> arr = [.. rects.Cast<Rect>()];
             return arr.Count < 3
                 ? throw new ArgumentOutOfRangeException(nameof(rects), "Amount of given Bounds was less than 3")
                 : new CombinedGeometry(
@@ -61,7 +61,7 @@ namespace GroupBox.Avalonia.Converters
 
         public static FuncMultiValueConverter<object?, Thickness> ConvertDoublesToThickness { get; } = new(src =>
         {
-            List<double> doubles = new();
+            List<double> doubles = [];
             foreach (var nd in src)
             {
                 if (nd is double d)
@@ -73,7 +73,7 @@ namespace GroupBox.Avalonia.Converters
                 1 => new Thickness(doubles[0]),
                 2 => new Thickness(doubles[0], doubles[1]),
                 4 => new Thickness(doubles[0], doubles[1], doubles[2], doubles[3]),
-                _ => throw new IndexOutOfRangeException("Source data must be doubles. Thickness' constructors only allow for 1, 2, or 4 arguments"),
+                _ => throw new ArgumentOutOfRangeException("Source data must be doubles. Thickness' constructors only allow for 1, 2, or 4 arguments"),
             };
         });
 
