@@ -27,7 +27,7 @@
                         PrivateAssets="All" />
       <PackageReference Condition=" '$(Configuration)' != 'Release' "
                         Include="HotAvalonia"
-                        Version="3.0.1"
+                        Version="3.0.2"
                         PrivateAssets="All"
                         Publish="true" />
       <PackageReference Include="Meziantou.Polyfill"
