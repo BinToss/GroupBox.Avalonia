@@ -18,11 +18,11 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           cache: "npm"
           check-latest: true
@@ -31,7 +31,7 @@ jobs:
 
       - run: npm ci
 
-      - uses: actions/setup-dotnet@v4.3.1
+      - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: "8.x"
           cache: true
