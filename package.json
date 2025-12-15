@@ -10,8 +10,8 @@
     "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
-    "@halospv3/hce.shared-config": "^3.2.0-develop.1",
-    "typescript": "^5.9.2"
+    "@halospv3/hce.shared-config": "^3.2.0",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=20.12.0",
