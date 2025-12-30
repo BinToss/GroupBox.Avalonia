@@ -41,6 +41,7 @@
 
   <ItemGroup>
     <None Include="../README.md" Pack="true" PackagePath="/" />
+    <None Include="../README.Banner.svg" Pack="true" PackagePath="/" />
     <None Include="../GroupBox.Avalonia.256.png" Pack="true" PackagePath="" />
   </ItemGroup>
 

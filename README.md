@@ -4,40 +4,9 @@
 
 <div align="center">
   <div style="display:grid">
-    <svg style="max-height: 28em; max-width: 36em; grid-area: 1/1; place-self: center center;" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <symbol id="gbHeaderTextTemplate">
-          <text x="75" y="85" font-size="70px"
-            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
-            GroupBox
-          </text>
-        </symbol>
-        <!-- modified from https://stackoverflow.com/a/31013492/14894786 -->
-        <!-- not perfect, but very close. known issue: Each character in the header adds another pixel or so to the x padding -->
-        <filter x="-0.05" y="0" width="1.1" height="1" id="solid">
-            <feFlood flood-color="none" result="bg" />
-            <feMerge>
-              <feMergeNode in="bg" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-        <mask id="knockout-area">
-            <rect width="100%" height="100%" fill="#ffffff" />
-            <use href="#gbHeaderTextTemplate" filter="url('#solid')" style="background-color:black; fill:black" />
-        </mask>
-        <style>
-            @media (prefers-color-scheme: dark) {
-              [aria-label="GroupBox"] {
-              filter: invert(1) hue-rotate(180deg)
-              }
-            }
-        </style>
-      </defs>
-      <g style="mask: url('#knockout-area');">
-        <rect width="500" height="475" x="38" y="67" rx="3" ry="3" style="stroke:gray; stroke-width:5; fill:none" />
-      </g>
-      <use href="#gbHeaderTextTemplate" aria-label="GroupBox" />
-    </svg>
+    <img src="./README.Banner.svg"
+      alt="SVG replication of GroupBox border and header"
+      style="max-height: 28em; max-width: 36em; grid-area: 1/1; place-self: center center;" />
     <div style="
       grid-area: 1/1;
       margin: 3em 0 2em 0;
