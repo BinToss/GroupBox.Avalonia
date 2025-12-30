@@ -10,7 +10,7 @@
    <symbol id="gbHeaderTextTemplate">
       <text x="75" y="85" font-size="70px"
          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
-         ur very cool :)
+         GroupBox
       </text>
    </symbol>
    <!-- modified from https://stackoverflow.com/a/31013492/14894786 -->
