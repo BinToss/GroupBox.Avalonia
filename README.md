@@ -3,58 +3,57 @@
 <!-- The SVG should be exported to an "optimized" SVG and the contents should be copied here. Take care so you don't delete the styles! -->
 
 <div align="center">
-<div style="display:grid">
-<svg style="max-height: 28em; max-width: 36em; grid-area: 1/1; place-self: center center;" viewBox="0 0 576 576"
-   xmlns="http://www.w3.org/2000/svg">
-   <defs>
-   <symbol id="gbHeaderTextTemplate">
-      <text x="75" y="85" font-size="70px"
-         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
-         GroupBox
-      </text>
-   </symbol>
-   <!-- modified from https://stackoverflow.com/a/31013492/14894786 -->
-   <!-- not perfect, but very close. known issue: Each character in the header adds another pixel or so to the x padding -->
-   <filter x="-0.05" y="0" width="1.1" height="1" id="solid">
-      <feFlood flood-color="none" result="bg" />
-      <feMerge>
-         <feMergeNode in="bg" />
-         <feMergeNode in="SourceGraphic" />
-      </feMerge>
-   </filter>
-   <mask id="knockout-area">
-      <rect width="100%" height="100%" fill="#ffffff" />
-      <use href="#gbHeaderTextTemplate" filter="url('#solid')" style="background-color:black; fill:black" />
-   </mask>
-   <style>
-      @media (prefers-color-scheme: dark) {
-         [aria-label="GroupBox"] {
-         filter: invert(1) hue-rotate(180deg)
-         }
-      }
-   </style>
-   </defs>
-   <g style="mask: url('#knockout-area');">
-   <rect width="500" height="475" x="38" y="67" rx="3" ry="3" style="stroke:gray; stroke-width:5; fill:none" />
-   </g>
-   <use href="#gbHeaderTextTemplate" aria-label="GroupBox" />
-</svg>
-<div style="
-   grid-area: 1/1;
-   margin: 3em 0 2em 0;
-   padding: 0em 6em;
-   place-self: center center;">
+  <div style="display:grid">
+    <svg style="max-height: 28em; max-width: 36em; grid-area: 1/1; place-self: center center;" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="gbHeaderTextTemplate">
+          <text x="75" y="85" font-size="70px"
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+            GroupBox
+          </text>
+        </symbol>
+        <!-- modified from https://stackoverflow.com/a/31013492/14894786 -->
+        <!-- not perfect, but very close. known issue: Each character in the header adds another pixel or so to the x padding -->
+        <filter x="-0.05" y="0" width="1.1" height="1" id="solid">
+            <feFlood flood-color="none" result="bg" />
+            <feMerge>
+              <feMergeNode in="bg" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <mask id="knockout-area">
+            <rect width="100%" height="100%" fill="#ffffff" />
+            <use href="#gbHeaderTextTemplate" filter="url('#solid')" style="background-color:black; fill:black" />
+        </mask>
+        <style>
+            @media (prefers-color-scheme: dark) {
+              [aria-label="GroupBox"] {
+              filter: invert(1) hue-rotate(180deg)
+              }
+            }
+        </style>
+      </defs>
+      <g style="mask: url('#knockout-area');">
+        <rect width="500" height="475" x="38" y="67" rx="3" ry="3" style="stroke:gray; stroke-width:5; fill:none" />
+      </g>
+      <use href="#gbHeaderTextTemplate" aria-label="GroupBox" />
+    </svg>
+    <div style="
+      grid-area: 1/1;
+      margin: 3em 0 2em 0;
+      padding: 0em 6em;
+      place-self: center center;">
 
-   [![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-   [![avalonia](https://img.shields.io/badge/avalonia-v11.*-8b44ac?logo=avaloniaui)](https://github.com/AvaloniaUI/Avalonia)
+[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![avalonia](https://img.shields.io/badge/avalonia-v11.*-8b44ac?logo=avaloniaui)](https://github.com/AvaloniaUI/Avalonia)
 
-   [![CI](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml)
-   [![Release](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml)
+[![CI](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml)
+[![Release](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml)
 
-   [![latest](https://img.shields.io/nuget/v/BinToss.GroupBox.Avalonia)](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/)
-   [![prerelease](https://img.shields.io/nuget/vpre/BinToss.GroupBox.Avalonia?label=nuget%20(prerelease))](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/#versions-body-tab)
-</div>
-</div>
+[![latest](https://img.shields.io/nuget/v/BinToss.GroupBox.Avalonia)](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/)
+[![prerelease](https://img.shields.io/nuget/vpre/BinToss.GroupBox.Avalonia?label=nuget%20(prerelease))](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/#versions-body-tab)
+    </div>
+  </div>
 </div>
 
 # GroupBox.Avalonia
