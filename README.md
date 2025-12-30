@@ -1,7 +1,5 @@
 <!-- Unfortunately, the AvaloniaUI badge is updated via the Release workflow instead of via Shields.io and NuGet's API. -->
 
-<!-- The SVG should be exported to an "optimized" SVG and the contents should be copied here. Take care so you don't delete the styles! -->
-
 <div align="center">
   <div style="display:grid">
     <img src="./README.Banner.svg"
