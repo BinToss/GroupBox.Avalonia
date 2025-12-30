@@ -55,8 +55,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.68",
-        "contentHash": "HapKNYry2VLvgCGik4COUelFRjyX1P3+IlzybmebTK/N4VGwDgUkEO5Mmr+pxn7IzTi3/bLApXdEFd8Dvs4OpA=="
+        "resolved": "1.0.82",
+        "contentHash": "RI/PRZmEdAHf1jgLJm11WK37u7Q+5I7OoMnSrcCaNIeuuADamIYbtwS/PC+Bc+iGoIkgYRDQusS1LkaqWGaLBQ=="
       },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",
@@ -305,14 +305,14 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.68",
-        "contentHash": "HapKNYry2VLvgCGik4COUelFRjyX1P3+IlzybmebTK/N4VGwDgUkEO5Mmr+pxn7IzTi3/bLApXdEFd8Dvs4OpA=="
+        "resolved": "1.0.82",
+        "contentHash": "RI/PRZmEdAHf1jgLJm11WK37u7Q+5I7OoMnSrcCaNIeuuADamIYbtwS/PC+Bc+iGoIkgYRDQusS1LkaqWGaLBQ=="
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
-        "requested": "[10.0.0, )",
-        "resolved": "10.0.0",
-        "contentHash": "kICGrGYEzCNI3wPzfEXcwNHgTvlvVn9yJDhSdRK+oZQy4jvYH529u7O0xf5ocQKzOMjfS07+3z9PKRIjrFMJDA=="
+        "requested": "[10.0.1, )",
+        "resolved": "10.0.1",
+        "contentHash": "ISahzLHsHY7vrwqr2p1YWZ+gsxoBRtH7gWRDK8fDUst9pp2He0GiesaqEfeX0V8QMCJM3eNEHGGpnIcPjFo2NQ=="
       },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",
@@ -448,8 +448,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.68",
-        "contentHash": "HapKNYry2VLvgCGik4COUelFRjyX1P3+IlzybmebTK/N4VGwDgUkEO5Mmr+pxn7IzTi3/bLApXdEFd8Dvs4OpA=="
+        "resolved": "1.0.82",
+        "contentHash": "RI/PRZmEdAHf1jgLJm11WK37u7Q+5I7OoMnSrcCaNIeuuADamIYbtwS/PC+Bc+iGoIkgYRDQusS1LkaqWGaLBQ=="
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
