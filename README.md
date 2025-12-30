@@ -66,8 +66,8 @@ Based on @derekantrican's Classic and Modern GroupBox examples at [[GroupBox] Mi
 
 When this library is production-ready, its themes/styles _may_ be pull-requested to teast/Avalonia.GroupBox. Otherwise, someone else will need to maintain this project.
 
-![GroupBox.Avalonia.Sample.png](./GroupBox.Avalonia.Sample_Dark.png)
-![GroupBox.Avalonia.Sample.png](./GroupBox.Avalonia.Sample_Light.png)
+![GroupBox.Avalonia.Sample_Dark.png](./GroupBox.Avalonia.Sample_Dark.png)
+![GroupBox.Avalonia.Sample_Light.png](./GroupBox.Avalonia.Sample_Light.png)
 
 # Known Issues
 
