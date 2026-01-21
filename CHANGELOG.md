@@ -1,3 +1,9 @@
+## [1.1.1-develop.1](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.1.0...v1.1.1-develop.1) (2026-01-21)
+
+### Bug Fixes
+
+* **deps:** bump Meziantou.Polyfill to 1.0.82 ([33ae5da](https://github.com/BinToss/GroupBox.Avalonia/commit/33ae5dac9cf8fe3459ad98106055b8a36e872a36))
+
 ## [1.1.0](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.0.0...v1.1.0) (2025-12-08)
 
 ### Features
