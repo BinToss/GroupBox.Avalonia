@@ -305,8 +305,8 @@
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
-        "resolved": "1.0.100",
-        "contentHash": "SH+OtcdvCkv4GvxBnZkQMxq78trhVCKViyhyiMLB2pvH2ZGoiXo7QdwULOPQ0smpya2d4fYFCIjYZnv05Qg+7w=="
+        "resolved": "1.0.82",
+        "contentHash": "RI/PRZmEdAHf1jgLJm11WK37u7Q+5I7OoMnSrcCaNIeuuADamIYbtwS/PC+Bc+iGoIkgYRDQusS1LkaqWGaLBQ=="
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
