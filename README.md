@@ -1,24 +1,39 @@
 <!-- Unfortunately, the AvaloniaUI badge is updated via the Release workflow instead of via Shields.io and NuGet's API. -->
 
 <div align="center">
-  <div style="display:grid">
-    <img src="./README.Banner.svg"
-      alt="SVG replication of GroupBox border and header"
-      style="max-height: 28em; max-width: 36em; grid-area: 1/1; place-self: center center;" />
+  <div>
+    <img src="./README.Banner.svg" align="center" alt="SVG replication of GroupBox border and header"
+      style="height: 12em;" />
     <div style="
-      grid-area: 1/1;
-      margin: 3em 0 2em 0;
-      padding: 0em 6em;
-      place-self: center center;">
-
-[![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-[![avalonia](https://img.shields.io/badge/avalonia-v11.*-8b44ac?logo=avaloniaui)](https://github.com/AvaloniaUI/Avalonia)
-
-[![CI](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml)
-[![Release](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml/badge.svg)](https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml)
-
-[![latest](https://img.shields.io/nuget/v/BinToss.GroupBox.Avalonia)](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/)
-[![prerelease](https://img.shields.io/nuget/vpre/BinToss.GroupBox.Avalonia?label=nuget%20(prerelease))](https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/#versions-body-tab)
+      transform: translateY(-105px);
+      height: 0">
+      <div>
+        <a href="https://github.com/semantic-release/semantic-release">
+          <img alt="semantic-release: conventionalcommits"
+            src="https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release" />
+        </a>
+        <a href="https://github.com/AvaloniaUI/Avalonia">
+          <img calt="avalonia" src="https://img.shields.io/badge/avalonia-v11.*-8b44ac?logo=avaloniaui" />
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml">
+          <img alt="CI" src="https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/ci.yml/badge.svg" />
+        </a>
+        <a href="https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml">
+          <img alt="Release"
+            src="https://github.com/BinToss/GroupBox.Avalonia/actions/workflows/release.yml/badge.svg" />
+        </a>
+      </div>
+      <div>
+        <a href="https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/">
+          <img alt="latest" src="https://img.shields.io/nuget/v/BinToss.GroupBox.Avalonia" />
+        </a>
+        <a href="https://www.nuget.org/packages/BinToss.GroupBox.Avalonia/#versions-body-tab">
+          <img calt="prerelease"
+            src="https://img.shields.io/nuget/vpre/BinToss.GroupBox.Avalonia?label=nuget%20(prerelease)" />
+        </a>
+      </div>
     </div>
   </div>
 </div>
