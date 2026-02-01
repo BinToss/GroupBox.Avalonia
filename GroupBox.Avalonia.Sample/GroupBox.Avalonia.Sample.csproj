@@ -8,6 +8,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ImplicitUsings>enable</ImplicitUsings>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <IsPackable>false</IsPackable>
     <!-- Enable control flow guard -->
     <ControlFlowGuard Condition="'$(RuntimeIdentifier)' != '' AND $(RuntimeIdentifier.StartsWith(`win`))">Guard</ControlFlowGuard>
 
