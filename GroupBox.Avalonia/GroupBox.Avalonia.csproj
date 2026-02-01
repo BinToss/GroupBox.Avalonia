@@ -35,6 +35,7 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols><!-- ...in snupkg -->
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <DebugType Condition="$(IncludeSymbols)">Portable</DebugType> <!-- required for snupkg -->
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <PackageIcon>GroupBox.Avalonia.256.png</PackageIcon>
   </PropertyGroup>
