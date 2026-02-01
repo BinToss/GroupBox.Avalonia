@@ -21,8 +21,7 @@
    <Import Project="$(HCESharedDir)/dotnet/ZipPublishDir.targets" />
    <ItemGroup>
       <!-- See https://github.com/dotnet/reproducible-builds#dotnetreproduciblebuilds -->
-      <PackageReference Condition="'$(IsPackable)' == 'true'"
-                        Include="DotNet.ReproducibleBuilds"
+      <PackageReference Include="DotNet.ReproducibleBuilds"
                         Version="1.*"
                         PrivateAssets="All" />
       <PackageReference Condition=" '$(Configuration)' != 'Release' "
