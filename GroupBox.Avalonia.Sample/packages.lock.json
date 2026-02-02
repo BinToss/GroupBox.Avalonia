@@ -574,14 +574,14 @@
       },
       "HotAvalonia": {
         "type": "Direct",
-        "requested": "[3.0.2, )",
-        "resolved": "3.0.2",
-        "contentHash": "VzTekt+vLLkyKOXJZfIO8FHjsUMV5pfXZtLK3sUzHGTpfMD3c4QHYwAVHh1IfoOdkulfvISvUkDxNGFauZ0Y5w==",
+        "requested": "[3.1.0, )",
+        "resolved": "3.1.0",
+        "contentHash": "31ppkXIyD+PppUyZ0oqUjaP3I6fJDkl2w95EHGN22xxh/P54hNpEiwDsAT1KPKtUMJoGtxRE5EZcc04kia42Eg==",
         "dependencies": {
           "Avalonia.Markup.Xaml.Loader": "11.0.0",
-          "HotAvalonia.Core": "3.0.2",
-          "HotAvalonia.Extensions": "3.0.2",
-          "HotAvalonia.Fody": "3.0.2"
+          "HotAvalonia.Core": "3.1.0",
+          "HotAvalonia.Extensions": "3.1.0",
+          "HotAvalonia.Fody": "3.1.0"
         }
       },
       "Meziantou.Polyfill": {
@@ -735,21 +735,21 @@
       },
       "HotAvalonia.Core": {
         "type": "Transitive",
-        "resolved": "3.0.2",
-        "contentHash": "WAtXZdrHNa4mF/U0BP27Xtsj9nY9dn/UsA76lr49eCxcEU9v9E3bAPABSkMPeObQycn3eYZI2epKI2bVrrRyiw==",
+        "resolved": "3.1.0",
+        "contentHash": "E4Q+Wm7kp5XyEWRLshRcoxgHShyMO3J8QcdoyDZfXMukuR+9FqXnEFrcStn2igDo/TIo/6wVOMNbv8Cu4FI5hg==",
         "dependencies": {
           "System.Reflection.Metadata": "9.0.3"
         }
       },
       "HotAvalonia.Extensions": {
         "type": "Transitive",
-        "resolved": "3.0.2",
-        "contentHash": "PuAk1aGyScsWuBQ2jnbGpFMC0thnWZSzz11vtHrKaNp5ExiASqHGsqjssD3+hwrt9MYwS5C3iiwJZj1R+CKq2g=="
+        "resolved": "3.1.0",
+        "contentHash": "RhDF4CFDHZi5GKBFJLw2mLwh0TieKO/JlJa8yohnK0dhh5B8gEr3b512zlDUXpQKZIVvTPRwNm4CwgczlxH37A=="
       },
       "HotAvalonia.Fody": {
         "type": "Transitive",
-        "resolved": "3.0.2",
-        "contentHash": "4+3CRqVUQtdIq/AFKbZRejAJXjFNHuunHuHB+qOW2hFiTn4GIzmuhuprWWt/PvZF8muJfQ8Zwl75pAmt8Ynf/w==",
+        "resolved": "3.1.0",
+        "contentHash": "xmbLwsK+SQOZcFFGeXcjkWBddVZ1Cql4oOJkO7/mcDiCO/kjY7UeP0+hsnXICfiBfiFGNh1XYiwbAZiONWL5kw==",
         "dependencies": {
           "Fody": "6.9.2"
         }
