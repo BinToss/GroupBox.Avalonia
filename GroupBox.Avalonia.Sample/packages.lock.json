@@ -48,18 +48,6 @@
         "resolved": "1.2.39",
         "contentHash": "fcFN01tDTIQqDuTwr1jUQK/geofiwjG5DycJQOnC72i1SsLAk1ELe+apBOuZ11UMQG8YKFZG1FgvjZPbqHyatg=="
       },
-      "HotAvalonia": {
-        "type": "Direct",
-        "requested": "[3.0.2, )",
-        "resolved": "3.0.2",
-        "contentHash": "VzTekt+vLLkyKOXJZfIO8FHjsUMV5pfXZtLK3sUzHGTpfMD3c4QHYwAVHh1IfoOdkulfvISvUkDxNGFauZ0Y5w==",
-        "dependencies": {
-          "Avalonia.Markup.Xaml.Loader": "11.0.0",
-          "HotAvalonia.Core": "3.0.2",
-          "HotAvalonia.Extensions": "3.0.2",
-          "HotAvalonia.Fody": "3.0.2"
-        }
-      },
       "Meziantou.Polyfill": {
         "type": "Direct",
         "requested": "[1.*, )",
@@ -127,15 +115,6 @@
           "Tmds.DBus.Protocol": "0.21.2"
         }
       },
-      "Avalonia.Markup.Xaml.Loader": {
-        "type": "Transitive",
-        "resolved": "11.0.0",
-        "contentHash": "SDcf5qvleyTb0R24vzZBhFJV9ONlGz0ftOBRxXiSy7R6c513Rjnae0IImuUXSIj+Bmn8AjU6x9eDFRJO78pYVA==",
-        "dependencies": {
-          "Avalonia": "11.0.0",
-          "System.Reflection.Emit": "4.3.0"
-        }
-      },
       "Avalonia.Native": {
         "type": "Transitive",
         "resolved": "11.3.9",
@@ -184,11 +163,6 @@
           "Avalonia.Skia": "11.3.9"
         }
       },
-      "Fody": {
-        "type": "Transitive",
-        "resolved": "6.9.2",
-        "contentHash": "YBHobPGogb0vYhGYIxn/ndWqTjNWZveDi5jdjrcshL2vjwU3gQGyDeI7vGgye+2rAM5fGRvlLgNWLW3DpviS/w=="
-      },
       "HarfBuzzSharp": {
         "type": "Transitive",
         "resolved": "8.3.1.1",
@@ -218,28 +192,6 @@
         "type": "Transitive",
         "resolved": "8.3.1.1",
         "contentHash": "UsJtQsfAJoFDZrXc4hCUfRPMqccfKZ0iumJ/upcUjz/cmsTgVFGNEL5yaJWmkqsuFYdMWbj/En5/kS4PFl9hBA=="
-      },
-      "HotAvalonia.Core": {
-        "type": "Transitive",
-        "resolved": "3.0.2",
-        "contentHash": "WAtXZdrHNa4mF/U0BP27Xtsj9nY9dn/UsA76lr49eCxcEU9v9E3bAPABSkMPeObQycn3eYZI2epKI2bVrrRyiw==",
-        "dependencies": {
-          "System.Reflection.Emit.Lightweight": "4.7.0",
-          "System.Reflection.Metadata": "9.0.3"
-        }
-      },
-      "HotAvalonia.Extensions": {
-        "type": "Transitive",
-        "resolved": "3.0.2",
-        "contentHash": "PuAk1aGyScsWuBQ2jnbGpFMC0thnWZSzz11vtHrKaNp5ExiASqHGsqjssD3+hwrt9MYwS5C3iiwJZj1R+CKq2g=="
-      },
-      "HotAvalonia.Fody": {
-        "type": "Transitive",
-        "resolved": "3.0.2",
-        "contentHash": "4+3CRqVUQtdIq/AFKbZRejAJXjFNHuunHuHB+qOW2hFiTn4GIzmuhuprWWt/PvZF8muJfQ8Zwl75pAmt8Ynf/w==",
-        "dependencies": {
-          "Fody": "6.9.2"
-        }
       },
       "MicroCom.Runtime": {
         "type": "Transitive",
@@ -297,15 +249,6 @@
         "resolved": "4.5.1",
         "contentHash": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg=="
       },
-      "System.Collections.Immutable": {
-        "type": "Transitive",
-        "resolved": "9.0.3",
-        "contentHash": "CfYi30Pbpw9aGpXVLcoGt+yM0egrE8M1DUOOwdAWOAQ2QZkXkSgjonqZYvtKdxUF1XJaLCp0OdTXueeAeUHSlQ==",
-        "dependencies": {
-          "System.Memory": "4.5.5",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        }
-      },
       "System.ComponentModel.Annotations": {
         "type": "Transitive",
         "resolved": "4.5.0",
@@ -344,25 +287,6 @@
         "type": "Transitive",
         "resolved": "4.5.0",
         "contentHash": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ=="
-      },
-      "System.Reflection.Emit": {
-        "type": "Transitive",
-        "resolved": "4.3.0",
-        "contentHash": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg=="
-      },
-      "System.Reflection.Emit.Lightweight": {
-        "type": "Transitive",
-        "resolved": "4.7.0",
-        "contentHash": "a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA=="
-      },
-      "System.Reflection.Metadata": {
-        "type": "Transitive",
-        "resolved": "9.0.3",
-        "contentHash": "7oYePO1JGlCPxOzawf8nkn80eYYboQaB4FvBWDPEvOzVHZVf96tdgbgq8LHSBrkeQoLRivx7+YhTCtirdQ386g==",
-        "dependencies": {
-          "System.Collections.Immutable": "9.0.3",
-          "System.Memory": "4.5.5"
-        }
       },
       "System.Runtime.CompilerServices.Unsafe": {
         "type": "Transitive",
