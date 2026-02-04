@@ -42,7 +42,7 @@
       },
       "Meziantou.Polyfill": {
         "type": "Direct",
-        "requested": "[1.*, )",
+        "requested": "[1.0.101, )",
         "resolved": "1.0.101",
         "contentHash": "88+sfRO4aO4AvMm1dSLVPfgQCLhKpiM8ZcVdh8y4VhuQSiRPjLfVv/keOafJq18sSyq1bbYgcAepAQEn+TwzEQ=="
       },
@@ -221,7 +221,7 @@
       },
       "Meziantou.Polyfill": {
         "type": "Direct",
-        "requested": "[1.*, )",
+        "requested": "[1.0.101, )",
         "resolved": "1.0.101",
         "contentHash": "88+sfRO4aO4AvMm1dSLVPfgQCLhKpiM8ZcVdh8y4VhuQSiRPjLfVv/keOafJq18sSyq1bbYgcAepAQEn+TwzEQ=="
       },
@@ -471,7 +471,7 @@
       },
       "Meziantou.Polyfill": {
         "type": "Direct",
-        "requested": "[1.*, )",
+        "requested": "[1.0.101, )",
         "resolved": "1.0.101",
         "contentHash": "88+sfRO4aO4AvMm1dSLVPfgQCLhKpiM8ZcVdh8y4VhuQSiRPjLfVv/keOafJq18sSyq1bbYgcAepAQEn+TwzEQ=="
       },
@@ -614,7 +614,7 @@
       },
       "Meziantou.Polyfill": {
         "type": "Direct",
-        "requested": "[1.*, )",
+        "requested": "[1.0.101, )",
         "resolved": "1.0.101",
         "contentHash": "88+sfRO4aO4AvMm1dSLVPfgQCLhKpiM8ZcVdh8y4VhuQSiRPjLfVv/keOafJq18sSyq1bbYgcAepAQEn+TwzEQ=="
       },

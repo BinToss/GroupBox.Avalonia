@@ -30,7 +30,7 @@
                         PrivateAssets="All"
                         Publish="true" />
       <PackageReference Include="Meziantou.Polyfill"
-                        Version="1.*"
+                        Version="1.0.101"
                         PrivateAssets="All">
          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
