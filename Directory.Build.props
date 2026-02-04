@@ -22,7 +22,7 @@
    <ItemGroup>
       <!-- See https://github.com/dotnet/reproducible-builds#dotnetreproduciblebuilds -->
       <PackageReference Include="DotNet.ReproducibleBuilds"
-                        Version="1.*"
+                        Version="1.2.39"
                         PrivateAssets="All" />
       <PackageReference Condition=" '$(Configuration)' != 'Release' AND '$(TargetFramework.StartsWith(`net4`))' == false"
                         Include="HotAvalonia"
