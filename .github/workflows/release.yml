@@ -48,6 +48,8 @@ jobs:
           cache: true
           cache-dependency-path: './GroupBox.Avalonia*/packages.lock.json'
 
+      - run: npm i -g npm@latest
+
       - name: NPM - Clean Install
         run: npm ci
 
