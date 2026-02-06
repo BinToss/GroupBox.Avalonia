@@ -63,6 +63,12 @@
           "Microsoft.NETFramework.ReferenceAssemblies.net481": "1.0.3"
         }
       },
+      "Microsoft.Packaging.Tools.Trimming": {
+        "type": "Direct",
+        "requested": "[1.1.0-preview1-26619-01, )",
+        "resolved": "1.1.0-preview1-26619-01",
+        "contentHash": "TsJW2A6DsEN+cmXUNsAXJppmZmGFbYPxk9LWUhZm6xAeMdbbgzipSI+72HMzNLHupGHQ/cD1eXm6oxnYWq8AXw=="
+      },
       "Avalonia": {
         "type": "Transitive",
         "resolved": "11.3.11",

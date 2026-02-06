@@ -20,9 +20,60 @@
     <StripSymbols>true</StripSymbols>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net481'">
-    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
-  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == net481">
+      <PropertyGroup>
+        <RuntimeIdentifiers>win-x86</RuntimeIdentifiers>
+        <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+        <!-- See
+        https://github.com/ericstj/Microsoft.Packaging.Tools.Trimming#from-the-ide-or-committing-the-change-to-your-project -->
+        <TrimUnusedDependencies>true</TrimUnusedDependencies>
+        <TrimFilesPreferNativeImages>true</TrimFilesPreferNativeImages>
+        <RootPackageReference>false</RootPackageReference>
+      </PropertyGroup>
+      <ItemGroup>
+        <PackageReference Include="Microsoft.Packaging.Tools.Trimming"
+                          Version="1.1.0-preview1-26619-01" />
+        <TrimmablePackages Include="Avalonia.FreeDesktop;Avalonia.Metal;Avalonia.X11" />
+        <TrimmableFiles Include="Avalonia.FreeDesktop.dll;Avalonia.Metal.dll;Avalonia.X11.dll;**/*.dynlib;**/*.so;" />
+      </ItemGroup>
+        <!-- "Avalonia.Desktop" relies on .NET Core 3 and .NET 5.0+ trimming to remove unnecessary managed
+        and native modules.
+        This is unavailable when targeting .NET Framework. We must do it ourselves. -->
+    </When>
+  </Choose>
+
+  <Target Name="Cleanup"
+          AfterTargets="Build"
+          Condition="'$(TargetFramework)' == net481">
+    <ItemGroup>
+      <_evictDir Include="
+        $(OutputPath)arm/;
+        $(OutputPath)arm64/;
+        $(OutputPath)loongarch64/;
+        $(OutputPath)musl-arm/;
+        $(OutputPath)musl-arm64/;
+        $(OutputPath)musl-loongarch64/;
+        $(OutputPath)musl-riscv64/;
+        $(OutputPath)musl-x64/;
+        $(OutputPath)riscv64/;
+        $(OutputPath)x64/;
+        $(OutputPath)x86/;"/>
+      <_evictFile Include="
+        $(OutputPath)Avalonia.FreeDesktop.dll;
+        $(OutputPath)Avalonia.Metal.dll;
+        $(OutputPath)Avalonia.X11.dll;
+        $(OutputPath)*.dylib;
+        $(OutputPath)*.so;" />
+    </ItemGroup>
+
+    <RemoveDir
+      Condition="'$(TargetFramework)' == net481"
+      Directories="@(_evictDir)" />
+    <Delete
+      Condition="'$(TargetFramework)' == net481"
+      Files="@(_evictFile)" />
+  </Target>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
