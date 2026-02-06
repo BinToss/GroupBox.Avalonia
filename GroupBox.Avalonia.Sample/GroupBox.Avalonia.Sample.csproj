@@ -26,6 +26,9 @@
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
+    <IsTrimmable>true</IsTrimmable>
+    <VerifyReferenceTrimCompatibility>true</VerifyReferenceTrimCompatibility>
+    <TrimMode>link</TrimMode>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>false</SelfContained>
     <PublishTrimmed>$(SelfContained)</PublishTrimmed>
