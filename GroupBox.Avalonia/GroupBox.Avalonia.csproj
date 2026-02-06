@@ -72,4 +72,8 @@
                       PrivateAssets="All" />
   </ItemGroup>
 
+  <!-- .NET Framework will never run natively on Apple's Metal graphics API -->
+  <Target Name="Net4-only-cleanup" AfterTargets="Build" Condition="$(TargetFramework.StartsWith(net4))">
+    <Delete Files="$(OutputPath)/Avalonia.Metal.dll;" />
+  </Target>
 </Project>
