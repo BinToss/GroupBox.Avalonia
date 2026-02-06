@@ -44,27 +44,43 @@
   </Choose>
 
   <Target Name="Cleanup"
-          AfterTargets="Build"
+          AfterTargets="Build;Publish"
           Condition="'$(TargetFramework)' == net481">
     <ItemGroup>
       <_evictDir Include="
         $(OutputPath)arm/;
+        $(PublishDir)arm/;
         $(OutputPath)arm64/;
+        $(PublishDir)arm64/;
         $(OutputPath)loongarch64/;
+        $(PublishDir)loongarch64/;
         $(OutputPath)musl-arm/;
+        $(PublishDir)musl-arm/;
         $(OutputPath)musl-arm64/;
+        $(PublishDir)musl-arm64/;
         $(OutputPath)musl-loongarch64/;
+        $(PublishDir)musl-loongarch64/;
         $(OutputPath)musl-riscv64/;
+        $(PublishDir)musl-riscv64/;
         $(OutputPath)musl-x64/;
+        $(PublishDir)musl-x64/;
         $(OutputPath)riscv64/;
+        $(PublishDir)riscv64/;
         $(OutputPath)x64/;
-        $(OutputPath)x86/;"/>
+        $(PublishDir)x64/;
+        $(OutputPath)x86/;
+        $(PublishDir)x86/;"/>
       <_evictFile Include="
         $(OutputPath)Avalonia.FreeDesktop.dll;
+        $(PublishDir)Avalonia.FreeDesktop.dll;
         $(OutputPath)Avalonia.Metal.dll;
+        $(PublishDir)Avalonia.Metal.dll;
         $(OutputPath)Avalonia.X11.dll;
+        $(PublishDir)Avalonia.X11.dll;
         $(OutputPath)*.dylib;
-        $(OutputPath)*.so;" />
+        $(PublishDir)*.dylib;
+        $(OutputPath)*.so;
+        $(PublishDir)*.so;" />
     </ItemGroup>
 
     <RemoveDir
