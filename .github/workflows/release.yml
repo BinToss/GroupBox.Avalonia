@@ -56,6 +56,13 @@ jobs:
       - name: Update version in README's Avalonia badge
         run: npm run update-readme
 
+      # Use the ambient GitHub token to login to NuGet and retrieve an API key
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: nToss
+
       # [release#
       # steps](https://github.com/semantic-release/semantic-release#release-steps)
       # Plugins add sub-steps e.g. @semantic-release/git's Prepare will create a
@@ -67,6 +74,6 @@ jobs:
         id: semantic_release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+          NUGET_TOKEN: ${{ steps.login.outputs.NUGET_API_KEY }}
         shell: pwsh
         run: npx semantic-release --debug
