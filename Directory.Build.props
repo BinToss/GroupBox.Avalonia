@@ -11,9 +11,9 @@
       <UseArtifactsOutput>true</UseArtifactsOutput>
    </PropertyGroup>
 
-   <PropertyGroup Condition="'$(CI)' == 'true'">
+   <PropertyGroup Condition="'$(CI)' == true">
       <Configuration Condition="'$(Configuration)' != Release">Release</Configuration>
-      <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
+      <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == true">true</RestoreLockedMode>
    </PropertyGroup>
 
    <Import Project="$(HCESharedDir)/dotnet/BuildEachRID.targets" />
