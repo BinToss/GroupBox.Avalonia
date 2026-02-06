@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@halospv3/hce.shared-config": "^3.3.0",
+    "@tsconfig/node24": "^24.0.4",
     "typescript": "^5.9.3"
   },
   "engines": {
