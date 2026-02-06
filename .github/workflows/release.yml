@@ -23,6 +23,7 @@ jobs:
     needs: [ci]
     runs-on: ubuntu-latest
     permissions:
+      attestations: write
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
@@ -77,3 +78,13 @@ jobs:
           NUGET_TOKEN: ${{ steps.login.outputs.NUGET_API_KEY }}
         shell: pwsh
         run: npx semantic-release --debug
+
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@96278af6caaf10aea03fd8d33a09a777ca52d62f # v3.2.0
+        with:
+          subject-path: publish/*
+
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: publish
+          path: publish/
