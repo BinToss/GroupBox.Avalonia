@@ -9,7 +9,7 @@
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <IsPackable>false</IsPackable>
     <!-- Enable control flow guard -->
-    <ControlFlowGuard Condition="'$(RuntimeIdentifier)' != '' AND $(RuntimeIdentifier.StartsWith(`win`))">Guard</ControlFlowGuard>
+    <ControlFlowGuard Condition="$(RuntimeIdentifier.StartsWith('win'))">Guard</ControlFlowGuard>
 
     <ApplicationIcon>../GroupBox.Avalonia.ico</ApplicationIcon>
   </PropertyGroup>
