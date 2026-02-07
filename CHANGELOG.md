@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.1.0...v1.1.1) (2026-02-07)
+
+### Bug Fixes
+
+* **deps-dev:** bump @halospv3/hce.shared-config to 3.3.0 ([f808aa7](https://github.com/BinToss/GroupBox.Avalonia/commit/f808aa706d2c929d0d4eabca3931cb9bf1bedaa0)), closes [#106](https://github.com/BinToss/GroupBox.Avalonia/issues/106)
+* **deps:** bump Meziantou.Polyfill to 1.0.82 ([33ae5da](https://github.com/BinToss/GroupBox.Avalonia/commit/33ae5dac9cf8fe3459ad98106055b8a36e872a36))
+
 ## [1.1.1-develop.2](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.1.1-develop.1...v1.1.1-develop.2) (2026-02-06)
 
 ### Bug Fixes
