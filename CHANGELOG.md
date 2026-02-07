@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.1.1...v1.2.0) (2026-02-07)
+
+### Features
+
+* bump verson ahead of prereleases ([a303fe8](https://github.com/BinToss/GroupBox.Avalonia/commit/a303fe8c6762d3cd7a38414420b1c04da473c823))
+
 ## [1.1.1](https://github.com/BinToss/GroupBox.Avalonia/compare/v1.1.0...v1.1.1) (2026-02-07)
 
 ### Bug Fixes
