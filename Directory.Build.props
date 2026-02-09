@@ -17,7 +17,6 @@
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == true">
-      <Configuration>Release</Configuration>
       <RestoreLockedMode>true</RestoreLockedMode>
    </PropertyGroup>
 
