@@ -29,7 +29,7 @@
       <PackageReference Include="DotNet.ReproducibleBuilds"
                         Version="2.0.2"
                         PrivateAssets="All" />
-      <PackageReference Condition=" '$(Configuration)' != 'Release' AND '$(TargetFramework.StartsWith(net4))' == false"
+      <PackageReference Condition=" '$(Configuration)' == Debug AND '$(TargetFramework.StartsWith(net4))' == false"
                         Include="HotAvalonia"
                         Version="3.1.0"
                         PrivateAssets="All"
