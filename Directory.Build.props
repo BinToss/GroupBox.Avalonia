@@ -17,8 +17,8 @@
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == true">
-      <Configuration Condition="'$(Configuration)' != Release">Release</Configuration>
-      <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == true">true</RestoreLockedMode>
+      <Configuration>Release</Configuration>
+      <RestoreLockedMode>true</RestoreLockedMode>
    </PropertyGroup>
 
    <Import Project="$(HCESharedDir)/dotnet/BuildEachRID.targets" />
