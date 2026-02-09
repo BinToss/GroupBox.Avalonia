@@ -2,6 +2,11 @@
    <PropertyGroup>
       <RepoRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), '.git/index'))</RepoRoot>
       <HCESharedDir>$(RepoRoot)node_modules/@halospv3/hce.shared-config</HCESharedDir>
+   </PropertyGroup>
+
+   <Import Project="$(HCESharedDir)/dotnet/HCE.Shared.CI.props" />
+
+   <PropertyGroup>
       <GitVersionPath>$(HCESharedDir)/dotnet/GitVersion6.0.yml</GitVersionPath>
       <AvaloniaVersion>11.3.11</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
