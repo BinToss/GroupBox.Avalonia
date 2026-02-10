@@ -20,10 +20,6 @@
       </NuGetLockFilePath>
    </PropertyGroup>
 
-   <PropertyGroup Condition="'$(CI)' == true">
-      <RestoreLockedMode>true</RestoreLockedMode>
-   </PropertyGroup>
-
    <Import Project="$(HCESharedDir)/dotnet/BuildEachRID.targets" />
    <Import Project="$(HCESharedDir)/dotnet/PublishAll.targets" />
    <Import Project="$(HCESharedDir)/dotnet/ZipPublishDir.targets" />
