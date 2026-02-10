@@ -14,6 +14,10 @@
       <LangVersion>Latest</LangVersion>
       <PublishRelease>true</PublishRelease>
       <UseArtifactsOutput>true</UseArtifactsOutput>
+      <NuGetLockFilePath Condition="'$(Configuration)' == Debug">$(MSBuildProjectDirectory)/packages-debug.lock.json</NuGetLockFilePath>
+      <NuGetLockFilePath Condition="'$(Configuration)' == Debug AND Exists('$(MSBuildProjectDirectory)/packages.$(_MSBuildProjectNameUnderscored).lock.json')">
+         $(MSBuildProjectDirectory)/packages-debug.$(_MSBuildProjectNameUnderscored).lock.json
+      </NuGetLockFilePath>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(CI)' == true">
