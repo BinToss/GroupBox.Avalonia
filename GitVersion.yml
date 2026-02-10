@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/GitTools/GitVersion/main/schemas/6.0/GitVersion.configuration.json
+# https://gitversion.net/docs/reference/configuration
+
+# # Conventional Commits
+# See https://www.npmjs.com/package/@commitlint/config-conventional
+# Note: Do not use "/" in scopes' names. "/" and "," are delimiters e.g.
+# `build(deps, deps-dev): bump dependencies`
+#
+# "!:" in the header -or- "BREAKING CHANGE:" in the footer.
+# e.g. refactor!: remove or change a public API symbol
+major-version-bump-message: ^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([\w\s-,/\\]*\))?(!:|:.*\n\n((.+\n)+\n)?BREAKING CHANGE:\s.+)
+# e.g. "feat: add awesome thing", "feat(App.Core): add thing to App.Core's API"
+minor-version-bump-message: ^(feat)(\([\w\s-]*\))?(:)
+# e.g. "Revert", "Reverts", "revert:", "fix:", or "perf:".
+patch-version-bump-message: ^(Reverts? )|(fix|perf|revert)(\([\w\s-]*\))?(:)
+# # Release/Version Rules
+# https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow/maintenance-releases#publishing-maintenance-releases
+# https://github.com/semantic-release/commit-analyzer/blob/master/lib/default-release-rules.js
+# { breaking: true, release: "major" }
+# { type: "feat", release: "minor" }
+# { revert: true, release: "patch" }
+# { type: "fix", release: "patch" }
+# { type: "perf", release: "patch" }
+# file://./../src/semanticReleaseConfig.ts#L64-L67
+# preset: 'conventionalcommits',
+# branches: [
+#   'main',
+#   { name: 'develop', channel: 'develop', prerelease: true },
+# ]
+
+branches:
+  develop:
+    increment: None
+    prevent-increment:
+      when-current-commit-tagged: true
+  main:
+    increment: None
+  release:
+    increment: None
+    prevent-increment:
+      when-current-commit-tagged: true
+  feature:
+    increment: None
+    prevent-increment:
+      when-current-commit-tagged: true
+    regex: ^feat(ures?)?[\/-](?<BranchName>.+)
+  pull-request:
+    increment: None
+    prevent-increment:
+      when-current-commit-tagged: true
+  hotfix:
+    increment: None
+    prevent-increment:
+      when-current-commit-tagged: true
+  support:
+    increment: None
+  unknown:
+    increment: None
