@@ -7,7 +7,6 @@
    <Import Project="$(HCESharedDir)/dotnet/HCE.Shared.CI.props" />
 
    <PropertyGroup>
-      <GitVersionPath>$(HCESharedDir)/dotnet/GitVersion6.0.yml</GitVersionPath>
       <AvaloniaVersion>11.3.11</AvaloniaVersion>
       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
       <Deterministic>true</Deterministic>
