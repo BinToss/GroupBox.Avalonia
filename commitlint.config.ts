@@ -1,11 +1,12 @@
 import hceShared from "@halospv3/hce.shared-config/commitlintConfig";
 
 const scopes = {
+  CHANGELOG: 'Affects "CHANGELOG.md".',
   commitlint: 'Affects "./commitlint.config.ts".',
   deps: 'Affects any runtime dependencies.',
   'deps-dev': 'Affects dependencies not included at runtime.',
-  README: 'Affects "./README.md".',
-  release: 'Only for commits made by @semantic-release/git.',
+  README: 'Affects "README.md".',
+  release: 'Reserved for release commits.',
   sample: 'Affects "./src/GroupBox.Avalonia.Sample/**/*".',
   vscode: 'Affects "./vscode/**/*".'
 };
