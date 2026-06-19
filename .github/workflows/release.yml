@@ -31,7 +31,7 @@ jobs:
       packages: write # for pushing GitHub Nuget packages
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # necessary for semantic release
 
