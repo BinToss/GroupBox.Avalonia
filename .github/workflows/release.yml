@@ -31,7 +31,7 @@ jobs:
       packages: write # for pushing GitHub Nuget packages
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # necessary for semantic release
 
@@ -82,7 +82,7 @@ jobs:
         run: npx semantic-release --debug
 
       - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@a2bbfa25375fe432b6a289bc6b6cd05ecd0c4c32 # v4.1.0
+        uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1
         with:
           subject-path: publish/*
 
