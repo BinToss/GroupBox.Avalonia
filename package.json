@@ -20,5 +20,6 @@
   },
   "engineStrict": true,
   "private": true,
-  "type": "module"
+  "type": "module",
+  "packageManager": "npm@12.0.0-pre.2+sha512.0785795e122792a64a4b80d39f6b0759f559156e5f337dcc1220967435ef40aa3d4a12b8448ece6b13c8b25731f61b9e0e5ef264f3ff8d8d0982b37c314a8ae1"
 }
