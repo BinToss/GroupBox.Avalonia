@@ -10,7 +10,7 @@
     "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
-    "@halospv3/hce.shared-config": "^3.8.0",
+    "@halospv3/hce.shared-config": "^3.9.3",
     "@tsconfig/node24": "^24.0.4",
     "typescript": "^6.0.3"
   },
