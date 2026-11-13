@@ -12,6 +12,7 @@
   "devDependencies": {
     "@halospv3/hce.shared-config": "^3.13.0",
     "@tsconfig/node24": "^24.0.5",
+    "@types/node": "^26.6.6",
     "commitlint": "^21.2.4",
     "husky": "^9.1.7",
     "semantic-release": "^26.0.0-beta.6",
