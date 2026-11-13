@@ -592,9 +592,9 @@
       },
       "Microsoft.NET.ILLink.Tasks": {
         "type": "Direct",
-        "requested": "[8.0.27, )",
-        "resolved": "8.0.27",
-        "contentHash": "rQi9TxifHRnXP7lVRZH05DxD2/XGbJp12q0ozcbrlBlBnyyzssFTH/2vLhtKWUp2CT1qVscTrcYTFiwTyKPKRg=="
+        "requested": "[8.0.34, )",
+        "resolved": "8.0.34",
+        "contentHash": "AoMGwI/388svzARQ2NYC25vFOQGcf13FgQWv61TwPAdPUMOejXpQxBQHrQpXfqM7vqxxj1E3SAkX/OkE2cuChw=="
       },
       "Avalonia": {
         "type": "Transitive",
