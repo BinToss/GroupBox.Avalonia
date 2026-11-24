@@ -9,30 +9,30 @@
     not included with releases 11.0.9, 11.0.10.
   -->
   <ControlTheme x:Key="{x:Type ctrl:GroupBox}" TargetType="ctrl:GroupBox">
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}"/>
-    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}"/>
-    <Setter Property="CornerRadius" Value="3"/>
-    <Setter Property="FontWeight" Value="Bold"/>
-    <Setter Property="Padding" Value="8"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
+    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
+    <Setter Property="CornerRadius" Value="3" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Padding" Value="8" />
     <Setter Property="Template">
       <ControlTemplate>
         <Grid RowDefinitions="auto *">
           <ContentPresenter Name="PART_HeaderPresenter"
+                            Grid.Row="0"
                             HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                             Content="{TemplateBinding Header}"
                             ContentTemplate="{TemplateBinding HeaderTemplate}"
                             FontFamily="{TemplateBinding FontFamily}"
                             FontStyle="{TemplateBinding FontStyle}"
-                            FontWeight="{TemplateBinding FontWeight}" 
-                            Grid.Row="0"/>
+                            FontWeight="{TemplateBinding FontWeight}" />
           <Border Name="GBBorder"
+                  Grid.Row="1"
+                  Padding="{TemplateBinding Padding}"
+                  Background="{TemplateBinding Background}"
                   BorderBrush="{TemplateBinding BorderBrush}"
                   BorderThickness="{TemplateBinding BorderThickness}"
-                  CornerRadius="{TemplateBinding CornerRadius}"
-                  Background="{TemplateBinding Background}"
-                  Padding="{TemplateBinding Padding}"
-                  Grid.Row="1">
+                  CornerRadius="{TemplateBinding CornerRadius}">
             <ContentPresenter Name="PART_ContentPresenter"
                               HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                               VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
