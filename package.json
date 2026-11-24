@@ -10,12 +10,12 @@
     "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
-    "@halospv3/hce.shared-config": "^3.13.0",
+    "@halospv3/hce.shared-config": "^3.14.5",
     "@tsconfig/node26": "^26.0.2",
     "@types/node": "^26.6.6",
     "commitlint": "^21.2.4",
     "husky": "^9.1.7",
-    "semantic-release": "^26.0.0-beta.6",
+    "semantic-release": "^26.0.1",
     "typescript": "^7.0.2"
   },
   "engines": {
