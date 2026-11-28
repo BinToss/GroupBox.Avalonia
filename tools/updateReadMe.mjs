@@ -29,10 +29,10 @@ function updateVersionInAvaloniaBadge() {
   for (const v of /** @type {unknown[]} */(parsedOutput.Items.PackageReference)) {
     if (!v || typeof v != 'object'
       || !('Identity' in v) || v.Identity !== 'Avalonia'
-      || !('Version' in v) || typeof v.Version != 'number') {
+      || !('Version' in v) || typeof v.Version != 'string') {
       continue;
     }
-    avaloniaVersion = v.Version.toString();
+    avaloniaVersion = v.Version;
   }
   if (avaloniaVersion === undefined)
     throw new Error('Failed to determine Avalonia\'s version');
