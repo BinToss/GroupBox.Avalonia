@@ -4,6 +4,7 @@
     "actionforge.actionforge",
     "dbaeumer.vscode-eslint",
     "dabbinavo.xamlstyler",
-    "wieslawsoltes.axsg-language-server"
+    "wieslawsoltes.axsg-language-server",
+    "arcanis.vscode-zipfs"
   ]
 }

@@ -1,3 +1,27 @@
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Whether you use PnP or not, the node_modules folder is often used to store
+# build artifacts that should be gitignored
+node_modules
+
+# Swap the comments on the following lines if you wish to use zero-installs
+# In that case, don't forget to run `yarn config set enableGlobalCache false`!
+# Documentation here: https://yarnpkg.com/features/caching#zero-installs
+
+#!.yarn/cache
+.pnp.*
+
+.tmp/
+GroupBox.Avalonia.Sample/TargetFrameworkSwitcher.targets
+.env
+.eslintcache
+*.tsbuildinfo
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,dotnetcore,csharp
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,dotnetcore,csharp
 
@@ -478,5 +502,3 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,dotnetcore,csharp
 
-.env
-GroupBox.Avalonia.Sample/TargetFrameworkSwitcher.targets

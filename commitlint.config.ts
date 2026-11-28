@@ -1,4 +1,5 @@
-import hceShared from "@halospv3/hce.shared-config/commitlintConfig";
+import { RuleConfigSeverity } from '@commitlint/types';
+import hceShared from '@halospv3/hce.shared-config/commitlintConfig';
 
 const scopes = {
   CHANGELOG: 'Affects "CHANGELOG.md".',
@@ -8,14 +9,14 @@ const scopes = {
   README: 'Affects "README.md".',
   release: 'Reserved for release commits.',
   sample: 'Affects "./src/GroupBox.Avalonia.Sample/**/*".',
-  vscode: 'Affects "./vscode/**/*".'
+  vscode: 'Affects "./vscode/**/*".',
 };
 
-hceShared.rules["scope-enum"] = [
-  2,
+hceShared.rules['scope-enum'] = [
+  RuleConfigSeverity.Error,
   'always',
   Reflect.ownKeys(scopes)
-    .map(key => String(key)) as (keyof typeof scopes)[]
+    .map(key => String(key)),
 ];
 
 export default hceShared;

@@ -5,7 +5,7 @@ then
     isModifiedBefore=true
 fi
 
-npm run update-readme
+yarn update-readme
 
 if $isModifiedBefore
 then

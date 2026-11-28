@@ -1,20 +1,18 @@
-//@ts-check
 import {
   GithubNugetRegistryInfo,
   MSBuildProject,
-  NugetRegistryInfo
+  NugetRegistryInfo,
 } from '@halospv3/hce.shared-config/dotnet';
 import { getConfig } from '@halospv3/hce.shared-config/semanticReleaseConfigDotnet';
+import { env } from 'node:process';
 import { inspect } from 'node:util';
 
-/** @type {import('semantic-release').Options} */
-let config = {};
+let config: import('semantic-release').Options;
 
 try {
-  /** @type {MSBuildProject[]} */
-  const projectsToPublish = await MSBuildProject.PackableProjectsToMSBuildProjects([
+  const projectsToPublish: MSBuildProject[] = await MSBuildProject.PackableProjectsToMSBuildProjects([
     './GroupBox.Avalonia/GroupBox.Avalonia.csproj',
-    './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj'
+    './GroupBox.Avalonia.Sample/GroupBox.Avalonia.Sample.csproj',
   ]).then(promises => Promise.all(promises));
 
   const mainProject = projectsToPublish[0];
@@ -23,12 +21,13 @@ try {
 
   const opts = { project: mainProject };
 
+  env['GITHUB_REPOSITORY_OWNER'] = 'BinToss';
   config = await getConfig(
     projectsToPublish,
     [
       new GithubNugetRegistryInfo(opts),
       new NugetRegistryInfo(opts),
-    ]
+    ],
   );
 }
 catch (error) {

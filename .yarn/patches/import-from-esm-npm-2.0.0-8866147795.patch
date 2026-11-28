@@ -1,0 +1,40 @@
+diff --git a/index.js b/index.js
+index b1ef46f47347ccf7274275667ef6261abc27fb2b..127987c637b5e642ecb1b6fe88618718dac15ea4 100644
+--- a/index.js
++++ b/index.js
+@@ -1,5 +1,6 @@
+-import { createRequire } from 'node:module';
++import _module, { createRequire } from 'node:module';
+ import { extname, resolve } from 'node:path';
++import process from 'node:process';
+ import { fileURLToPath, pathToFileURL } from 'node:url';
+ 
+ import createDebug from 'debug';
+@@ -108,12 +109,24 @@ async function importFrom(fromDirectory, moduleId) {
+ 		}
+ 	}
+ 
++	let _error;
++
++	if (!loadedModule) {
++		const isUsingYarn = process.env.npm_config_user_agent?.startsWith('yarn') === true;
++		const isUsingPnp = 'findPnpApi' in _module && typeof _module.findPnpApi === 'function';
++		// if Yarn PnP, fallback to default loader
++		if (isUsingYarn && isUsingPnp) {
++			try { loadedModule = await import(moduleId); }
++			catch (error) { _error = error; }
++		}
++	}
++
+ 	if (!loadedModule) {
+ 		const errorString = `Cannot find module '${moduleId}'`;
+ 		debug(errorString);
+-		const error = new Error(errorString);
+-		error.code = 'MODULE_NOT_FOUND';
+-		throw error;
++		const newError = new Error(errorString, { cause: _error });
++		newError.code = 'MODULE_NOT_FOUND';
++		throw newError;
+ 	}
+ 
+ 	debug(`Successfully loaded module '${moduleId}' from '${fromDirectory}'`);

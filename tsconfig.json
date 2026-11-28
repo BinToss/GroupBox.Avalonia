@@ -1,21 +1,14 @@
 {
+    "extends": "./.config/tsconfig.base.json",
     "compilerOptions": {
-        "module": "NodeNext",
-        "lib": [ "ES2025", "ES2025.Collection", "ES2025.Intl", "ES2025.Float16", "ES2025.Iterator", "ES2025.Promise", "ES2025.Regexp", "ESNext.Error", "ESNext.Temporal", "ESNext.TypedArrays", "ESNext.Disposable" ],
-        "target": "es2025",
-        "types": [ "node" ],
-
-        "allowJs": true,
-        "noEmit": true,
-        "strict": true,
-        "erasableSyntaxOnly": true,
-        "exactOptionalPropertyTypes": true,
-        "noImplicitOverride": true,
-        "noImplicitReturns": true,
-        "noPropertyAccessFromIndexSignature": true,
-        "noUncheckedIndexedAccess": true,
-        "verbatimModuleSyntax": true
+        "outDir": ".tsout",
+        "erasableSyntaxOnly": true
     },
+    "include": [
+        "./*.cts",
+        "./*.mts",
+        "./*.ts"
+    ],
     "exclude": [
         "node_modules",
         "GroupBox.Avalonia",
@@ -24,8 +17,9 @@
         "artifacts"
     ],
     "files": [
-        "./commitlint.config.ts",
-        "./.releaserc.js",
+        "commitlint.config.ts",
+        "eslint.config.ts",
+        ".releaserc.ts",
         "./tools/formatXamlFiles.mjs",
         "./tools/updateReadMe.mjs"
     ]

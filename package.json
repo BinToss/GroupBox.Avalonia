@@ -1,22 +1,43 @@
 {
+  "name": "groupbox-avalonia",
   "description": "dev-environment utilities",
   "scripts": {
     "prepare": "husky && dotnet tool restore",
-    "format": "dotnet format && npm run xstyler",
-    "release": "npx semantic-release",
-    "semantic-release": "npx semantic-release",
+    "format": "dotnet format && yarn xstyler",
+    "lint": "eslint --cache",
+    "release": "yarn semantic-release",
     "test": "dotnet test",
-    "update-readme": "node ./tools/updateReadMe.mjs",
-    "xstyler": "node -- ./tools/formatXamlFiles.mjs --ignore"
+    "update-readme": "yarn node ./tools/updateReadMe.mjs",
+    "xstyler": "yarn node -- ./tools/formatXamlFiles.mjs --ignore"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@commitlint/load": "^21.2.4",
+    "@commitlint/types": "^21.2.3",
     "@halospv3/hce.shared-config": "^3.14.5",
+    "@semantic-release/changelog": "^8.0.0-beta.1",
+    "@semantic-release/commit-analyzer": "^14.0.0-beta.5",
+    "@semantic-release/exec": "^8.0.0-beta.1",
+    "@semantic-release/git": "^11.0.1",
+    "@semantic-release/github": "^13.0.0-beta.1",
+    "@semantic-release/npm": "^14.0.0-beta.3",
+    "@semantic-release/release-notes-generator": "^15.0.0-beta.4",
     "@tsconfig/node26": "^26.0.2",
-    "@types/node": "^26.6.6",
+    "@types/debug": "^4.1.13",
+    "@types/node": "^26.6.11",
     "commitlint": "^21.2.4",
+    "conventional-changelog-conventionalcommits": "^10.4.1",
+    "eslint": "^10.15.0",
     "husky": "^9.1.7",
+    "jiti": "^2.7.0",
     "semantic-release": "^26.0.1",
-    "typescript": "^7.0.2"
+    "semantic-release-export-data": "^1.2.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.74.0"
+  },
+  "resolutions": {
+    "import-from-esm@npm:^2.0.0": "patch:import-from-esm@npm%3A2.0.0#~/.yarn/patches/import-from-esm-npm-2.0.0-8866147795.patch"
   },
   "engines": {
     "node": ">=26.13.0",
@@ -25,5 +46,5 @@
   "engineStrict": true,
   "private": true,
   "type": "module",
-  "packageManager": "npm@12.2.3+sha512.a2f98d4517bbe89bdca7513a88e78f43a1fd66be1730eaea81f69e18d86d46f3f75d29762e8fdaf42d4de7f8d194b2ebb2a09e9bfa268067591e96796baca7d5"
+  "packageManager": "yarn@4.19.0+sha512.2cb9e5a36f7f11f2bc6ff444830d87368d419e0d83b6a0fb6077d3e6fed0f476c9514dff4ba4d84b049bd34ef32954e550f264ad2fbbfebcba6c89e869530bba"
 }
