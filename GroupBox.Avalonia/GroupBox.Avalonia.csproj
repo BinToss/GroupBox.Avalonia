@@ -30,6 +30,9 @@
     <Copyright>© 2025 Noah Sherwin</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!-- This file should be created and written by Semantic Release; It is not checked in -->
+    <PackageReleaseNotes Condition="Exists('$(RepoRoot)RELEASE_NOTES.md')">
+      $([System.IO.File]::ReadAllText('$(RepoRoot)RELEASE_NOTES.md'))</PackageReleaseNotes>
     <PackageTags>Avalonia AvaloniaUI GroupBox</PackageTags>
     <RepositoryUrl>https://github.com/BinToss/GroupBox.Avalonia</RepositoryUrl>
     <PackageProjectUrl>$(RepositoryUrl)#groupboxavalonia</PackageProjectUrl>
