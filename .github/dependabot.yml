@@ -5,62 +5,85 @@
 
 version: 2
 updates:
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
+  - package-ecosystem: 'gitsubmodule'
+    directory: '/'
     schedule:
-      interval: "daily"
-    target-branch: "develop"
+      interval: 'daily'
+    target-branch: 'develop'
     groups:
-      "Git SubModules":
+      'Git SubModules':
         patterns:
-          - "*"
+          - '*'
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "daily"
-    target-branch: "develop"
+      interval: 'daily'
+    target-branch: 'develop'
     commit-message:
-      prefix: "ci(deps-dev)"
+      include: scope
+      prefix: ci
     groups:
-      "GitHub Actions":
+      'GitHub Actions':
         patterns:
-          - "*"
+          - '*'
 
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
-    target-branch: "develop"
+      interval: 'daily'
+    target-branch: 'develop'
     commit-message:
-      prefix: chore(deps-dev)
+      include: scope
+      prefix: build
     groups:
-      "NPM":
+      'NPM':
         patterns:
-          - "*"
+          - '*'
+    ignore:
+      # stage node and @types/node upgrades separately
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'node'
+        update-types: ['version-update:semver-major']
 
-  - package-ecosystem: "nuget"
-    directory: "/GroupBox.Avalonia.Sample/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
-    target-branch: "develop"
+      interval: 'daily'
+    target-branch: 'develop'
+    commit-message:
+      include: scope
+      prefix: build
+    groups:
+      'NPM (Node)':
+        patterns:
+          - 'node'
+          - '@types/node'
+
+  - package-ecosystem: 'nuget'
+    directory: '/GroupBox.Avalonia.Sample/'
+    schedule:
+      interval: 'daily'
+    target-branch: 'develop'
     commit-message:
       prefix: build(sample)
+      include: scope
     groups:
-      "GroupBox.Avalonia.Sample":
+      'NuGet (GroupBox.Avalonia.Sample)':
         patterns:
-          - "*"
+          - '*'
 
-  - package-ecosystem: "nuget"
-    directory: "/GroupBox.Avalonia/"
+  - package-ecosystem: 'nuget'
+    directory: '/GroupBox.Avalonia/'
     schedule:
-      interval: "daily"
-    target-branch: "develop"
+      interval: 'daily'
+    target-branch: 'develop'
     commit-message:
       include: scope
       prefix: fix
       prefix-development: build
     groups:
-      "GroupBox.Avalonia":
+      'NuGet (GroupBox.Avalonia)':
         patterns:
-          - "*"
+          - '*'
