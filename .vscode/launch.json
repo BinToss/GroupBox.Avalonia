@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/artifacts/bin/GroupBox.Avalonia.Sample/debug_net8.0/GroupBox.Avalonia.Sample.dll",
+            "program": "${workspaceFolder}/artifacts/bin/GroupBox.Avalonia.Sample/debug_net10.0/GroupBox.Avalonia.Sample.dll",
             "args": [ ],
             "cwd": "${workspaceFolder}/GroupBox.Avalonia.Sample",
             "console": "internalConsole",

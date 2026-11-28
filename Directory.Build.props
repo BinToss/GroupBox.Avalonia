@@ -3,7 +3,6 @@
     <RepoRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), '.git/index'))</RepoRoot>
     <_HCESharedDirSuffix>node_modules/@halospv3/hce.shared-config/</_HCESharedDirSuffix>
     <HCESharedDir>$(RepoRoot)$(_HCESharedDirSuffix)</HCESharedDir>
-    <AvaloniaVersion>11.3.11</AvaloniaVersion>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <Deterministic>true</Deterministic>
     <LangVersion>Latest</LangVersion>
@@ -40,15 +39,12 @@
   <ItemGroup>
     <!-- See https://github.com/dotnet/reproducible-builds#dotnetreproduciblebuilds -->
     <PackageReference Include="DotNet.ReproducibleBuilds"
-                      Version="2.0.2"
                       PrivateAssets="All" />
-    <PackageReference Condition=" '$(Configuration)' == Debug AND '$(TargetFramework.StartsWith(net4))' == false"
+    <PackageReference Condition=" '$(Configuration)' == Debug"
                       Include="HotAvalonia"
-                      Version="3.1.0"
                       PrivateAssets="All"
                       Publish="true" />
     <PackageReference Include="Meziantou.Polyfill"
-                      Version="1.0.101"
                       PrivateAssets="All">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

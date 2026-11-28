@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net481;net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ImplicitUsings>enable</ImplicitUsings>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <IsPackable>false</IsPackable>
@@ -20,78 +19,7 @@
     <StripSymbols>true</StripSymbols>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition="'$(TargetFramework)' == net481">
-      <PropertyGroup>
-        <RuntimeIdentifiers>win-x86</RuntimeIdentifiers>
-        <RuntimeIdentifier>win-x86</RuntimeIdentifier>
-        <!-- See
-        https://github.com/ericstj/Microsoft.Packaging.Tools.Trimming#from-the-ide-or-committing-the-change-to-your-project -->
-        <TrimUnusedDependencies>true</TrimUnusedDependencies>
-        <TrimFilesPreferNativeImages>true</TrimFilesPreferNativeImages>
-        <RootPackageReference>false</RootPackageReference>
-      </PropertyGroup>
-      <ItemGroup>
-        <PackageReference Include="Microsoft.Packaging.Tools.Trimming"
-                          Version="1.1.0-preview1-26619-01" />
-        <TrimmablePackages Include="Avalonia.FreeDesktop;Avalonia.Metal;Avalonia.X11" />
-        <TrimmableFiles Include="Avalonia.FreeDesktop.dll;Avalonia.Metal.dll;Avalonia.X11.dll;**/*.dynlib;**/*.so;" />
-      </ItemGroup>
-        <!-- "Avalonia.Desktop" relies on .NET Core 3 and .NET 5.0+ trimming to remove unnecessary managed
-        and native modules.
-        This is unavailable when targeting .NET Framework. We must do it ourselves. -->
-    </When>
-  </Choose>
-
-  <Target Name="Cleanup"
-          AfterTargets="Build;Publish"
-          Condition="'$(TargetFramework)' == net481">
-    <ItemGroup>
-      <_evictDir Include="
-        $(OutputPath)arm/;
-        $(PublishDir)arm/;
-        $(OutputPath)arm64/;
-        $(PublishDir)arm64/;
-        $(OutputPath)loongarch64/;
-        $(PublishDir)loongarch64/;
-        $(OutputPath)musl-arm/;
-        $(PublishDir)musl-arm/;
-        $(OutputPath)musl-arm64/;
-        $(PublishDir)musl-arm64/;
-        $(OutputPath)musl-loongarch64/;
-        $(PublishDir)musl-loongarch64/;
-        $(OutputPath)musl-riscv64/;
-        $(PublishDir)musl-riscv64/;
-        $(OutputPath)musl-x64/;
-        $(PublishDir)musl-x64/;
-        $(OutputPath)riscv64/;
-        $(PublishDir)riscv64/;
-        $(OutputPath)x64/;
-        $(PublishDir)x64/;
-        $(OutputPath)x86/;
-        $(PublishDir)x86/;"/>
-      <_evictFile Include="
-        $(OutputPath)Avalonia.FreeDesktop.dll;
-        $(PublishDir)Avalonia.FreeDesktop.dll;
-        $(OutputPath)Avalonia.Metal.dll;
-        $(PublishDir)Avalonia.Metal.dll;
-        $(OutputPath)Avalonia.X11.dll;
-        $(PublishDir)Avalonia.X11.dll;
-        $(OutputPath)*.dylib;
-        $(PublishDir)*.dylib;
-        $(OutputPath)*.so;
-        $(PublishDir)*.so;" />
-    </ItemGroup>
-
-    <RemoveDir
-      Condition="'$(TargetFramework)' == net481"
-      Directories="@(_evictDir)" />
-    <Delete
-      Condition="'$(TargetFramework)' == net481"
-      Files="@(_evictFile)" />
-  </Target>
-
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+  <PropertyGroup Condition="$([MSBuild]::IsTargetFrameworkCompatible('net8.0', '$(TargetFramework)'))">
     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x86;win-x64</RuntimeIdentifiers>
     <IsTrimmable>true</IsTrimmable>
     <VerifyReferenceTrimCompatibility>true</VerifyReferenceTrimCompatibility>
@@ -109,13 +37,9 @@
     <Watch Include="**/*.axaml;../GroupBox.Avalonia/**/*.axaml" />
 
     <ProjectReference Include="../GroupBox.Avalonia/GroupBox.Avalonia.csproj" />
-    <PackageReference Include="Avalonia.Desktop"
-                      Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.Fonts.Inter"
-                      Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.Themes.Fluent"
-                      Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.Themes.Simple"
-                      Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Avalonia.Themes.Simple" />
   </ItemGroup>
 </Project>

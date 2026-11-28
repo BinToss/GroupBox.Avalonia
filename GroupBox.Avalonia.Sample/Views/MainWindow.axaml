@@ -34,12 +34,12 @@
 
     <StackPanel Grid.Column="1" Margin="10">
       <CheckBox Name="FluentWindowButton"
-                Checked="FluentWindowButton_OnChecked" Unchecked="FluentWindowButton_OnUnchecked">
+                IsCheckedChanged="FluentWindowButton_OnChanged">
         Show FluentWindow
       </CheckBox>
 
       <CheckBox Name="SimpleWindowButton"
-                Checked="SimpleWindowButton_OnChecked" Unchecked="SimpleWindowButton_OnUnchecked">
+                IsCheckedChanged="SimpleWindowButton_OnChanged">
         Show SimpleWindow
       </CheckBox>
     </StackPanel>

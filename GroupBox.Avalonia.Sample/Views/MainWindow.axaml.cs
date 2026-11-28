@@ -11,7 +11,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        ThemeVariantComboBox.ItemsSource = ThemeVariants.Keys as IEnumerable<string>;
+        ThemeVariantComboBox.ItemsSource = ThemeVariants.Keys;
         ThemeVariantComboBox.SelectedIndex = 0;
     }
 
@@ -25,37 +25,28 @@ public partial class MainWindow : Window
     public static FluentWindow? FluentWindow => App?.FluentWindow;
     public static SimpleWindow? SimpleWindow => App?.SimpleWindow;
 
-    public static void FluentWindowButton_OnChecked(object sender, RoutedEventArgs args)
+    public static void FluentWindowButton_OnChanged(object? sender, RoutedEventArgs args)
     {
         if (FluentWindow?.IsVisible is false)
             FluentWindow.Show();
-    }
-
-    public static void FluentWindowButton_OnUnchecked(object sender, RoutedEventArgs args)
-    {
-        if (FluentWindow?.IsVisible is true)
+        else if (FluentWindow?.IsVisible is true)
             FluentWindow.Hide();
     }
 
-    public static void SimpleWindowButton_OnChecked(object sender, RoutedEventArgs args)
+    public static void SimpleWindowButton_OnChanged(object? sender, RoutedEventArgs args)
     {
         if (SimpleWindow?.IsVisible is false)
             SimpleWindow.Show();
-    }
-
-    public static void SimpleWindowButton_OnUnchecked(object sender, RoutedEventArgs args)
-    {
-        if (SimpleWindow?.IsVisible is true)
+        else if (SimpleWindow?.IsVisible is true)
             SimpleWindow.Hide();
     }
 
-    public void ThemeVariantComboBox_OnSelectionChanged(object sender, SelectionChangedEventArgs args)
+    public void ThemeVariantComboBox_OnSelectionChanged(object? sender, SelectionChangedEventArgs args)
     {
         string selection = args.AddedItems[0]?.ToString() ?? "";
         try
         {
-            if (App is not null)
-                App.RequestedThemeVariant = ThemeVariants[selection];
+            App?.RequestedThemeVariant = ThemeVariants[selection];
         }
         catch (KeyNotFoundException) { }
     }
