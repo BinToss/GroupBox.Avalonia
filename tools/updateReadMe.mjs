@@ -3,6 +3,7 @@ import { execFileSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+// import { inspect } from 'node:util';
 
 // this file's directory
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -14,7 +15,7 @@ function updateVersionInAvaloniaBadge() {
 
   const out = subprocess;
   // console.log('dotnet output: ' + out);
-  // console.log(JSON.parse(out));
+  // console.log(inspect(JSON.parse(out), undefined, 8));
 
   // eslint-disable-next-line @stylistic/no-extra-parens
   const parsedOutput = (/** @type {unknown} */(JSON.parse(out)));
